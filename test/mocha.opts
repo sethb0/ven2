@@ -1,0 +1,4 @@
+--require @babel/register
+--recursive
+--slow 500
+--timeout 5000

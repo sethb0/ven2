@@ -1,0 +1,42 @@
+# Unit test / coverage reports
+coverage
+lib-cov
+.coverage
+.tox
+nosetests.xml
+
+# Translations
+*.mo
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build
+
+# karma unit test output
+test_out
+
+# Dependency directories
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+
+node_modules
+dist
+
+.tmp
+*.tmp
+.babel-cache.json
+
+secrets.json
+client_secret*.json
+.env*
+*.pem
