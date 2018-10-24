@@ -47,6 +47,9 @@ overrides:
 - files: bin/*.js
   parserOptions:
     sourceType: script
+- files: src/commands/*.js
+  rules:
+    no-console: off
 - files: "**/*.spec.js"
   env:
     mocha: true

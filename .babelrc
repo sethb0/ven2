@@ -26,7 +26,8 @@
       {
         "loose": true
       }
-    ]
+    ],
+    "babel-plugin-dynamic-import-node"
   ],
   "sourceMaps": false
 }

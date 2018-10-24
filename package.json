@@ -24,7 +24,7 @@
     "CLI"
   ],
   "engines": {
-    "node": ">=10.12.0",
+    "node": ">=11.0.0",
     "npm": ">=6.4.1"
   },
   "os": [
@@ -38,6 +38,10 @@
   "dependencies": {
     "@sethb0/yaml-utils": "^0.4.0",
     "js-yaml": "^3.12.0",
+    "mkdirp": "^0.5.1",
+    "opn": "^5.4.0",
+    "superagent": "^4.0.0-beta.5",
+    "uid-safe": "^2.1.5",
     "yargs": "^12.0.2"
   },
   "devDependencies": {
@@ -54,12 +58,14 @@
     "@sethb0/eslint-config-mfllc": "^0.5.0",
     "@sethb0/mockstd": "^0.1.0",
     "babel-eslint": "^10.0.1",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "eslint": "^5.7.0",
     "eslint-plugin-babel": "^5.2.1",
     "mocha": "^5.2.0",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "superagent-throttle": "^0.2.5"
   },
   "yargs": {}
 }
