@@ -3,16 +3,12 @@ import util from 'util';
 
 const writeFile = util.promisify(fs.writeFile);
 
-function loadFile (path) {
-  return fs.readFileSync(path, 'utf8');
-}
-
 export const stdBuilder = {
   input: {
     description: 'Input filename',
     defaultDescription: 'stdin',
     alias: 'i',
-    coerce: loadFile,
+    coerce: (path) => fs.readFileSync(path, 'utf8'),
     nargs: 1,
     normalize: true,
     requiresArg: true,
@@ -34,6 +30,9 @@ export const stdBuilder = {
   //   type: 'boolean',
   // },
 };
+
+export const stdEpilogue = `Environment variables:
+  VENATOR_CONFIG  Directory of config files            [default: ~/Library/ven2]`;
 
 export function stdOutput (argv, message) {
   return (
