@@ -36,9 +36,10 @@
     "url": "https://github.com/sethb0/ven2/issues"
   },
   "dependencies": {
-    "@sethb0/yaml-utils": "^0.4.0",
+    "@sethb0/yaml-utils": "^0.5.0",
     "js-yaml": "^3.12.0",
     "mkdirp": "^0.5.1",
+    "object.fromentries": "^2.0.0",
     "opn": "^5.4.0",
     "superagent": "^4.0.0-beta.5",
     "uid-safe": "^2.1.5",
