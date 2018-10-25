@@ -1,0 +1,103 @@
+pageSize: LETTER
+pageOrientation: portrait
+pageMargins: [36, 54, 36, 45]
+defaultStyle:
+  font: PTSans
+  fontSize: 10.5
+  alignment: left
+  columnGap: 18
+styles:
+  title:
+    font: 'Trebuchet'
+    fontSize: 21
+    alignment: 'center'
+    margin: &titleMargins [36, 28, 36, 0]
+  subtitle:
+    font: Trebuchet
+    fontSize: 13
+    italics: true
+    color: gray
+    alignment: center
+    margin: [0, 0, 0, 10]
+  section:
+    font: Trebuchet
+    fontSize: 16
+    margin: [0, 10, 0, 3]
+  subsection:
+    font: Trebuchet
+    fontSize: 13
+    margin: [0, 6, 0, 3]
+  summary:
+    fontSize: 14
+    margin: [0, 9, 0, 0]
+  header:
+    fontSize: 11
+    alignment: right
+    margin: *titleMargins
+  footer:
+    fontSize: 11
+    alignment: center
+    margin: [0, 9, 0, 0]
+  hang:
+    leadingIndent: -18
+    marginLeft: 18
+  creation:
+    color: black
+  bonus:
+    color: crimson
+  experienced:
+    color: dodgerblue
+  augmented:
+    color: yellowgreen
+  diminished:
+    color: darkgray
+  N/A:
+    color: firebrick
+images:
+  splat.Solar: images/100%/Solar.png
+  splat.Dragon-Blooded: images/100%/Dragon-Blooded.png
+  splat.Lunar: images/100%/Lunar.png
+  splat.Sidereal: images/100%/Sidereal.png
+  splat.Abyssal: images/100%/Abyssal.png
+  splat.Alchemical: images/100%/Alchemical.png
+  splat.Infernal: images/100%/Infernal.png
+  splat.Raksha: images/100%/Raksha.png
+  splat.Dragon King: images/100%/splat_default.png
+  splat.Jadeborn: images/100%/splat_default.png
+  splat.Mortal: images/100%/splat_default.png
+  splat.Ghost: images/100%/splat_default.png
+  splat.God-Blooded: images/100%/splat_default.png
+  caste.Dawn: images/10%/Dawn.png
+  caste.Zenith: images/10%/Zenith.png
+  caste.Twilight: images/10%/Twilight.png
+  caste.Night: images/10%/Night.png
+  caste.Eclipse: images/10%/Eclipse.png
+  caste.Air: images/10%/Air.png
+  caste.Earth: images/10%/Earth.png
+  caste.Fire: images/10%/Fire.png
+  caste.Water: images/10%/Water.png
+  caste.Wood: images/10%/Wood.png
+  caste.Full Moon: images/10%/Full Moon.png
+  caste.Changing Moon: images/10%/Changing Moon.png
+  caste.No Moon: images/10%/No Moon.png
+  caste.Casteless: images/10%/Casteless.png
+  caste.Journeys: images/10%/Journeys.png
+  caste.Serenity: images/10%/Serenity.png
+  caste.Battles: images/10%/Battles.png
+  caste.Secrets: images/10%/Secrets.png
+  caste.Endings: images/10%/Endings.png
+  caste.Dusk: images/10%/Dusk.png
+  caste.Midnight: images/10%/Midnight.png
+  caste.Daybreak: images/10%/Daybreak.png
+  caste.Day: images/10%/Day.png
+  caste.Moonshadow: images/10%/Moonshadow.png
+  caste.Anklok: images/25%/Anklok.png
+  caste.Mosok: images/25%/Mosok.png
+  caste.Pterok: images/25%/Pterok.png
+  caste.Raptok: images/25%/Raptok.png
+  caste.Orichalcum: images/10%/Orichalcum.png
+  caste.Moonsilver: images/10%/Moonsilver.png
+  caste.Jade: images/10%/Jade.png
+  caste.Starmetal: images/10%/Starmetal.png
+  caste.Soulsteel: images/10%/Soulsteel.png
+  caste.Slayer: images/10%/Slayer.png
