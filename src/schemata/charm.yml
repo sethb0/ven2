@@ -34,6 +34,8 @@ definitions:
 allOf:
 - type: object
   properties:
+    id:
+      $ref: 'common.json#/definitions/idString'
     name:
       $ref: 'common.json#/definitions/nonEmptyString'
     type:
@@ -132,7 +134,7 @@ allOf:
       $ref: 'common.json#/definitions/true'
     errata:
       $ref: 'common.json#/definitions/true'
-  required: ['name', 'type']
+  required: ['id', 'name', 'type']
 - if:
     properties:
       edge cost: true
