@@ -1,0 +1,41 @@
+- id: Infernal.SelfishnessisPower
+  name: Selfishness Is Power
+  type: charm
+  exalt: Infernal
+  group: Ebon Dragon
+  prerequisites:
+    essence: 3
+    charms:
+      - id: Infernal.WitnesstoDarkness
+  action: Simple
+  keywords:
+    Combo-OK: true
+    Shaping: true
+  repurchases:
+    when:
+      - essence: 3
+      - essence: 3
+      - essence: 4
+- id: Solar.ImmortalCaptainsAdvantages
+  name: Immortal Captain's Advantages
+  type: charm
+  exalt: Solar
+  group: Sail
+  prerequisites:
+    traits:
+      Sail: 3
+    essence: 3
+    charms:
+      - id: Solar.PerfectReckoningTechnique
+  action: Permanent
+  keywords:
+    Mirror: true
+    Native: true
+  repurchases:
+    when:
+      - Sail: 3
+        essence: 3
+      - Sail: 3
+        essence: 4
+      - Sail: 3
+        essence: 5

@@ -1,0 +1,41 @@
+- id: Lunar.BesiegingTheBastionOfForm
+  name: Besieging the Bastion of Form
+  type: charm
+  exalt: Lunar
+  group: Strength
+  prerequisites:
+    traits:
+      Strength: 5
+    essence: 6
+    charms:
+      - id: Lunar.FormDestroyingTouch
+  action: Permanent
+  keywords: {}
+  edge cost: 2
+  edges:
+    FastProgression: Fast Progression
+    Fatal: Fatal
+    Selectable: Selectable
+    Custom: Custom
+- id: Abyssal.WitheringPhantasmagoria
+  name: Withering Phantasmagoria
+  type: charm
+  exalt: Abyssal
+  group: Performance
+  prerequisites:
+    traits:
+      Performance: 5
+    essence: 3
+    charms:
+      - id: Abyssal.HauntingApparitionTrick
+  action: Simple
+  keywords:
+    Combo-Basic: true
+    Illusion: true
+    Mirror: true
+    Obvious: true
+  edge cost: 1
+  edges:
+    AreaContinuing: 'Area, Continuing'
+    SingleTargetContinuing: 'Single Target, Continuing'
+    SingleTargetInstant: 'Single Target, Instant'

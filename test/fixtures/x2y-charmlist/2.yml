@@ -1,0 +1,31 @@
+- id: Sidereal.OrdainedBridleOfMercury
+  name: Ordained Bridle of Mercury
+  type: charm
+  exalt: Sidereal
+  group: Ride
+  prerequisites:
+    traits:
+      Ride: 2
+    essence: 2
+  action: Simple
+  keywords:
+    Compulsion: true
+    Obvious: true
+    Touch: true
+  errata: true
+- id: Sidereal.SpiritShapeCompanion
+  name: Spirit-Shape Companion
+  type: charm
+  exalt: Sidereal
+  group: Ride
+  prerequisites:
+    traits:
+      Ride: 3
+    essence: 3
+    charms:
+      - id: Sidereal.OrdainedBridleOfMercury
+  action: Simple
+  keywords:
+    Servitude: true
+    Shaping: true
+    Touch: true

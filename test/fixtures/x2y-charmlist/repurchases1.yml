@@ -1,0 +1,43 @@
+- id: Spirit.EssencePlethora
+  name: Essence Plethora
+  type: charm
+  exalt: Spirit
+  group: Universal
+  prerequisites:
+    essence: 1
+  action: Permanent
+  keywords: {}
+  repurchases:
+    limit: Essence
+- id: Solar.GloriousSolarSaber
+  name: Glorious Solar Saber
+  type: charm
+  exalt: Solar
+  group: Melee
+  prerequisites:
+    traits:
+      Melee: 4
+    essence: 3
+    charms:
+      - id: Solar.CallBlade
+  action: Simple
+  keywords:
+    Combo-OK: true
+    Holy: true
+    Obvious: true
+  repurchases:
+    limit: Melee
+  errata: true
+- id: Lunar.RighteousLionDefense
+  name: Righteous Lion Defense
+  type: charm
+  exalt: Lunar
+  group: Intelligence
+  prerequisites:
+    traits:
+      Intelligence: 3
+    essence: 1
+  action: Permanent
+  keywords: {}
+  repurchases:
+    limit: 2

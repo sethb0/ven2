@@ -1,0 +1,25 @@
+- id: Infernal.1stExcellency
+  name: First (Yozi) Excellency
+  type: generic
+  exalt: Infernal
+  prerequisites:
+    essence: 1
+  action: Reflexive
+  keywords:
+    Combo-OK: true
+  excellency: true
+  repurchases:
+    limit: Essence
+    required: true
+- id: Infernal.2ndExcellency
+  name: Second (Yozi) Excellency
+  type: generic
+  exalt: Infernal
+  prerequisites:
+    essence: 1
+    charms:
+      - id: Infernal.1stExcellency
+  action: Reflexive
+  keywords:
+    Combo-OK: true
+  excellency: true

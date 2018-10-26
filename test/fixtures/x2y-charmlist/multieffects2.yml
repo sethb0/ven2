@@ -1,0 +1,26 @@
+- id: Infernal.WholenessRightlyAssumed
+  name: Wholeness Rightly Assumed
+  type: charm
+  exalt: Infernal
+  group: She Who Lives in Her Name
+  prerequisites:
+    essence: 3
+    charms:
+      - id: Infernal.Ego-InfusedPatternPrimacy
+  action: Permanent
+  keywords: {}
+  variants:
+    Crippling:
+      name: Crippling
+    Sickness:
+      name: Sickness
+    Poison:
+      name: Poison
+    Bashing:
+      name: Bashing
+    Lethal:
+      name: Lethal
+      prerequisites:
+        charms:
+          - id: Infernal.WholenessRightlyAssumed
+            variant: Bashing

@@ -1,0 +1,14 @@
+- id: Lunar.ImpossibleImprovement
+  name: Impossible (Attribute) Improvement
+  type: generic
+  exalt: Lunar
+  prerequisites:
+    traits:
+      _: 5
+    essence: 5
+    charms:
+      - id: Lunar.FlawlessFocus
+      - id: Lunar.InstinctiveUnity
+  action: Permanent
+  keywords: {}
+  raises trait cap: true

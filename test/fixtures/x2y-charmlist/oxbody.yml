@@ -1,0 +1,36 @@
+- id: Spirit.OxBodyTechnique
+  name: Ox-Body Technique
+  type: charm
+  exalt: Spirit
+  group: Aegis
+  prerequisites:
+    essence: 1
+  action: Permanent
+  keywords:
+    Stackable: true
+  repurchases:
+    limit: Essence
+  variants:
+    Category.-1-2:
+      name: '-1/-2'
+- id: Solar.Ox-BodyTechnique
+  name: Ox-Body Technique
+  type: charm
+  exalt: Solar
+  group: Resistance
+  prerequisites:
+    traits:
+      Resistance: 1
+    essence: 1
+  action: Permanent
+  keywords:
+    Stackable: true
+  repurchases:
+    limit: Resistance
+  variants:
+    Category.-0:
+      name: '-0'
+    Category.-1x2:
+      name: '-1x2'
+    Category.-1-2x2:
+      name: '-1/-2x2'

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<charmlist xmlns="http://anathema.sourceforge.net/charms">
+  <charm id="Spirit.OxBodyTechnique" exalt="Spirit" group="Aegis">
+        <prerequisite>
+                <essence value="1"/>
+        </prerequisite>
+        <cost>
+        </cost>
+        <duration duration="Permanent"/>
+        <charmtype type="Permanent"/>
+        <charmAttribute attribute="Stackable" visualize="true"/>
+        <charmAttribute attribute="Mortal"/>
+<oxbody trait="Essence">
+     <pick name="Category.-1-2">
+         <oneHealthLevel/>
+         <twoHealthLevel/>
+     </pick>
+</oxbody>
+        <source source="GodsAndElementals"/>
+  </charm>
+  <charm id="Solar.Ox-BodyTechnique" exalt="Solar" group="Resistance">
+          <prerequisite>
+                  <essence id="Essence" value="1"/>
+                  <trait id="Resistance" value="1"/>
+          </prerequisite>
+          <cost>
+          </cost>
+          <duration duration="Permanent"/>
+          <charmtype type="Permanent"/>
+          <charmAttribute attribute="Stackable" visualize="true"/>
+          <oxbody trait="Resistance">
+                  <pick name="Category.-0">
+                          <zeroHealthLevel/>
+                  </pick>
+                  <pick name="Category.-1x2">
+                          <oneHealthLevel/>
+                          <oneHealthLevel/>
+                  </pick>
+                  <pick name="Category.-1-2x2">
+                          <oneHealthLevel/>
+                          <twoHealthLevel/>
+                          <twoHealthLevel/>
+                  </pick>
+          </oxbody>
+          <source source="SecondEdition" page="208"/>
+  </charm>
+</charmlist>

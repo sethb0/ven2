@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spelllist>
+  <spell id="Terrestrial.DeathObsidianButterflies" circle="Terrestrial">
+		<cost>
+			<essence cost="20" text="or more"/>
+		</cost>
+		<target target="Area30x100x10yards"/>
+		<source source="SecondEdition" page="252" edition="SecondEdition"/>
+    <source source="ScrollErrata"/>
+	</spell>
+</spelllist>

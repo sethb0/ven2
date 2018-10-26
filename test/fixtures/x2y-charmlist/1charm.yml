@@ -1,0 +1,14 @@
+- id: Abyssal.SurvivingTheSunlitLands
+  name: Surviving the Sunlit Lands
+  type: charm
+  exalt: Abyssal
+  group: Survival
+  prerequisites:
+    traits:
+      Survival: 5
+    essence: 3
+    charms:
+      - id: Abyssal.MaelstromWeatheringIndifference
+  action: Permanent
+  keywords:
+    Mirror: true

@@ -1,0 +1,42 @@
+- id: Infernal.RootsOfTheBrassLotus
+  name: Roots of the Brass Lotus
+  type: charm
+  exalt: Infernal
+  group: Martial Arts
+  treat as: Celestial Martial Arts
+  prerequisites:
+    traits:
+      Martial Arts: 5
+    essence: 2
+  action: Permanent
+  keywords:
+    Mirror: true
+  errata: true
+- id: Lunar.TerrestrialBloodlineIntegration
+  name: Terrestrial Bloodline Integration
+  type: charm
+  exalt: Lunar
+  group: Martial Arts
+  treat as: Celestial Martial Arts
+  prerequisites:
+    traits:
+      Martial Arts: 5
+    essence: 2
+  action: Permanent
+  keywords:
+    Mirror: true
+  errata: true
+- id: Sidereal.PerfectedLotusMastery
+  name: Perfected Lotus Mastery
+  type: charm
+  exalt: Sidereal
+  group: Martial Arts
+  treat as: Celestial Martial Arts
+  prerequisites:
+    traits:
+      Martial Arts: 5
+    essence: 2
+  action: Permanent
+  keywords:
+    Mirror: true
+  errata: true

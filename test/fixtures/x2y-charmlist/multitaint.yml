@@ -1,0 +1,20 @@
+- id: Abyssal.FiveKnifeFist
+  name: Five Knife Fist
+  type: charm
+  exalt: Abyssal
+  group: Dark Messiah Style
+  treat as: Celestial Martial Arts
+  prerequisites:
+    traits:
+      Martial Arts: 4
+    essence: 3
+    charms:
+      - id: Celestial.DarkMessiahForm
+  action: Reflexive
+  keywords:
+    Combo-OK: true
+    Obvious: true
+    Taint: true
+  taint:
+    bone spurs: 4
+    skeletal protrusions: 8

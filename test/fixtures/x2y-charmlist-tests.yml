@@ -1,0 +1,190 @@
+- description: returns nothing when given nothing
+  fixture: empty
+  properties: {}
+- description: handles a single regular Charm
+  fixture: 1charm
+  properties:
+    Abyssal.SurvivingTheSunlitLands: Surviving the Sunlit Lands
+- description: handles a Charm with no name
+  fixture: nameless
+  properties: {}
+- description: handles a single generic Charm
+  fixture: 1generic
+  properties:
+    Abyssal.ApocalypticEvolutionOf: Apocalyptic Evolution of (Ability)
+- description: handles a Knack
+  fixture: 1knack
+  properties:
+    Lunar.HeartTheftOfTheBehemoth: Heart-Theft of the Behemoth
+- description: handles two Charms
+  fixture: 2
+  properties:
+    Sidereal.OrdainedBridleOfMercury: Ordained Bridle of Mercury
+    Sidereal.SpiritShapeCompanion: Spirit-Shape Companion
+- description: handles Extra Action Charms
+  fixture: extra-action
+  properties:
+    Solar.CrossFangMaelstrom: Cross-Fang Maelstrom
+    ExtraAction: Extra Action
+- description: handles Charms with no Exalt listed
+  fixture: no-exalt
+  properties:
+    Solar.HolisticMiracleUnderstanding: Holistic Miracle Understanding
+- description: handles Infernal Excellencies
+  fixture: infernal-exc
+  properties:
+    Infernal.1stExcellency: First (Yozi) Excellency
+    Infernal.2ndExcellency: Second (Yozi) Excellency
+- description: handles Elemental Charms
+  fixture: elemental
+  properties:
+    Dragon-Blooded.ElementalDefenseTechnique: Elemental Defense Technique
+- description: handles basic Taint Charms
+  fixture: taint
+  properties:
+    Abyssal.BlackHeartsVenom: Black Heart's Venom
+    Abyssal.VoidStaresBack: Void Stares Back
+- description: handles multiple taints
+  fixture: multitaint
+  properties:
+    Abyssal.FiveKnifeFist: Five Knife Fist
+    DarkMessiahStyle: Dark Messiah Style
+    BoneSpurs: bone spurs
+    SkeletalProtrusions: skeletal protrusions
+- description: handles Terrestrial Martial Arts
+  fixture: tma
+  properties:
+    Terrestrial.WhistlingAnalogSignal: Whistling Analog Signal
+    Terrestrial.ShelteringSeasDefense: Sheltering Seas Defense
+    BlackTideStyle: Black Tide Style
+    LiveWireStyle: Live Wire Style
+- description: handles Celestial Martial Arts
+  fixture: cma
+  properties:
+    Solar.StrikingCobraTechnique: Striking Cobra Technique
+    SnakeStyle: Snake Style
+    Dragon-Blooded.DrowningInUnderstandingKata: Drowning in Understanding Kata
+    TerrestrialInitiation: Terrestrial Initiation into Celestial Martial Arts
+- description: handles Lotus Root Charms
+  pending: true
+  fixture: lotus-root
+  properties:
+    Infernal.RootsOfTheBrassLotus: Roots of the Brass Lotus
+    Lunar.TerrestrialBloodlineIntegration: Terrestrial Bloodline Integration
+    Sidereal.PerfectedLotusMastery: Perfected Lotus Mastery
+    MartialArts: Martial Arts
+- description: handles Charms that raise Essence cap
+  fixture: essence-cap
+  properties:
+    Infernal.AscendancyMantle: Ascendancy Mantle of (Yozi)
+    Solar.GloryToTheMostHigh: Glory to the Most High
+- description: handles Charms that raise other trait cap
+  fixture: trait-cap
+  properties:
+    Lunar.ImpossibleImprovement: Impossible (Attribute) Improvement
+- description: handles group field for non-generic Infernal Charms
+  fixture: infernal
+  properties:
+    Infernal.Loom-SnarlingDeception: Loom-Snarling Deception
+    Infernal.ByPainReforged: By Pain Reforged
+    Infernal.FactualDeterminationAnalysis: Factual Determination Analysis
+    EbonDragon: Ebon Dragon
+    Malfeas: Malfeas
+    SheWhoLivesInHerName: She Who Lives In Her Name
+    Loom: 'Ebon Dragon: Loom-Snarling Deception'
+    PainReforged: 'Malfeas: By Pain Reforged'
+    FactualDetermination: 'SWLiHN: Factual Determination Analysis'
+- description: handles group field for non-generic Lunar Charms
+  fixture: lunar
+  properties:
+    Lunar.ShiftingPenumbraStance: Shifting Penumbra Stance
+    Disguise: Disguise Charms
+- description: handles repurchase Charms with a limit
+  fixture: repurchases1
+  properties:
+    Spirit.EssencePlethora: Essence Plethora
+    Solar.GloriousSolarSaber: Glorious Solar Saber
+    Lunar.RighteousLionDefense: Righteous Lion Defense
+    Universal: Universal Charms
+- description: handles repurchase Charms with steps
+  fixture: repurchases2
+  properties:
+    Infernal.SelfishnessisPower: Selfishness Is Power
+    Solar.ImmortalCaptainsAdvantages: Immortal Captain's Advantages
+    EbonDragon: Ebon Dragon
+- description: handles Ox-Body Technique
+  fixture: oxbody
+  properties:
+    Spirit.OxBodyTechnique: Ox-Body Technique
+    Solar.Ox-BodyTechnique: Ox-Body Technique
+    Aegis: Aegis
+    OxBodyTechnique.Category.-1-2: '-1/-2'
+    OxBodyTechnique.Category.-1-2x2: '-1/-2x2'
+    OxBodyTechnique.Category.-0: '-0'
+    OxBodyTechnique.Category.-1x2: '-1x2'
+- description: handles multiEffects tag with explicit variants
+  fixture: multieffects1
+  properties:
+    Dragon-Blooded.ElementProtectionForm: (Element) Protection Form
+    Infernal.GreatMothersTears: Great Mother's Tears
+    Infernal.GreatMothersTears.Subeffects.PoisonImmunity: Poison Immunity
+    Infernal.GreatMothersTears.Subeffects.KnockoutPoisons: Knockout Poisons
+    Infernal.GreatMothersTears.Subeffects.EmotionPoisons: Emotion Effect Poisons
+    Infernal.GreatMothersTears.Subeffects.MutagenicPoisons: Mutagenic Poisons
+    Mother: 'Kimbery: Mother Sea Mastery'
+    Dragon-Blooded.ElementProtectionForm.Subeffects.Air: Air
+    Dragon-Blooded.ElementProtectionForm.Subeffects.Earth: Earth
+    Dragon-Blooded.ElementProtectionForm.Subeffects.Fire: Fire
+    Dragon-Blooded.ElementProtectionForm.Subeffects.Water: Water
+    Dragon-Blooded.ElementProtectionForm.Subeffects.Wood: Wood
+- description: handles multiEffects tag with subeffect prerequisites
+  fixture: multieffects2
+  properties:
+    Infernal.WholenessRightlyAssumed: Wholeness Rightly Assumed
+    Infernal.WholenessRightlyAssumed.PrintPattern: Wholeness Rightly Assumed ({0})
+    Infernal.WholenessRightlyAssumed.Subeffects.Crippling: Crippling
+    Infernal.WholenessRightlyAssumed.Subeffects.Sickness: Sickness
+    Infernal.WholenessRightlyAssumed.Subeffects.Poison: Poison
+    Infernal.WholenessRightlyAssumed.Subeffects.Bashing: Bashing
+    Infernal.WholenessRightlyAssumed.Subeffects.Lethal: Lethal
+    Ego: 'SWLiHN: Ego-Infused Pattern Primacy'
+    SheWhoLivesInHerName: She Who Lives in Her Name
+- description: handles subeffects tag
+  fixture: subeffects
+  properties:
+    Lunar.BesiegingTheBastionOfForm: Besieging the Bastion of Form
+    DamageEnhancement: Damage Enhancement Charms
+    Lunar.BesiegingTheBastionOfForm.Subeffects.FastProgression: Fast Progression
+    Abyssal.WitheringPhantasmagoria: Withering Phantasmagoria
+    Abyssal.WitheringPhantasmagoria.Subeffects.AreaContinuing: 'Area, Continuing'
+    Abyssal.WitheringPhantasmagoria.Subeffects.SingleTargetContinuing: 'Single Target, Continuing'
+    Abyssal.WitheringPhantasmagoria.Subeffects.SingleTargetInstant: 'Single Target, Instant'
+- description: handles Heretical Charms
+  fixture: Heretical
+  properties:
+    Infernal.Scale-SheddingSolution: Scale-Shedding Solution
+    Heretic: Heretical Charms
+- description: handles Devil-Tiger Charms
+  fixture: devil-tiger
+  properties:
+    Infernal.TheTempestofInwardFocus: The Tempest of Inward Focus
+    DevilTiger: 'Heretical Charms: Triumphant Howl of the Devil Tiger'
+- description: handles Charms with more than one trait prerequisite
+  fixture: multi-trait
+  properties:
+    Celestial.StentorianChallenge: Stentorian Challenge
+    ArtOfForcefulDeclarationStyle: (Celestial) Art of Forceful Declaration Style
+    MartialArts: Martial Arts
+- description: handles genericCharmAttributeRequirement
+  fixture: gcar
+  properties:
+    Solar.InfiniteMastery: Infinite {0} Mastery
+- description: handles "any Excellency" requirements
+  fixture: car
+  properties:
+    Sidereal.GiftOfABrokenMask: Gift of a Broken Mask
+    Lunar.InevitableGeniusInsight: Inevitable Genius Insight
+    Abyssal.RaveningMouth.MartialArts: Ravening Mouth of MartialArts
+    Infernal.TriumphantHowloftheDevilTiger: Triumphant Howl of the Devil-Tiger
+    Insight: Insight Charms
+    MartialArts: Martial Arts

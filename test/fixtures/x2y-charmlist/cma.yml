@@ -1,0 +1,30 @@
+- id: Solar.StrikingCobraTechnique
+  name: Striking Cobra Technique
+  type: charm
+  exalt: Celestial Martial Arts
+  group: Snake Style
+  prerequisites:
+    traits:
+      Martial Arts: 2
+    essence: 1
+  action: Supplemental
+  keywords:
+    Combo-OK: true
+- id: Dragon-Blooded.DrowningInUnderstandingKata
+  name: Drowning in Understanding Kata
+  type: charm
+  exalt: Celestial Martial Arts
+  group: Enlightening
+  prerequisites:
+    traits:
+      Martial Arts: 5
+    essence: 5
+    charms:
+      - id: Dragon-Blooded.Tiger-and-BearUnity
+  action: Simple
+  keywords:
+    Enlightening: true
+    Martyr: true
+    Obvious: true
+    Touch: true
+    Training: true

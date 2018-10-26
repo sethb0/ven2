@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<charmlist>
+  <charm id="Solar.HolisticMiracleUnderstanding" group="Craft">
+       <prerequisite>
+            <trait id="Craft" value="5" />
+            <essence value="5" />
+            <charmReference id="Solar.DesignBeyondLimit" />
+       </prerequisite>
+       <cost />
+       <duration duration="Permanent" />
+       <charmtype type="Permanent" />
+       <source source="ScrollErrata" />
+  </charm>
+</charmlist>

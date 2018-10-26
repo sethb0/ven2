@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<charmlist xmlns="http://anathema.sourceforge.net/charms">
+     <genericCharm id="Infernal.AscendancyMantle" exalt="Infernal">
+          <prerequisite>
+               <trait value="0" />
+               <essence value="5" />
+               <genericCharmReference id="Infernal.1stExcellency"/>
+          </prerequisite>
+          <cost />
+          <duration duration="Permanent" />
+          <charmtype type="Permanent">
+          </charmtype>
+          <genericCharmAttribute attribute="Excellency" />
+          <charmAttribute attribute="Native" />
+          <charmAttribute attribute="Combo-OK" visualize="true" />
+          <traitCapModifier trait="Essence" modifier="1"/>
+          <source source="BrokenWingedCrane" />
+     </genericCharm>
+  <charm id="Solar.GloryToTheMostHigh" exalt="Solar" group="Integrity">
+       <prerequisite>
+            <trait id="Integrity" value="5" />
+            <essence value="5" />
+            <charmReference id="Solar.PhoenixRenewalTactic" />
+       </prerequisite>
+       <cost />
+       <duration amount="1" unit="day" />
+       <charmtype type="Reflexive" />
+       <charmAttribute attribute="Combo-OK" visualize="true" />
+       <charmAttribute attribute="Mirror" visualize="true" />
+       <charmAttribute attribute="Obvious" visualize="true" />
+       <traitCapModifier trait="Essence" modifier="1"/>
+       <source source="GloriesUCS" />
+  </charm>
+</charmlist>

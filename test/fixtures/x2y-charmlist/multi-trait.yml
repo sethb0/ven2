@@ -1,0 +1,13 @@
+- id: Celestial.StentorianChallenge
+  name: Stentorian Challenge
+  type: charm
+  exalt: Celestial Martial Arts
+  group: Art of Forceful Declaration Style
+  prerequisites:
+    traits:
+      Martial Arts: 2
+      Valor: 2
+    essence: 1
+  action: Supplemental
+  keywords:
+    Combo-OK: true

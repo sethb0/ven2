@@ -1,0 +1,17 @@
+- id: Infernal.Scale-SheddingSolution
+  name: Scale-Shedding Solution
+  type: charm
+  exalt: Infernal
+  group: Heretical
+  prerequisites:
+    essence: 2
+    charms:
+      - id: Infernal.CrackedCellCircumvention
+      - id: Infernal.DreadPanoplyoftheSilentWind
+  action: Reflexive
+  keywords:
+    Combo-OK: true
+    Heretical: true
+    Native: true
+    Obvious: true
+    Sorcerous: true

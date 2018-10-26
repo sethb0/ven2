@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<charmlist xmlns="http://anathema.sourceforge.net/charms">
+  <charm id="Infernal.Loom-SnarlingDeception" exalt="Infernal" group="Loom">
+         <prerequisite>
+              <trait id="EbonDragon" value="0" />
+              <essence value="2" />
+         </prerequisite>
+          <cost>
+      <essence cost="0-8" />
+      </cost>
+         <duration duration="Indefinite" />
+         <charmtype type="Simple" />
+         <charmAttribute attribute="Combo-OK" visualize="true" />
+         <charmAttribute attribute="Illusion" visualize="true" />
+         <charmAttribute attribute="Shaping" visualize="true" />
+         <source source="Infernals" />
+    </charm>
+    <charm id="Infernal.ByPainReforged" exalt="Infernal" group="PainReforged">
+         <prerequisite>
+              <trait id="Malfeas" value="0" />
+              <essence value="2" />
+         </prerequisite>
+         <cost>
+              <health cost="1" type="Bashing" />
+         </cost>
+         <duration duration="Instant" />
+         <charmtype type="Simple" />
+         <charmAttribute attribute="Combo-OK" visualize="true" />
+         <source source="Infernals" />
+    </charm>
+    <charm id="Infernal.FactualDeterminationAnalysis" exalt="Infernal" group="FactualDetermination">
+         <prerequisite>
+              <trait id="SheWhoLivesInHerName" value="0" />
+              <essence value="2" />
+         </prerequisite>
+          <cost>
+              <essence cost="2" />
+         </cost>
+         <duration duration="Instant" />
+         <charmtype type="Reflexive" />
+         <charmAttribute attribute="Combo-OK" visualize="true" />
+         <source source="Infernals" />
+    </charm>
+</charmlist>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<charmlist>
+  <genericCharm id="Solar.InfiniteMastery" exalt="Solar">
+        <prerequisite>
+                <trait value="4"/>
+                <essence value="3"/>
+                <genericCharmAttributeRequirement attribute="Excellency"/>
+        </prerequisite>
+        <cost>
+                <essence cost="2" text="or more"/>
+                <willpower cost="1"/>
+        </cost>
+        <duration amount="1" unit="scene"/>
+        <charmtype type="Simple"/>
+        <charmAttribute attribute="Mortal"/>
+        <source source="SecondEdition" page="185"/>
+  </genericCharm>
+</charmlist>

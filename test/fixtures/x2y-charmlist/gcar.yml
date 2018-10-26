@@ -1,0 +1,11 @@
+- id: Solar.InfiniteMastery
+  name: Infinite {0} Mastery
+  type: generic
+  exalt: Solar
+  prerequisites:
+    traits:
+      _: 4
+    essence: 3
+    excellencies: 1
+  action: Simple
+  keywords: {}

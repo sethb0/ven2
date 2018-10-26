@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<charmlist xmlns="http://anathema.sourceforge.net/charms">
+  <charm id="Lunar.HeartTheftOfTheBehemoth" exalt="Lunar" group="Supernatural">
+       <prerequisite>
+            <trait id="Stamina" value="5" />
+            <essence value="5" />
+            <charmReference id="Lunar.GreenSunChild" />
+       </prerequisite>
+       <cost />
+       <duration duration="Instant"/>
+       <charmtype type="Reflexive"/>
+       <charmAttribute attribute="NotAlienLearnable" />
+       <charmAttribute attribute="Knack"/>
+       <source source="Lunars2nd" />
+  </charm>
+</charmlist>

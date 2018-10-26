@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<charmlist xmlns="http://anathema.sourceforge.net/charms">
+  <genericCharm id="Lunar.ImpossibleImprovement" exalt="Lunar">
+       <prerequisite>
+            <trait value="5" />
+            <essence value="5" />
+            <genericCharmReference id="Lunar.InstinctiveUnity"/>
+            <genericCharmReference id="Lunar.FlawlessFocus"/>
+       </prerequisite>
+       <cost />
+       <duration duration="Permanent" />
+       <charmtype type="Permanent" />
+       <genericCharmAttribute attribute="Excellency" />
+       <charmAttribute attribute="Mortal" />
+       <traitCapModifier modifier="1"/>
+       <source source="LordsOfCreation" page="68" />
+  </genericCharm>
+</charmlist>

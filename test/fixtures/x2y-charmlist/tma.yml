@@ -1,0 +1,26 @@
+- id: Terrestrial.WhistlingAnalogSignal
+  name: Whistling Analog Signal
+  type: charm
+  exalt: Terrestrial Martial Arts
+  group: Live Wire Style
+  prerequisites:
+    traits:
+      Martial Arts: 2
+    essence: 2
+  action: Reflexive
+  keywords:
+    Combo-OK: true
+- id: Terrestrial.ShelteringSeasDefense
+  name: Sheltering Seas Defense
+  type: charm
+  exalt: Terrestrial Martial Arts
+  group: Black Tide Style
+  prerequisites:
+    traits:
+      Martial Arts: 2
+    essence: 2
+  action: Reflexive
+  keywords:
+    Aquatic: true
+    Combo-OK: true
+    Obvious: true

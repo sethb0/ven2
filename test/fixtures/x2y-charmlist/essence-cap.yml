@@ -1,0 +1,29 @@
+- id: Infernal.AscendancyMantle
+  name: Ascendancy Mantle of (Yozi)
+  type: generic
+  exalt: Infernal
+  prerequisites:
+    essence: 5
+    charms:
+      - id: Infernal.1stExcellency
+  action: Permanent
+  keywords:
+    Native: true
+  raises Essence cap: true
+- id: Solar.GloryToTheMostHigh
+  name: Glory to the Most High
+  type: charm
+  exalt: Solar
+  group: Integrity
+  prerequisites:
+    traits:
+      Integrity: 5
+    essence: 5
+    charms:
+      - id: Solar.PhoenixRenewalTactic
+  action: Reflexive
+  keywords:
+    Combo-OK: true
+    Mirror: true
+    Obvious: true
+  raises Essence cap: true

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<charmlist xmlns="http://anathema.sourceforge.net/charms">
+     <!-- Ride -->
+     <charm id="Sidereal.OrdainedBridleOfMercury" exalt="Sidereal" group="Ride">
+          <prerequisite>
+               <trait id="Ride" value="2" />
+               <essence value="2" />
+          </prerequisite>
+          <cost>
+               <essence cost="10" />
+               <willpower cost="1" />
+          </cost>
+          <duration event="AppliesBridle" />
+          <charmtype type="Simple">
+               <special speed="6" defense="-2" />
+          </charmtype>
+          <charmAttribute attribute="Compulsion" visualize="true" />
+          <charmAttribute attribute="Obvious" visualize="true" />
+          <charmAttribute attribute="Touch" visualize="true" />
+          <source source="Sidereals2nd" />
+          <source source="ScrollErrata" />
+     </charm>
+     <charm id="Sidereal.SpiritShapeCompanion" exalt="Sidereal" group="Ride">
+          <prerequisite>
+               <trait id="Ride" value="3" />
+               <essence value="3" />
+               <charmReference id="Sidereal.OrdainedBridleOfMercury" />
+          </prerequisite>
+          <cost>
+               <essence cost="10" />
+               <willpower cost="1" />
+               <experience cost="3" permanent="true" />
+          </cost>
+          <duration duration="Instant" />
+          <charmtype type="Simple">
+               <special speed="6" defense="-2" />
+          </charmtype>
+          <charmAttribute attribute="Servitude" visualize="true" />
+          <charmAttribute attribute="Shaping" visualize="true" />
+          <charmAttribute attribute="Touch" visualize="true" />
+          <source source="Sidereals2nd" />
+     </charm>
+</charmlist>

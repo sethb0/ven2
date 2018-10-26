@@ -1,0 +1,25 @@
+- id: Infernal.TheTempestofInwardFocus
+  name: The Tempest of Inward Focus
+  type: charm
+  exalt: Infernal
+  group: Heretical
+  prerequisites:
+    essence: 6
+    charms:
+      - id: Infernal.TriumphantHowloftheDevilTiger
+    groups:
+      - threshold: 2
+        charms:
+          - id: Infernal.BlackMirrorShintai
+          - id: Infernal.ScarletRaptureShintai
+          - id: Infernal.SplinteredGaleShintai
+          - id: Infernal.Soul-SandDevilShintai
+          - id: Infernal.TenebrousApotheosisShintai
+          - id: Infernal.All-DevouringDepthsShintai
+          - id: Infernal.DevilTyrantAvatarShintai
+          - id: Infernal.DemonEmperorShintai
+          - id: Infernal.HeuristicLogosShintai
+  action: Permanent
+  keywords:
+    Heretical: true
+    Native: true

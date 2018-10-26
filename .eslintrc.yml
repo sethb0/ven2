@@ -47,7 +47,7 @@ overrides:
 - files: bin/*.js
   parserOptions:
     sourceType: script
-- files: y2j
+- files: utils/*.js
   parserOptions:
     sourceType: script
 - files: src/commands/*.js

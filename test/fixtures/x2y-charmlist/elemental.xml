@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<charmlist>
+  <charm id="Dragon-Blooded.ElementalDefenseTechnique" exalt="Dragon-Blooded" group="Dodge">
+   <prerequisite>
+    <trait id="Dodge" value="5"/>
+    <essence value="3"/>
+    <charmReference id="Dragon-Blooded.SafetyAmongEnemies"/>
+   </prerequisite>
+   <cost>
+
+     <essence cost="5"/>
+
+   </cost>
+   <duration amount="1" unit="scene"/>
+   <charmtype type="Simple"/>
+   <charmAttribute attribute="Elemental" visualize="true"/>
+   <charmAttribute attribute="Leader6" visualize="true"/>
+   <charmAttribute attribute="Obvious" visualize="true"/>
+   <elemental/>
+   <source source="DragonBlooded2nd"/>
+   <source source="ScrollErrata"/>
+  </charm>
+</charmlist>

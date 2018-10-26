@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spelllist>
+  <spell circle="Terrestrial" id="Terrestrial.MaledictionDistortedCompass">
+		<cost>
+			<essence cost="15"/>
+		</cost>
+		<target target="Creature"/>
+		<source edition="SecondEdition" source="WhiteTreatise" page="52"/>
+	</spell>
+</spelllist>

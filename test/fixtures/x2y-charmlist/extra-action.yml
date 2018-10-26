@@ -1,0 +1,14 @@
+- id: Solar.CrossFangMaelstrom
+  name: Cross-Fang Maelstrom
+  type: charm
+  exalt: Solar
+  group: Melee
+  prerequisites:
+    traits:
+      Melee: 5
+    essence: 4
+    charms:
+      - id: Solar.IronWhirlwindAttack
+  action: Extra Action
+  keywords:
+    Combo-OK: true

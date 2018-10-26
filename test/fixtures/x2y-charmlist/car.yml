@@ -1,0 +1,69 @@
+- id: Sidereal.GiftOfABrokenMask
+  name: Gift of a Broken Mask
+  type: charm
+  exalt: Sidereal
+  group: Stealth
+  prerequisites:
+    traits:
+      Stealth: 2
+    essence: 2
+    charms:
+      - id: Sidereal.SoftPresencePractice
+    excellencies: 1
+  action: Simple
+  keywords:
+    Combo-Basic: true
+    Shaping: true
+    Touch: true
+  errata: true
+- id: Lunar.InevitableGeniusInsight
+  name: Inevitable Genius Insight
+  type: charm
+  exalt: Lunar
+  group: Intelligence
+  prerequisites:
+    traits:
+      Intelligence: 3
+    essence: 2
+    excellencies: 2
+  action: Simple
+  keywords: {}
+- id: Abyssal.RaveningMouth.MartialArts
+  name: Ravening Mouth of MartialArts
+  type: charm
+  exalt: Abyssal
+  group: Martial Arts
+  prerequisites:
+    traits:
+      Martial Arts: 4
+    essence: 3
+    excellencies: 1
+  action: Reflexive
+  keywords:
+    Combo-OK: true
+- id: Infernal.TriumphantHowloftheDevilTiger
+  name: Triumphant Howl of the Devil-Tiger
+  type: charm
+  exalt: Infernal
+  group: Heretical
+  prerequisites:
+    essence: 6
+    groups:
+      - threshold: 1
+        charms:
+          - id: Infernal.BlackMirrorShintai
+          - id: Infernal.ScarletRaptureShintai
+          - id: Infernal.SplinteredGaleShintai
+          - id: Infernal.Soul-SandDevilShintai
+          - id: Infernal.TenebrousApotheosisShintai
+          - id: Infernal.All-DevouringDepthsShintai
+          - id: Infernal.DevilTyrantAvatarShintai
+          - id: Infernal.DemonEmperorShintai
+          - id: Infernal.HeuristicLogosShintai
+    excellencies: 1
+    # I am comfortable not handling SorcerousEnlightenment because it affects only this Charm
+    # I will hack something in by hand
+  action: Permanent
+  keywords:
+    Heretical: true
+    Native: true

@@ -1,0 +1,14 @@
+- id: Abyssal.ApocalypticEvolutionOf
+  name: Apocalyptic Evolution of (Ability)
+  type: generic
+  exalt: Abyssal
+  prerequisites:
+    traits:
+      _: 5
+    essence: 5
+  action: Permanent
+  keywords:
+    Mirror: true
+    Native: true
+  transcends: true
+  errata: true

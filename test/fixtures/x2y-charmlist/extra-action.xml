@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<charmlist>
+  <charm id="Solar.CrossFangMaelstrom" exalt="Solar" group="Melee">
+    <prerequisite>
+      <trait id="Melee" value="5" />
+      <essence value="4" />
+      <charmReference id="Solar.IronWhirlwindAttack" />
+    </prerequisite>
+    <cost>
+      <essence cost="1" text=", 3+ free reflexive attacks" />
+    </cost>
+    <duration duration="Instant" />
+    <charmtype type="ExtraAction" />
+    <charmAttribute attribute="Combo-OK" visualize="true" />
+    <source source="InkMonkeys" />
+  </charm>
+</charmlist>

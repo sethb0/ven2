@@ -1,0 +1,28 @@
+- id: Dragon-Blooded.ElementalDefenseTechnique
+  name: Elemental Defense Technique
+  type: charm
+  exalt: Dragon-Blooded
+  group: Dodge
+  prerequisites:
+    traits:
+      Dodge: 5
+    essence: 3
+    charms:
+      - id: Dragon-Blooded.SafetyAmongEnemies
+  action: Simple
+  keywords:
+    Elemental: true
+    Leader: 6
+    Obvious: true
+  variants:
+    Air:
+      name: Air
+    Earth:
+      name: Earth
+    Fire:
+      name: Fire
+    Water:
+      name: Water
+    Wood:
+      name: Wood
+  errata: true

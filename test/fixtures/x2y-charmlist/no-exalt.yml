@@ -1,0 +1,14 @@
+- id: Solar.HolisticMiracleUnderstanding
+  name: Holistic Miracle Understanding
+  type: charm
+  exalt: Solar
+  group: Craft
+  prerequisites:
+    traits:
+      Craft: 5
+    essence: 5
+    charms:
+      - id: Solar.DesignBeyondLimit
+  action: Permanent
+  keywords: {}
+  errata: true

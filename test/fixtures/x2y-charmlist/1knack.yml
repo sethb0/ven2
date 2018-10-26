@@ -1,0 +1,13 @@
+- id: Lunar.HeartTheftOfTheBehemoth
+  name: Heart-Theft of the Behemoth
+  type: knack
+  exalt: Lunar
+  prerequisites:
+    traits:
+      Stamina: 5
+    essence: 5
+    charms:
+      - id: Lunar.GreenSunChild
+  action: Reflexive
+  keywords:
+    Native: true

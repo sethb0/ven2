@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<charmlist xmlns="http://anathema.sourceforge.net/charms">
+     <genericCharm id="Infernal.1stExcellency" exalt="Infernal">
+          <prerequisite>
+               <trait value="0" />
+               <essence value="1" />
+          </prerequisite>
+          <cost>
+               <essence cost="1" text="per die" />
+          </cost>
+          <duration duration="Instant" />
+          <charmtype type="Reflexive">
+               <special primaryStep="1" secondaryStep="2" />
+          </charmtype>
+          <genericCharmAttribute attribute="Excellency" />
+          <charmAttribute attribute="Infernal1stExcellency" visualize="false"/>
+          <charmAttribute attribute="Mortal" />
+          <charmAttribute attribute="Combo-OK" visualize="true" />
+          <essenceFixedRepurchases/>
+          <source source="Infernals" />
+     </genericCharm>
+     <genericCharm id="Infernal.2ndExcellency" exalt="Infernal">
+          <prerequisite>
+               <trait value="0" />
+               <essence value="1" />
+               <genericCharmReference id="Infernal.1stExcellency"/>
+          </prerequisite>
+          <cost>
+               <essence cost="2" text="per success" />
+          </cost>
+          <duration duration="Instant" />
+          <charmtype type="Reflexive">
+               <special primaryStep="1" secondaryStep="2" />
+          </charmtype>
+          <genericCharmAttribute attribute="Excellency" />
+          <charmAttribute attribute="Mortal" />
+          <charmAttribute attribute="Combo-OK" visualize="true" />
+          <source source="Infernals" />
+     </genericCharm>
+</charmlist>

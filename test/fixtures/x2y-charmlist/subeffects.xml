@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<charmlist>
+  <charm id="Lunar.BesiegingTheBastionOfForm" exalt="Lunar" group="DamageEnhancement">
+       <prerequisite>
+            <trait id="Strength" value="5" />
+            <essence value="6" />
+            <charmReference id="Lunar.FormDestroyingTouch" />
+       </prerequisite>
+       <cost />
+       <duration duration="Permanent" />
+       <charmtype type="Permanent" />
+       <subeffects bpCost="1">
+                     <subeffect name="FastProgression"/>
+                     <subeffect name="Fatal"/>
+                     <subeffect name="Selectable"/>
+                     <subeffect name="Custom"/>
+               </subeffects>
+       <source source="LordsOfCreation" />
+  </charm>
+  <charm id="Abyssal.WitheringPhantasmagoria" exalt="Abyssal" group="Performance">
+       <prerequisite>
+            <trait id="Performance" value="5" />
+            <essence value="3" />
+            <charmReference id="Abyssal.HauntingApparitionTrick" />
+       </prerequisite>
+       <cost>
+            <essence cost="Variable" />
+            <willpower cost="1" />
+       </cost>
+       <duration duration="Instant" />
+       <charmtype type="Simple">
+            <special defense="-2" speed="6" />
+       </charmtype>
+       <charmAttribute attribute="Combo-Basic" visualize="true" />
+       <charmAttribute attribute="Illusion" visualize="true" />
+       <charmAttribute attribute="Mirror" visualize="true" />
+       <!-- NOTE:  Solar Mirror - Demon-Wracking Glory -->
+       <charmAttribute attribute="Obvious" visualize="true" />
+       <subeffects bpCost=".5">
+          <subeffect name="AreaContinuing"/>
+          <subeffect name="SingleTargetContinuing"/>
+          <subeffect name="SingleTargetInstant"/>
+       </subeffects>
+       <source source="Abyssals2nd" />
+  </charm>
+</charmlist>

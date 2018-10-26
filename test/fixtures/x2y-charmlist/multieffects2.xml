@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<charmlist>
+  <charm id="Infernal.WholenessRightlyAssumed" exalt="Infernal" group="Ego"> 
+
+       <prerequisite>
+            <trait id="SheWhoLivesInHerName" value="0" />
+            <essence value="3" />
+            <charmReference id="Infernal.Ego-InfusedPatternPrimacy"/>
+       </prerequisite>
+        <cost />
+       <duration duration="Permanent" />
+       <charmtype type="Permanent" />
+       <multiEffects>
+             <effect name="Crippling"/>
+             <effect name="Sickness"/>
+             <effect name="Poison"/>
+             <effect name="Bashing"/>
+             <effect name="Lethal" prereqEffect="Bashing"/>
+       </multiEffects>
+       <source source="Infernals" />
+  </charm>
+</charmlist>

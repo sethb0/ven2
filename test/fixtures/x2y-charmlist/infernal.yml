@@ -1,0 +1,32 @@
+- id: Infernal.Loom-SnarlingDeception
+  name: Loom-Snarling Deception
+  type: charm
+  exalt: Infernal
+  group: Ebon Dragon
+  prerequisites:
+    essence: 2
+  action: Simple
+  keywords:
+    Combo-OK: true
+    Illusion: true
+    Shaping: true
+- id: Infernal.ByPainReforged
+  name: By Pain Reforged
+  type: charm
+  exalt: Infernal
+  group: Malfeas
+  prerequisites:
+    essence: 2
+  action: Simple
+  keywords:
+    Combo-OK: true
+- id: Infernal.FactualDeterminationAnalysis
+  name: Factual Determination Analysis
+  type: charm
+  exalt: Infernal
+  group: She Who Lives in Her Name
+  prerequisites:
+    essence: 2
+  action: Reflexive
+  keywords:
+    Combo-OK: true

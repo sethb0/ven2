@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<charmlist xmlns="http://anathema.sourceforge.net/charms">
+     <!-- Art of Forceful Declaration -->
+     <charm id="Celestial.StentorianChallenge" exalt="Solar" group="ArtOfForcefulDeclarationStyle">
+          <prerequisite>
+               <trait id="MartialArts" value="2" />
+               <trait id="Valor" value="2" />
+               <essence value="1" />
+          </prerequisite>
+          <cost>
+               <essence cost="1" />
+          </cost>
+          <duration duration="Instant" />
+          <charmtype type="Supplemental" />
+          <charmAttribute attribute="Celestial" />
+          <charmAttribute attribute="Combo-OK" visualize="true" />
+          <source source="ImperfectLotus" />
+     </charm>
+</charmlist>

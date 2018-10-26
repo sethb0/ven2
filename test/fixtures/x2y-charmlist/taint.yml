@@ -1,0 +1,35 @@
+- id: Abyssal.BlackHeartsVenom
+  name: Black Heart's Venom
+  type: charm
+  exalt: Abyssal
+  group: Medicine
+  prerequisites:
+    traits:
+      Medicine: 3
+    essence: 3
+    charms:
+      - id: Abyssal.LifeMockingAssembly
+      - id: Abyssal.VenomBleedingAgony
+  action: Reflexive
+  keywords:
+    Combo-OK: true
+    Poison: true
+    Taint: true
+  taint:
+    permanent: 0
+- id: Abyssal.VoidStaresBack
+  name: Void Stares Back
+  type: charm
+  exalt: Abyssal
+  group: Awareness
+  prerequisites:
+    traits:
+      Awareness: 3
+    essence: 2
+  action: Simple
+  keywords:
+    Combo-OK: true
+    Obvious: true
+    Taint: true
+  taint:
+    permanent: 2

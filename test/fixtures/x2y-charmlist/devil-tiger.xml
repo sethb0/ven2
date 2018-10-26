@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<charmlist>
+  <charm id="Infernal.TheTempestofInwardFocus" exalt="Infernal" group="DevilTiger">
+       <prerequisite>
+            <essence value="6" />
+                                     <charmReference id="Infernal.TriumphantHowloftheDevilTiger" />
+                                     <selectiveCharmGroup threshold="2" label="Shintai">
+                                     <charmReference id="Infernal.BlackMirrorShintai" />
+                     <charmReference id="Infernal.ScarletRaptureShintai" />
+                                     <charmReference id="Infernal.SplinteredGaleShintai" />
+                                     <charmReference id="Infernal.Soul-SandDevilShintai" />
+                                     <!--the greater shintai for Cecelyne requires the minor -->
+                                     <charmReference id="Infernal.TenebrousApotheosisShintai" />
+                                     <charmReference id="Infernal.All-DevouringDepthsShintai" />
+                                     <charmReference id="Infernal.DevilTyrantAvatarShintai" />
+                                     <charmReference id="Infernal.DemonEmperorShintai" />
+                                     <charmReference id="Infernal.HeuristicLogosShintai" />
+                             </selectiveCharmGroup>
+       </prerequisite>
+       <cost />
+       <duration duration="Permanent" />
+       <charmtype type="Permanent" />
+       <charmAttribute attribute="Heretical" visualize="true" />
+       <charmAttribute attribute="Native" visualize="false" />
+       <source source="BrokenWingedCrane" />
+  </charm>
+</charmlist>

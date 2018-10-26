@@ -1,0 +1,16 @@
+- id: Lunar.ShiftingPenumbraStance
+  name: Shifting Penumbra Stance
+  type: charm
+  exalt: Lunar
+  group: Appearance
+  prerequisites:
+    traits:
+      Appearance: 3
+    essence: 2
+    charms:
+      - id: Lunar.HideOfTheCunningHunter
+  action: Reflexive
+  keywords:
+    Combo-OK: true
+    Illusion: true
+    Obvious: true
