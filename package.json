@@ -6,10 +6,10 @@
   "license": "MIT",
   "scripts": {
     "posttest": "eslint .",
-    "prepare": "rm -rf dist && babel src --out-dir dist && cp -pr src/assets dist/",
+    "prepare": "rm -rf dist && babel src --out-dir dist --copy-files",
     "start": "node --require @babel/register src",
     "test": "mocha",
-    "web": "rm -rf web/schema && mkdir -p web/schema && (for x in src/schemata/*.yml; do ./y2j \"$x\" web/schema/$(basename \"$x\" .yml).json; done) && firebase deploy --only hosting"
+    "web": "rm -rf web/schema && mkdir -p web/schema && (for x in src/schemata/*.yml; do node bin/y2j.js \"$x\" web/schema/$(basename \"$x\" .yml).json; done) && firebase deploy --only hosting"
   },
   "bin": {
     "ven2": "./bin/ven2.js"
@@ -42,9 +42,6 @@
     "js-yaml": "^3.12.0",
     "mkdirp": "^0.5.1",
     "object.fromentries": "^2.0.0",
-    "opn": "^5.4.0",
-    "superagent": "^4.0.0-beta.5",
-    "uid-safe": "^2.1.5",
     "yargs": "^12.0.2"
   },
   "devDependencies": {
@@ -67,8 +64,7 @@
     "eslint": "^5.7.0",
     "eslint-plugin-babel": "^5.2.1",
     "mocha": "^5.2.0",
-    "rimraf": "^2.6.2",
-    "superagent-throttle": "^0.2.5"
+    "rimraf": "^2.6.2"
   },
   "yargs": {}
 }

@@ -32,6 +32,7 @@ test_out
 node_modules
 /dist
 .firebase
+.firebaserc
 /web/schema
 
 .tmp
