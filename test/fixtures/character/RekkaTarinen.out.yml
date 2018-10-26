@@ -1,0 +1,312 @@
+name: Rekka Tarinen
+player: NPC
+splat: Lunar
+caste: Changing Moon
+concept: Lei’s Lunar mate
+motivation: to watch over Lei-Xin and keep her safe from dangers she does not recognize
+description:
+  sex: F
+  eyes: brown
+  hair: brown
+  skin: fair
+  appearance: 'Tell: white feathers scattered through hair'
+anima: great snowy owl
+age: 30
+essence:
+  permanent:
+    creation: 3
+    experienced: 5
+willpower:
+  creation: 10
+virtues:
+  Compassion:
+    creation: 3
+    experienced: 4
+  Conviction:
+    creation: 5
+  Temperance:
+    creation: 2
+  Valor:
+    creation: 2
+    experienced: 3
+attributes:
+  Strength:
+    creation: 3
+    experienced: 4
+  Dexterity:
+    creation: 5
+  Stamina:
+    creation: 3
+    experienced: 5
+  Charisma:
+    caste: true
+    creation: 3
+    experienced: 5
+  Manipulation:
+    caste: true
+    creation: 2
+    experienced: 4
+  Appearance:
+    caste: true
+    creation: 3
+    experienced: 5
+  Perception:
+    creation: 3
+    experienced: 5
+  Intelligence:
+    creation: 2
+    experienced: 5
+  Wits:
+    favored: true
+    creation: 4
+    experienced: 5
+abilities:
+  Archery:
+    experienced: 5
+  Martial Arts:
+    favored: true
+    creation: 3
+    experienced: 5
+  Melee:
+    creation: 1
+    experienced: 5
+  War:
+    experienced: 2
+  Integrity:
+    creation: 2
+    experienced: 4
+  Performance:
+    experienced: 3
+  Presence:
+    experienced: 2
+  Resistance:
+    creation: 3
+  Survival:
+    favored: true
+    creation: 3
+    experienced: 4
+  Investigation:
+    experienced: 2
+  Lore:
+    experienced: 4
+  Occult:
+    creation: 1
+    experienced: 3
+  Athletics:
+    creation: 3
+    experienced: 4
+  Awareness:
+    experienced: 4
+  Dodge:
+    creation: 4
+    experienced: 5
+  Larceny:
+    creation: 3
+    experienced: 5
+  Stealth:
+    creation: 1
+    experienced: 4
+  Linguistics:
+    creation: 1
+    experienced: 5
+  Socialize:
+    creation: 1
+    experienced: 2
+specialties:
+  Archery:
+    - name: Essence weapons
+      experienced: 3
+  Resistance:
+    - name: cold
+      creation: 1
+  Survival:
+    - name: cold environments
+      creation: 1
+  Awareness:
+    - name: hearing
+      experienced: 1
+  Larceny:
+    - name: picking locks
+      creation: 2
+languages:
+  - Skytongue
+  - Claw Speak
+  - Riverspeak
+  - Flametongue
+  - Autochthonic
+  - Custodian codes
+  - Old Realm
+  - High Holy Speech
+backgrounds:
+  - name: Allies
+    creation: 4
+  - name: Artifact (prayer transceiver)
+    creation: 2
+  - name: Artifact (moonsilver daiklave)
+    creation: 2
+  - name: Artifact (small concussive Essence cannon)
+    creation: 2
+  - name: Artifact (celestial battle armor)
+    creation: 5
+  - name: Backing (Sun King Seneschals)
+    creation: 3
+  - name: Heart’s Blood
+    creation: 3
+  - name: Manse (gem of consequences)
+    creation: 2
+  - name: Manse (sign of chaos)
+    creation: 3
+  - name: Reputation
+    creation: 3
+  - name: Solar Bond
+    creation: 5
+  - name: Style
+    augmented: 3
+charms:
+  Lunar:
+    Appearance:
+      - name: Second Appearance Excellency
+        experienced: 1
+      - name: Hide of the Cunning Hunter
+        creation: 1
+      - name: Glance-Oration Technique
+        experienced: 1
+    Dexterity:
+      - name: Cat-Falling Attitude
+        experienced: 1
+      - name: Graceful Crane Stance
+        experienced: 1
+      - name: Ferocious Guardian Beast Stance
+        experienced: 1
+      - name: Golden Tiger Stance
+        experienced: 1
+      - name: Heron Sheds Rain
+        experienced: 1
+      - name: Vigilant Mastiff Technique
+        experienced: 1
+      - name: Wary Swallow Method
+        experienced: 1
+      - name: First Dexterity Excellency
+        creation: 1
+      - name: Wasp-Sting Blur
+        merge: Wasp-Sting Blur
+        experienced: 1
+    Charisma:
+      - name: First Charisma Excellency
+        experienced: 1
+      - name: Outworld-Forsaking Stance
+        experienced: 1
+      - name: Lunar Eclipse Technique
+        experienced: 1
+      - name: 'Sacred Guardian Renewal: Compassion'
+        creation: 1
+        experienced: 1
+      - name: Thousand Streams Defender
+        experienced: 1
+    Wits:
+      - name: Implausible Lunar Panoply
+        experienced: 1
+      - name: Many-Pockets Meditation
+        experienced: 1
+      - name: The Spider’s Trap Door
+        experienced: 1
+      - name: Thieving Magpie Prana
+        experienced: 1
+      - name: Meerkat Alertness Practice
+        experienced: 1
+      - name: Wasp-Sting Blur
+        merge: Wasp-Sting Blur
+        experienced: 1
+      - name: First Wits Excellency
+        creation: 1
+    Strength:
+      - name: Impressions of Strength
+        edge cost: 2
+        edges:
+          - name: Ogre’s Loving Caress
+            experienced: 1
+          - name: Rock-to-Pebble Attitude
+            experienced: 1
+          - name: Undeniable Might
+            experienced: 1
+      - name: Tearing Claw Atemi
+        experienced: 1
+      - name: First Strength Excellency
+        creation: 1
+    Intelligence:
+      - name: Righteous Lion Defense
+        experienced: 1
+      - name: Argent Muse Approach
+        experienced: 1
+      - name: Second Intelligence Excellency
+        experienced: 1
+      - name: Laughing into the Teeth of Madness
+        experienced: 1
+    Stamina:
+      - name: Air Mastery Technique
+        experienced: 1
+      - name: Earth Mastery Technique
+        experienced: 1
+      - name: Fire Mastery Technique
+        experienced: 1
+      - name: Water Mastery Technique
+        experienced: 1
+      - name: Wood Mastery Technique
+        experienced: 1
+      - name: External Hide Perfection
+        experienced: 1
+      - name: Bruise-Relief Method
+        experienced: 1
+      - name: Halting the Scarlet Flow
+        experienced: 1
+      - name: Armor-Forming Technique
+        experienced: 1
+      - name: Frenzied Bear Fortification
+        experienced: 1
+      - name: Hide-Toughening Essence
+        creation: 1
+      - name: Second Stamina Excellency
+        experienced: 1
+    Perception:
+      - name: Eye and Fingertip Wisdom
+        experienced: 1
+      - name: Second Perception Excellency
+        experienced: 1
+      - name: Keen Hearing and Touch Technique
+        experienced: 1
+      - name: Outland Navigating Guile
+        experienced: 1
+      - name: Wyld-Sensing Instincts
+        experienced: 1
+knacks:
+  - name: Compassionate Mirror Nature
+    experienced: 1
+  - name: Lunar Blood Shaping Technique
+    experienced: 1
+  - name: Prey’s Skin Disguise
+    experienced: 1
+  - name: Life of the Hummingbird
+    experienced: 1
+  - name: Changing Plumage Mastery
+    experienced: 1
+  - name: Hybrid Body Rearrangement
+    experienced: 1
+  - name: Internal Form Mastery
+    experienced: 1
+  - name: Subtle Silver Declaration
+    creation: 1
+  - name: Beast-Power Concentration
+    experienced: 1
+  - name: Humble Mouse Shape
+    creation: 1
+  - name: Lightning-Change Style
+    experienced: 1
+  - name: Quicksilver Second Face
+    experienced: 1
+  - name: Deadly Beastman Transformation
+    experienced: 1
+experience:
+  - memo: K-0
+    points: 1110
+  - memo: Motivation changed
+    points: -2

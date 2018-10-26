@@ -1,0 +1,461 @@
+name: Lissome Avid Engineer
+splat: Alchemical
+caste: Starmetal
+motivation: design the greatest works of architecture ever seen
+anima: unfolding nest of prismatic lines describing a web-strewn cityscape
+attributes:
+  Strength:
+    creation: 2
+    experienced: 3
+  Dexterity:
+    caste: true
+    creation: 3
+    experienced: 5
+    augmented: 8
+  Stamina:
+    creation: 3
+    experienced: 4
+  Charisma:
+    creation: 2
+    experienced: 4
+    augmented: 5
+  Manipulation:
+    caste: true
+    creation: 3
+    experienced: 4
+  Appearance:
+    favored: true
+    creation: 4
+    experienced: 5
+    augmented: 6
+  Perception:
+    favored: true
+    creation: 3
+    experienced: 5
+    augmented: 6
+  Intelligence:
+    caste: true
+    creation: 5
+    augmented: 8
+  Wits:
+    favored: true
+    creation: 3
+    experienced: 5
+abilities:
+  Archery:
+    experienced: 2
+  Awareness:
+    experienced: 2
+  Bureaucracy:
+    creation: 2
+  Craft:
+    Air:
+      creation: 2
+    Earth:
+      creation: 3
+      bonus: 5
+    Fire:
+      creation: 3
+    Magitech:
+      creation: 2
+  Dodge:
+    creation: 2
+    experienced: 4
+  Integrity:
+    experienced: 5
+  Linguistics:
+    experienced: 2
+  Lore:
+    creation: 2
+    experienced: 5
+  Melee:
+    creation: 2
+    experienced: 5
+  Occult:
+    creation: 2
+    experienced: 5
+  Performance:
+    experienced: 4
+  Presence:
+    creation: 1
+    bonus: 3
+    experienced: 4
+  Resistance:
+    experienced: 4
+  Socialize:
+    creation: 2
+    experienced: 4
+  War:
+    experienced: 1
+specialties:
+  Craft:
+    Earth:
+      - name: architecture
+        creation: 3
+  Socialize:
+    - name: parties
+      creation: 1
+thaumaturgy:
+  Biotectonics:
+    degrees:
+      experienced: 3
+  Geomancy:
+    degrees:
+      experienced: 3
+languages:
+  - Autochthonic
+  - Old Realm
+  - Rocktongue
+virtues:
+  Compassion:
+    creation: 2
+    experienced: 5
+  Conviction:
+    creation: 2
+    experienced: 5
+  Temperance:
+    creation: 3
+  Valor:
+    creation: 2
+willpower:
+  creation: 5
+  bonus: 8
+  experienced: 10
+essence:
+  permanent:
+    creation: 3
+    experienced: 5
+  personal:
+    committed: 19
+    maximum: 25
+  peripheral:
+    committed: 18
+    maximum: 75
+backgrounds:
+  - name: Allies (Kasterak)
+    creation: 3
+  - name: Allies (Tawdarra)
+    creation: 3
+  - name: Artifact (combat gear)
+    creation: 2
+    bonus: 3
+    notes: 'beamklave, onslaught crossbow, transformative armor'
+  - name: Artifact (cores)
+    experienced: 3
+    notes: >-
+      protocol resonator, quickmouth apparatus, scrying apparatus, vision
+      receiver
+  - name: Artifact (other)
+    experienced: 5
+    notes: >-
+      mobile metacore reactor, shaft speeder, victorious general’s galea, core
+      bracers, precision goggles
+  - name: Class
+    creation: 3
+    bonus: 4
+  - name: Contacts
+    creation: 1
+    experienced: 3
+  - name: Eidolon
+    creation: 1
+  - name: Manse (jewel of the maker’s hand)
+    experienced: 4
+slots:
+  general:
+    creation: 4
+    experienced: 10
+  dedicated:
+    creation: 4
+    experienced: 32
+installed:
+  - name: Man-Machine Weaving Engine
+    experienced: 1
+    commitment: 1
+    dedicated: 1
+    exemplar: 1
+    permanent: true
+  - name: Hierarchical Dogma Lock
+    experienced: 3
+    submodules:
+      - name: Multimodal Duty Integrator
+        experienced: 1
+      - name: Herald Infuser
+        experienced: 1
+    commitment: 0
+    dedicated: 3
+  - - name: Fourth Appearance Augmentation
+      experienced: 1
+      commitment: 1
+      dedicated: 1
+    - name: Thousandfold Courtesan Calculations
+      creation: 1
+      submodules:
+        - name: Ultimate Ardor Upgrade
+          experienced: 1
+      commitment: 1
+      dedicated: 1
+    - name: Emotive Aesthetics of the Body Electric
+      experienced: 1
+      submodules:
+        - name: Dormancy Emotive Upgrade
+          experienced: 1
+      commitment: 1
+      dedicated: 1
+  - - name: Fourth Dexterity Augmentation
+      creation: 1
+      experienced: 3
+      commitment: 1
+      dedicated: 3
+    - name: Fourth Charisma Augmentation
+      experienced: 1
+      commitment: 1
+      general: 1
+    - name: Fourth Intelligence Augmentation
+      experienced: 3
+      commitment: 1
+      dedicated: 3
+    - name: Accelerated Response System (Dodge)
+      experienced: 1
+      commitment: 1
+      dedicated: 1
+    - name: Precalculated Evasion System
+      experienced: 1
+      submodules:
+        - name: Transphase Engine
+          experienced: 1
+        - name: Advanced Calculation Arrays
+          experienced: 1
+      commitment: 1
+      dedicated: 1
+    - name: Omnisituational Evasive Equation
+      experienced: 1
+      commitment: 1
+      dedicated: 1
+    - name: Auxiliary Essence Storage Unit
+      bonus: 1
+      commitment: 1
+      general: 1
+    - name: Programmed Catechism Rebuttal
+      experienced: 1
+      commitment: 1
+      general: 1
+  - - name: Sixth Dexterity Augmentation (Craft)
+      creation: 1
+      commitment: 1
+      dedicated: 1
+    - name: Fourth Perception Augmentation
+      experienced: 1
+      commitment: 1
+      dedicated: 1
+    - name: First Intelligence Augmentation
+      creation: 1
+      commitment: 1
+      dedicated: 1
+    - name: Second Intelligence Augmentation
+      experienced: 1
+      commitment: 1
+      dedicated: 1
+    - name: Sixth Intelligence Augmentation (Craft)
+      creation: 1
+      commitment: 1
+      dedicated: 1
+    - name: Transpuissant Intelligence Upgrade
+      experienced: 1
+      commitment: 1
+      dedicated: 1
+    - name: Imprinted Data Cluster
+      creation: 1
+      submodules:
+        - name: Lucid Dream Calibration
+          experienced: 1
+      commitment: 1
+      dedicated: 1
+    - name: Omnitool Implant
+      creation: 1
+      submodules:
+        - name: Comprehensive Surgical Systems
+          experienced: 3
+        - name: Secondary Telefactor Assembly
+          experienced: 1
+      commitment: 1
+      dedicated: 1
+  - - name: Dynamic Reaction Enhancement System
+      experienced: 1
+      submodules:
+        - name: Subsynaptic Accelerator
+          experienced: 0
+        - name: Cluster Action Hyperprocessor
+          experienced: 0
+      commitment: 1
+      dedicated: 1
+    - name: Incomparable Efficiency Upgrade
+      experienced: 1
+      submodules:
+        - name: Hypercalibration Benediction
+          experienced: 1
+      commitment: 1
+      dedicated: 1
+    - name: Creator Fugue Construction Engines
+      experienced: 1
+      exemplar: 3
+      submodules:
+        - name: Architectural Army of One
+          experienced: 1
+      commitment: 2
+      dedicated: 1
+    - name: Technological Analysis Engrams
+      experienced: 2
+      exemplar: 2
+      commitment: 2
+      dedicated: 2
+  - - name: Second Perception Augmentation
+      experienced: 1
+      commitment: 1
+      dedicated: 1
+    - name: Fourth Perception Augmentation
+      experienced: 1
+      commitment: 1
+      dedicated: 1
+    - name: Optical Enhancement
+      experienced: 1
+      submodules:
+        - name: Flash Shutters
+          experienced: 1
+        - name: Cross-Phase Scanner
+          experienced: 2
+        - name: Light-Intensification Filters
+          experienced: 1
+        - name: Microscopic Lens
+          experienced: 1
+        - name: Essence Sight Oculars
+          creation: 2
+      commitment: 2
+      dedicated: 1
+uninstalled:
+  - name: Chemical Fog Generator
+    bonus: 1
+    submodules:
+      - name: Vectored Toxin Deployment
+        experienced: 1
+      - name: Tear Gas
+        experienced: 1
+      - name: Nerve Gas
+        experienced: 1
+    commitment: 1
+    general: 1
+  - name: Interpolative Syntax Emulator
+    experienced: 1
+    submodules:
+      - name: Infallible Fluency Vocoder
+        experienced: 1
+    commitment: 1
+    dedicated: 1
+  - name: 'Manifold Transhuman Implants (Lidless Demon Eye, Wall-Walking)'
+    experienced: 1
+    commitment: 1
+    general: 1
+  - - name: First Manipulation Augmentation
+      creation: 1
+      commitment: 1
+      dedicated: 1
+    - name: Sixth Manipulation Augmentation (Performance)
+      experienced: 1
+      commitment: 1
+      dedicated: 1
+    - name: Sixth Manipulation Augmentation (Presence)
+      experienced: 1
+      commitment: 1
+      dedicated: 1
+    - name: Third Appearance Augmentation
+      creation: 1
+      commitment: 1
+      dedicated: 1
+    - name: Sixth Perception Augmentation (Socialize)
+      experienced: 1
+      commitment: 1
+      dedicated: 1
+    - name: Pheromone Regulation Systems
+      creation: 1
+      submodules:
+        - name: Biochemical Lozenge Machine
+          experienced: 1
+      commitment: 1
+      dedicated: 1
+    - name: Unobtrusive Repartee Baffles
+      bonus: 1
+      commitment: 0
+      dedicated: 1
+    - name: Motivational Vocoder
+      experienced: 1
+      submodules:
+        - name: Noetic Signal Booster
+          experienced: 1
+        - name: Design-Respinning Upgrade
+          experienced: 1
+      commitment: 1
+      general: 1
+  - - name: First Dexterity Augmentation
+      creation: 1
+      commitment: 1
+      dedicated: 1
+    - name: Second Wits Augmentation
+      experienced: 1
+      commitment: 1
+      dedicated: 1
+    - name: Fourth Wits Augmentation
+      experienced: 1
+      commitment: 1
+      dedicated: 1
+    - name: Accelerated Response System (Parry)
+      creation: 1
+      commitment: 0
+      dedicated: 1
+    - name: Impenetrable Repulsor Field
+      experienced: 1
+      commitment: 1
+      dedicated: 1
+    - name: Dynamic Reaction Enhancement System
+      creation: 1
+      submodules:
+        - name: Subsynaptic Accelerator
+          experienced: 1
+        - name: Cluster Action Hyperprocessor
+          experienced: 1
+      commitment: 1
+      dedicated: 1
+    - name: Anticipatory Simulation Processor
+      experienced: 1
+      commitment: 1
+      dedicated: 1
+  - name: Thousandfold Courtesan Calculations
+    creation: 1
+    submodules:
+      - name: Ultimate Ardor Upgrade
+        experienced: 0
+    commitment: 1
+    dedicated: 1
+  - name: 'Manifold Transhuman Implants (Chameleon, Inexhaustible, Wall-Walking)'
+    bonus: 1
+    commitment: 1
+    general: 1
+protocols:
+  Man-Machine:
+    - name: Driving the Shadow Machine
+      experienced: 1
+    - name: Essence Reallocation Protocol
+      experienced: 1
+    - name: Incantation of Effective Restoration
+      experienced: 1
+    - name: Theoplastic Engineering Protocol
+      experienced: 1
+    - name: Vision Transmission Protocol
+      experienced: 1
+mutations:
+  afflictions:
+    - name: Impossible Joints
+      experienced: 1
+    - name: Inexhaustible
+      experienced: 1
+experience:
+  - memo: K-0
+    points: 1110

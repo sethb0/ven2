@@ -1,0 +1,1308 @@
+name: Choi Janak
+player: NPC
+splat: Sidereal
+caste: Battles
+concept: tricky old soldier
+motivation: to turn the returned Solars into a fit tool to fight the Deathlords and Yozis
+description:
+  sex: M
+  eyes: red
+  hair: white
+  skin: tanned
+anima: red
+age: 2580
+essence:
+  permanent:
+    creation: 3
+    experienced: 8
+  personal:
+    maximum: 26
+  peripheral:
+    maximum: 76
+willpower:
+  creation: 10
+virtues:
+  Compassion:
+    creation: 3
+    experienced: 5
+  Conviction:
+    creation: 3
+    experienced: 5
+  Temperance:
+    creation: 2
+    experienced: 5
+  Valor:
+    creation: 3
+attributes:
+  Strength:
+    creation: 2
+    experienced: 6
+  Dexterity:
+    creation: 4
+    experienced: 8
+  Stamina:
+    creation: 3
+    experienced: 6
+  Charisma:
+    creation: 3
+    experienced: 8
+  Manipulation:
+    creation: 2
+    experienced: 8
+  Appearance:
+    creation: 2
+    experienced: 6
+  Perception:
+    creation: 4
+    experienced: 8
+  Intelligence:
+    creation: 4
+    experienced: 8
+  Wits:
+    creation: 3
+    experienced: 8
+abilities:
+  Archery:
+    caste: true
+    creation: 3
+    experienced: 8
+  Martial Arts:
+    favored: true
+    creation: 5
+    experienced: 8
+  Melee:
+    caste: true
+    experienced: 7
+  Thrown:
+    experienced: 6
+  War:
+    caste: true
+    creation: 2
+    experienced: 8
+  Integrity:
+    creation: 3
+    experienced: 8
+  Performance:
+    experienced: 8
+  Presence:
+    caste: true
+    creation: 2
+    experienced: 8
+  Resistance:
+    creation: 3
+    experienced: 8
+  Survival:
+    experienced: 5
+  Craft (Air):
+    experienced: 6
+  Craft (Earth):
+    experienced: 8
+  Craft (Fire):
+    experienced: 5
+  Craft (Water):
+    experienced: 3
+  Craft (Wood):
+    experienced: 3
+  Craft (Magitech):
+    experienced: 8
+  Craft (Fate):
+    creation: 1
+    experienced: 8
+  Investigation:
+    experienced: 6
+  Lore:
+    favored: true
+    creation: 5
+    experienced: 8
+  Medicine:
+    experienced: 6
+  Occult:
+    favored: true
+    creation: 5
+    experienced: 8
+  Athletics:
+    caste: true
+    creation: 2
+    experienced: 6
+  Awareness:
+    creation: 2
+    experienced: 7
+  Dodge:
+    creation: 3
+    experienced: 8
+  Larceny:
+    experienced: 7
+  Stealth:
+    creation: 1
+    experienced: 8
+  Bureaucracy:
+    creation: 2
+    experienced: 6
+  Linguistics:
+    creation: 3
+    experienced: 8
+  Ride:
+    experienced: 5
+  Sail:
+    experienced: 6
+  Socialize:
+    favored: true
+    creation: 1
+    experienced: 8
+specialties:
+  Archery:
+    - name: Essence weaponry
+      creation: 1
+      experienced: 3
+  Martial Arts:
+    - name: barehanded
+      experienced: 3
+  Performance:
+    - name: prayer
+      experienced: 3
+  Investigation:
+    - name: research
+      experienced: 3
+  Lore:
+    - name: mathematics
+      experienced: 2
+  Occult:
+    - name: Underworld
+      experienced: 2
+    - name: Yozis
+      experienced: 1
+  Awareness:
+    - name: Join Battle
+      creation: 3
+      experienced: 3
+  Dodge:
+    - name: multiple opponents
+      experienced: 2
+  Larceny:
+    - name: outside fate
+      experienced: 3
+  Stealth:
+    - name: outside fate
+      experienced: 3
+  Linguistics:
+    - name: calligraphy
+      experienced: 3
+  Sail:
+    - name: flying vehicles
+      experienced: 3
+languages:
+  - Riverspeak
+  - Old Realm
+  - Forest-tongue
+  - Skytongue
+  - Flametongue
+  - Rocktongue
+  - High Realm
+  - Autochthonic
+  - Seatongue
+  - custodian codes
+  - High Holy Speech
+backgrounds:
+  - name: Allies (Lavender Blossoms by Moonlight)
+    creation: 2
+  - name: Backing (Convention of Wood)
+    creation: 3
+    diminished: 0
+  - name: Backing (Convention on Deathlords)
+    creation: 3
+    diminished: 0
+  - name: Backing (Convention on Demons)
+    creation: 4
+    diminished: 0
+  - name: Backing (Division of Battles)
+    creation: 4
+    diminished: 0
+  - name: Backing (Gold Faction)
+    creation: 4
+    diminished: 0
+  - name: Celestial Manse (crimson panoply stone)
+    creation: 4
+  - name: Manse (stone potato)
+    creation: 1
+  - name: Salary
+    creation: 4
+charms:
+  Sidereal:
+    Archery:
+      - name: First Archery Excellency
+        experienced: 1
+      - name: Second Archery Excellency
+        experienced: 1
+      - name: Any Direction Arrow
+        experienced: 1
+      - name: Fateful Archery Excellency
+        experienced: 1
+      - name: Every Direction Arrow
+        experienced: 1
+      - name: Five Seasons Response
+        experienced: 1
+      - name: Generalized Ammunition Technique
+        experienced: 1
+      - name: Many Missiles Bow Technique
+        edge cost: 1
+        edges:
+          - name: Boulder
+            experienced: 1
+          - name: Fire
+            experienced: 1
+          - name: Glass
+            experienced: 1
+          - name: Grain
+            experienced: 1
+          - name: Health
+            experienced: 1
+          - name: Love
+            experienced: 1
+          - name: Precipitation
+            experienced: 1
+      - name: Opportune Shot
+        experienced: 1
+      - name: Propitious Archery Alignment
+        experienced: 1
+    Athletics:
+      - name: Second Athletics Excellency
+        experienced: 1
+      - name: Burn Life
+        experienced: 1
+      - name: Fateful Athletics Excellency
+        experienced: 1
+      - name: Forgotten Earth
+        experienced: 1
+      - name: Forward Thinking Technique
+        experienced: 1
+      - name: Inexorable Advance
+        experienced: 1
+      - name: Invisible Motion
+        experienced: 1
+      - name: Propitious Athletics Alignment
+        experienced: 1
+      - name: Unswerving Juggernaut Principle
+        experienced: 1
+    Awareness:
+      - name: Second Awareness Excellency
+        experienced: 1
+      - name: Conclusive Wisdom
+        experienced: 1
+      - name: Fateful Awareness Excellency
+        experienced: 1
+      - name: Expected Pain
+        experienced: 1
+      - name: Inevitable Pursuit
+        experienced: 1
+      - name: Prior Warning
+        creation: 1
+      - name: Propitious Awareness Alignment
+        experienced: 1
+      - name: Supernal Awareness
+        experienced: 1
+      - name: Wise Choice
+        experienced: 1
+    Bureaucracy:
+      - name: First Bureaucracy Excellency
+        experienced: 1
+      - name: Second Bureaucracy Excellency
+        experienced: 1
+      - name: End Debate
+        experienced: 1
+      - name: Fateful Bureaucracy Excellency
+        experienced: 1
+      - name: Icy Hand
+        experienced: 1
+      - name: Paralyzed Mandarin Infliction
+        experienced: 1
+      - name: Propitious Bureaucracy Alignment
+        experienced: 1
+      - name: Terminal Sanction
+        experienced: 3
+      - name: Underling Invisibility Practice
+        experienced: 1
+    Craft:
+      - name: Second Craft Excellency
+        experienced: 1
+      - name: Destiny-Knitting Entanglement
+        experienced: 1
+      - name: Elemental Vision
+        experienced: 1
+      - name: Fateful Craft Excellency
+        experienced: 1
+      - name: Excellent Implementation of Objectives
+        experienced: 1
+      - name: Implicit Construction Methodology
+        experienced: 1
+      - name: Mending Warped Designs
+        experienced: 1
+      - name: Predestined Delivery Shaping
+        experienced: 1
+      - name: Propitious Craft Alignment
+        experienced: 1
+      - name: World-Shaping Artistic Vision
+        experienced: 1
+    Dodge:
+      - name: First Dodge Excellency
+        experienced: 1
+      - name: Second Dodge Excellency
+        creation: 1
+      - name: Third Dodge Excellency
+        experienced: 1
+      - name: Absence
+        creation: 1
+        experienced: 2
+      - name: Avoidance Kata
+        experienced: 1
+      - name: Duck Fate
+        creation: 1
+      - name: Fateful Dodge Excellency
+        experienced: 1
+      - name: Neighborhood Relocation Scheme
+        experienced: 1
+      - name: Propitious Dodge Alignment
+        experienced: 1
+      - name: Trouble-Reduction Strategy
+        experienced: 2
+    Integrity:
+      - name: First Integrity Excellency
+        experienced: 1
+      - name: Second Integrity Excellency
+        creation: 1
+      - name: Third Integrity Excellency
+        experienced: 1
+      - name: Compassionate Essence Replenishment
+        experienced: 1
+      - name: Creation-Preserving Will
+        experienced: 1
+      - name: Death-of-Self Meditation
+        experienced: 1
+      - name: Fateful Integrity Excellency
+        experienced: 1
+      - name: Heroic Essence Replenishment
+        experienced: 1
+      - name: One Direction Invocation
+        experienced: 1
+      - name: Preservation of Resolve
+        experienced: 1
+      - name: Propitious Integrity Alignment
+        experienced: 1
+      - name: Slick Essence Replenishment
+        experienced: 1
+      - name: Stern Essence Replenishment
+        experienced: 1
+      - name: Unhearing Dedication
+        experienced: 1
+      - name: Unwavering Well-Being Meditation
+        experienced: 2
+    Investigation:
+      - name: Second Investigation Excellency
+        experienced: 1
+      - name: Auspicious Prospects for Battles
+        experienced: 1
+      - name: Auspicious Prospects for Endings
+        experienced: 1
+      - name: Auspicious Prospects for Journeys
+        experienced: 1
+      - name: Auspicious Prospects for Secrets
+        experienced: 1
+      - name: Auspicious Prospects for Serenity
+        experienced: 1
+      - name: Efficient Secretary Technique
+        experienced: 1
+      - name: Embracing Life Method
+        experienced: 1
+      - name: Fateful Investigation Excellency
+        experienced: 1
+      - name: Propitious Investigation Alignment
+        experienced: 1
+      - name: Research  Assistant Invocation
+        experienced: 1
+    Larceny:
+      - name: Second Larceny Excellency
+        experienced: 1
+      - name: Third Larceny Excellency
+        experienced: 1
+      - name: Avoiding the Truth Technique
+        experienced: 1
+      - name: Conning Chaos Technique
+        experienced: 1
+      - name: Dream Confiscation Approach
+        experienced: 1
+      - name: Fateful Larceny Excellency
+        experienced: 1
+      - name: Masque of the Uncanny
+        experienced: 1
+      - name: Name-Pilfering Practice
+        experienced: 1
+      - name: Propitious Larceny Alignment
+        experienced: 1
+      - name: Sidereal Shell Games
+        experienced: 1
+      - name: Thought-Swiping Distraction
+        experienced: 1
+    Linguistics:
+      - name: Second Linguistics Excellency
+        experienced: 1
+      - name: Abandoned Words Curse
+        experienced: 2
+      - name: Blue Vervain Binding
+        experienced: 1
+      - name: Fateful Linguistics Excellency
+        experienced: 1
+      - name: Favorable Inflection Procedure
+        experienced: 1
+      - name: Lover’s Oath
+        experienced: 1
+      - name: Propitious Linguistics Alignment
+        experienced: 1
+    Lore:
+      - name: Second Lore Excellency
+        creation: 1
+      - name: Third Lore Excellency
+        experienced: 1
+      - name: Fateful Lore Excellency
+        experienced: 1
+      - name: Methodology of Secrets
+        creation: 1
+      - name: Of Horrors Best Unknown
+        experienced: 1
+      - name: Of Secrets Yet Untold
+        experienced: 1
+      - name: Of the Shape of the World
+        experienced: 1
+      - name: Of Things Desired and Feared
+        experienced: 1
+      - name: Of Truths Best Unspoken
+        experienced: 1
+      - name: Propitious Lore Alignment
+        experienced: 1
+      - name: Transcendent Hatchet of Fate
+        experienced: 1
+    Martial Arts:
+      - name: First Martial Arts Excellency
+        experienced: 1
+      - name: Second Martial Arts Excellency
+        creation: 1
+      - name: Fateful Martial Arts Excellency
+        experienced: 1
+      - name: Perfected Lotus Mastery
+        treat as: Celestial Martial Arts
+        experienced: 1
+      - name: Propitious Martial Arts Alignment
+        experienced: 1
+    Medicine:
+      - name: Second Medicine Excellency
+        experienced: 1
+      - name: Deferred Wounds
+        experienced: 1
+      - name: Earth and Sky Bargain
+        experienced: 1
+      - name: Fateful Medicine Excellency
+        experienced: 1
+      - name: Invocation of the Storm-Following Silence
+        experienced: 1
+      - name: Peaceable Conclusion
+        experienced: 1
+      - name: Propitious Medicine Alignment
+        experienced: 1
+      - name: Smooth Transition
+        experienced: 1
+      - name: Terminate Illness
+        experienced: 1
+    Melee:
+      - name: First Melee Excellency
+        experienced: 1
+      - name: Second Melee Excellency
+        experienced: 1
+      - name: Fateful Melee Excellency
+        experienced: 1
+      - name: Harmony of Blows
+        experienced: 1
+      - name: Impeding the Flow
+        experienced: 1
+      - name: Meditation on War
+        experienced: 1
+      - name: Orchestration of Mirrored Fates
+        experienced: 1
+      - name: Perfection of the Visionary Warrior
+        experienced: 1
+      - name: Propitious Melee Alignment
+        experienced: 1
+      - name: Serenity in Blood
+        experienced: 1
+      - name: Smiling at the Damned
+        experienced: 1
+    Occult:
+      - name: First Occult Excellency
+        experienced: 1
+      - name: Second Occult Excellency
+        experienced: 1
+      - name: Third Occult Excellency
+        experienced: 1
+      - name: Celestial Circle Sorcery
+        experienced: 1
+      - name: Fateful Occult Excellency
+        experienced: 1
+      - name: Incite Decorum
+        experienced: 1
+      - name: Mark of Exaltation
+        experienced: 1
+      - name: Propitious Occult Alignment
+        experienced: 1
+      - name: Telltale Symphony
+        experienced: 1
+      - name: Terrestrial Circle Sorcery
+        experienced: 1
+      - name: Unweaving Method
+        experienced: 1
+      - name: Willing Assumption of Chains
+        experienced: 1
+      - name: Devonian Absorption
+        experienced: 1
+    Performance:
+      - name: First Performance Excellency
+        experienced: 1
+      - name: Second Performance Excellency
+        experienced: 1
+      - name: Defense of Shining Joy
+        experienced: 1
+      - name: Fateful Performance Excellency
+        experienced: 1
+      - name: Faultless Ceremony
+        experienced: 1
+      - name: Harmonic Completion
+        experienced: 1
+      - name: Heart-Brightening Presentation Style
+        experienced: 1
+      - name: Ice and Fire Binding
+        experienced: 1
+      - name: Perfection in Life
+        experienced: 1
+      - name: Propitious Performance Alignment
+        experienced: 1
+      - name: Song of Spirit Persuasion
+        experienced: 1
+    Presence:
+      - name: First Presence Excellency
+        experienced: 1
+      - name: Second Presence Excellency
+        experienced: 1
+      - name: Easily Accepted Proposition Stance
+        experienced: 1
+      - name: Fateful Presence Excellency
+        experienced: 1
+      - name: Force Decision
+        creation: 1
+      - name: Impose Motivation
+        experienced: 1
+      - name: Loyalty-Sacrificing Sidestep
+        experienced: 2
+      - name: Presence in Absence Technique
+        experienced: 1
+      - name: Propitious Presence Alignment
+        experienced: 1
+    Resistance:
+      - name: Second Resistance Excellency
+        experienced: 1
+      - name: Third Resistance Excellency
+        experienced: 1
+      - name: Fateful Resistance Excellency
+        experienced: 1
+      - name: Heartless Maiden Trance
+        experienced: 1
+      - name: Optimistic Security Practice
+        experienced: 1
+      - name: 'Ox-Body Technique: −0'
+        experienced: 8
+      - name: Propitious Resistance Alignment
+        experienced: 1
+      - name: Shield of Destiny
+        experienced: 1
+      - name: Someone Else’s Destiny
+        experienced: 1
+      - name: Storm’s Eye Stance
+        experienced: 1
+      - name: Water and Fire Legion
+        experienced: 1
+      - name: Water and Fire Treaty
+        experienced: 1
+    Ride:
+      - name: Second Ride Excellency
+        experienced: 1
+      - name: Third Ride Excellency
+        experienced: 1
+      - name: Breaking the Wild Mortal
+        experienced: 1
+      - name: Fateful Ride Excellency
+        experienced: 1
+      - name: Glory Path
+        experienced: 1
+      - name: Godly Companion
+        experienced: 1
+      - name: Ordained Bridle of Mercury
+        experienced: 1
+      - name: Propitious Ride Alignment
+        experienced: 1
+      - name: Riding the Dragon
+        experienced: 1
+      - name: Spirit-Shape Companion
+        experienced: 1
+      - name: Yellow Path
+        experienced: 1
+    Sail:
+      - name: Second Sail Excellency
+        experienced: 1
+      - name: Third Sail Excellency
+        experienced: 1
+      - name: Fateful Sail Excellency
+        experienced: 1
+      - name: Five Ordeals Odyssey
+        experienced: 1
+      - name: Mirror-Shattering Method
+        edge cost: 2
+        edges:
+          - name: Yu-Shan
+            experienced: 1
+          - name: The Underworld
+            experienced: 1
+          - name: Malfeas
+            experienced: 1
+          - name: Autochthonia
+            experienced: 1
+      - name: Propitious Sail Alignment
+        experienced: 1
+      - name: Salt into Ash Sleight
+        experienced: 1
+      - name: Serendipitous Voyage
+        experienced: 1
+      - name: Stone Skipping Spirit
+        experienced: 1
+      - name: Walls of Salt and Ash
+        edge cost: 2
+        edges:
+          - name: Gods and Elementals
+            experienced: 1
+          - name: Fair Folk and the Wyld
+            experienced: 1
+          - name: Undead and the Underworld
+            experienced: 1
+          - name: Demons and Malfeas
+            experienced: 1
+          - name: Biomechanicals and the Reaches
+            experienced: 1
+    Socialize:
+      - name: Second Socialize Excellency
+        experienced: 1
+      - name: Third Socialize Excellency
+        experienced: 1
+      - name: Cash and Murder Games
+        experienced: 1
+      - name: Fateful Socialize Excellency
+        experienced: 1
+      - name: Fortuitous Fellowship
+        experienced: 1
+      - name: Life without Compunction
+        experienced: 1
+      - name: Propitious Socialize Alignment
+        experienced: 1
+      - name: Shun the Smiling Lady
+        experienced: 1
+      - name: Wanting and Fearing Prayer
+        experienced: 1
+      - name: You and Yours Stance
+        experienced: 1
+    Stealth:
+      - name: Second Stealth Excellency
+        experienced: 1
+      - name: Third Stealth Excellency
+        experienced: 1
+      - name: Blinding the Boar
+        experienced: 1
+      - name: Ceasing to Exist Approach
+        experienced: 1
+      - name: Fateful Stealth Excellency
+        experienced: 1
+      - name: Gift of a Broken Mask
+        experienced: 1
+      - name: Propitious Stealth Alignment
+        experienced: 1
+      - name: Soft Presence Practice
+        experienced: 1
+      - name: Subordinate Inspiration Technique
+        experienced: 1
+      - name: Walking Outside Fate
+        experienced: 1
+    Survival:
+      - name: Second Survival Excellency
+        experienced: 1
+      - name: Third Survival Excellency
+        experienced: 1
+      - name: Adopting the Untamed Face
+        experienced: 1
+      - name: Becoming the Wilderness
+        experienced: 2
+      - name: Dreaming the Wild Lands
+        experienced: 1
+      - name: Fateful Survival Excellency
+        experienced: 1
+      - name: Propitious Survival Alignment
+        experienced: 1
+      - name: Sky and Rain Mantra
+        experienced: 1
+      - name: Sky Spirit Demand
+        experienced: 1
+      - name: Wilderness-Commanding Practice
+        experienced: 1
+    Thrown:
+      - name: First Thrown Excellency
+        experienced: 1
+      - name: Second Thrown Excellency
+        experienced: 1
+      - name: Fateful Thrown Excellency
+        experienced: 1
+      - name: Essence Thorn Practice
+        experienced: 1
+      - name: Life Gets Worse Approach
+        experienced: 1
+      - name: Pain-Amplification Stratagem
+        experienced: 1
+      - name: Propitious Thrown Alignment
+        experienced: 1
+      - name: Shadow-Piercing Needle
+        experienced: 1
+      - name: Unrelenting Torment Technique
+        experienced: 1
+      - name: Willful Weapon Method
+        experienced: 1
+    War:
+      - name: First War Excellency
+        experienced: 1
+      - name: Second War Excellency
+        creation: 1
+      - name: Third War Excellency
+        experienced: 1
+      - name: Auspicious Recruitment Drive
+        experienced: 1
+      - name: Demon-Blocking Battle Pattern
+        experienced: 1
+      - name: Fateful War Excellency
+        experienced: 1
+      - name: Essence-Draining Battle Pattern
+        experienced: 1
+      - name: Predestined Triumph Practice
+        experienced: 1
+      - name: Propitious War Alignment
+        experienced: 1
+      - name: Red Haze
+        experienced: 1
+      - name: Spirit-Binding Battle Pattern
+        experienced: 1
+      - name: Training Mandate of Auspicious Battle
+        experienced: 1
+      - name: Training Mandate of Celestial Empowerment
+        experienced: 1
+      - name: Training Mandate of War-God Puissance
+        experienced: 1
+    Throne Shadow Style:
+      - name: Crimson Palm Counterstrike
+        treat as: Celestial Martial Arts
+        experienced: 1
+      - name: Horrific Wreath
+        treat as: Celestial Martial Arts
+        experienced: 1
+      - name: Unobstructed Blow
+        treat as: Celestial Martial Arts
+        experienced: 1
+      - name: Flow-Breaking Strike
+        treat as: Celestial Martial Arts
+        experienced: 1
+      - name: Secret Lesson Revelation
+        treat as: Celestial Martial Arts
+        experienced: 1
+      - name: Showing the Secret Hand
+        treat as: Celestial Martial Arts
+        experienced: 1
+      - name: The Lotus Blossoms
+        treat as: Celestial Martial Arts
+        experienced: 1
+  Sidereal Martial Arts:
+    Charcoal March of Spiders Style:
+      - name: Cannibalistic Heritage Technique
+        experienced: 1
+      - name: Charcoal March of Spiders Form
+        experienced: 1
+      - name: Dance of the Hungry Spider
+        experienced: 1
+      - name: Grandmother Spider Mastery
+        experienced: 1
+      - name: Jumping Spider Strike
+        experienced: 1
+      - name: Maw of Dripping Venom
+        experienced: 1
+      - name: Nest of Living Strands
+        experienced: 1
+      - name: Pattern Spider Touch
+        experienced: 1
+      - name: Rain of Unseen Threads
+        experienced: 1
+      - name: Thumbnail Spider March
+        experienced: 1
+      - name: Unnatural Many-Step Stride
+        experienced: 1
+      - name: Water Spider Bite
+        experienced: 1
+    Citrine Poxes of Contagion Style:
+      - name: Citrine Poxes of Contagion Form
+        experienced: 1
+      - name: Convulsive Displacement Infectious Atemi
+        experienced: 1
+      - name: Disjointed Essence Infectious Atemi
+        experienced: 1
+      - name: Essence-Disrupting Infectious Atemi
+        experienced: 1
+      - name: Essence-Shattering Typhoon
+        experienced: 1
+      - name: Feverish Essence Discharge Atemi
+        experienced: 1
+      - name: Flare of Invulnerability Method
+        experienced: 1
+      - name: Gentle Touch of the Wicked Hand
+        experienced: 1
+      - name: Glorious Sidereal Protection
+        experienced: 1
+      - name: Inner Dragon Unbinding
+        experienced: 1
+      - name: Perfect Reconstruction Method
+        experienced: 1
+      - name: Spirit and Body Purification Touch
+        experienced: 1
+      - name: Spiritual Perfection
+        experienced: 1
+    Prismatic Arrangement of Creation Style:
+      - name: Astrology Interruption Method
+        experienced: 1
+      - name: Charm Redirection Technique
+        experienced: 1
+      - name: Deadly Starmetal Offensive
+        experienced: 1
+      - name: Demesne and Manse Form (CHUNG TING)
+        experienced: 1
+      - name: Demesne Emulation Practice
+        experienced: 1
+      - name: Five Jade Fury
+        experienced: 1
+      - name: Flickering Moonsilver Approach
+        experienced: 1
+      - name: Four Magical Materials Form
+        experienced: 1
+      - name: Games of Divinity Form (WU JI)
+        experienced: 1
+      - name: God Ways
+        experienced: 1
+      - name: Orichalcum Sheathing Stance
+        experienced: 1
+      - name: Prismatic Arrangement of Creation Form (TAO)
+        experienced: 1
+      - name: Sequential Charm Disruption
+        experienced: 1
+      - name: Soul Fire Shaper Form
+        experienced: 1
+      - name: Spell-Shattering Palm (LI)
+        experienced: 1
+      - name: (Type) Exalt Ways (YOU PAN)
+        experienced: 1
+    Sapphire Veil of Passion Style:
+      - name: Black Dragon Coils
+        experienced: 1
+      - name: Dissolution Of Value
+        experienced: 1
+      - name: Eternal Infatuation Dance
+        experienced: 1
+      - name: Into Infinite Depths
+        experienced: 1
+      - name: Joy In Ownership
+        experienced: 1
+      - name: Memories Of Intimacy
+        experienced: 1
+      - name: Sapphire Binding Pattern
+        experienced: 1
+      - name: Sapphire Veil of Passion Form
+        experienced: 1
+      - name: Satisfying Idle Fantasy
+        experienced: 1
+      - name: Silken Rope Trick
+        experienced: 1
+      - name: Someone Else’s Consequence
+        experienced: 1
+      - name: Thousand Desire Ribbons
+        experienced: 1
+      - name: Yellow Dragon Flight
+        experienced: 1
+  Celestial Martial Arts:
+    Universal:
+      - name: Flowing Kata Form
+        experienced: 1
+    Crane Style:
+      - name: Beak Spears Frog
+        experienced: 1
+      - name: Crane Form
+        experienced: 1
+      - name: Crossed Wings Denial
+        experienced: 1
+      - name: Empowering Justice Redirection
+        experienced: 1
+      - name: Feather Stirred Arrow Deflection
+        experienced: 1
+      - name: Fluttering Cry Of Warning
+        experienced: 1
+      - name: Humbling Enlightenment Commentary
+        experienced: 1
+      - name: Kindly Sifu’s Quill
+        experienced: 1
+      - name: Wings Spread To Sky
+        experienced: 1
+      - name: Wisdom Of The Celestial Crane
+        experienced: 1
+    Crystal Chameleon Style:
+      - name: Crystal Chameleon Form
+        experienced: 1
+      - name: Death From Nowhere Method
+        experienced: 1
+      - name: Flashing Leaves Evasion
+        experienced: 1
+      - name: Flashing Passage
+        experienced: 1
+      - name: Just Another Branch Deceit
+        experienced: 1
+      - name: Light-Treading Technique
+        experienced: 1
+      - name: Razor-Edged Prism Assault
+        experienced: 1
+      - name: Shattered Crystal Rebuke
+        experienced: 1
+      - name: Stepping Beyond Light Prana
+        experienced: 1
+    Mantis Style:
+      - name: Crushing Claw Technique
+        experienced: 1
+      - name: Flying Mantis Kick
+        experienced: 1
+      - name: Grasping Claw Method
+        experienced: 1
+      - name: Grasping Mantis Defense
+        experienced: 1
+      - name: Iron-Arm Block
+        experienced: 1
+      - name: Joint-Disabling Attack
+        experienced: 1
+      - name: Joint-Locking Technique
+        experienced: 1
+      - name: Leaping Mantis Technique
+        experienced: 1
+      - name: Mantis Form
+        experienced: 1
+      - name: Unfolding Retribution Stance
+        experienced: 1
+    Snake Style:
+      - name: Armor-Penetrating Fang Strike
+        experienced: 1
+      - name: Essence Fangs and Scales Technique
+        experienced: 1
+      - name: Essence Venom Strike
+        experienced: 1
+      - name: Serpentine Evasion
+        experienced: 1
+      - name: Snake Form
+        experienced: 1
+      - name: Snake Strikes The Heel
+        experienced: 1
+      - name: Striking Cobra Technique
+        experienced: 1
+      - name: Striking Serpent Speed
+        experienced: 1
+      - name: Uncoiling Serpent Prana
+        experienced: 1
+    Enlightening:
+      - name: Drowning in Understanding Kata
+        experienced: 1
+      - name: Tiger-and-Bear Awareness
+        experienced: 1
+      - name: Tiger-and-Bear Unity
+        experienced: 1
+    Throne Shadow Style:
+      - name: Clear Eyes Defense
+        experienced: 1
+      - name: Deadliest of All Weapons
+        experienced: 1
+      - name: Finger-Stealing Handshake
+        experienced: 1
+      - name: Lion Mouse Stratagem
+        experienced: 1
+      - name: Lotus Eye Tactics
+        experienced: 1
+      - name: Pneuma-Sealing Strike
+        experienced: 1
+      - name: Shadow Lost in the Court
+        experienced: 1
+      - name: Sifu’s Useful Fingers
+        experienced: 1
+      - name: Throne Shadow Form
+        experienced: 1
+      - name: Welcoming the Uninvited Guest
+        experienced: 1
+      - name: World as Weapon Mastery
+        experienced: 1
+    Tiger Style:
+      - name: Angry Predator Frenzy Style
+        experienced: 1
+      - name: Celestial Tiger Hide
+        experienced: 1
+      - name: Crimson Leaping Cat Technique
+        experienced: 1
+      - name: Leap from Cloaking Shadows Attack
+        experienced: 1
+      - name: Raging Tiger Pounce
+        experienced: 1
+      - name: Spine-Shattering Bite
+        experienced: 1
+      - name: Stalking Cat Movement Meditation
+        experienced: 1
+      - name: Striking Fury Claws Attack
+        experienced: 1
+      - name: Tiger Form
+        experienced: 1
+    Violet Bier of Sorrows Style:
+      - name: Blade of the Battle Maiden
+        experienced: 1
+      - name: Conclusion-Pursuing Approach
+        experienced: 1
+      - name: Death-Parrying Stroke
+        experienced: 1
+      - name: Flight of Mercury
+        experienced: 1
+      - name: Joy in Adversity Stance
+        creation: 1
+      - name: Life-Severing Blow
+        experienced: 1
+      - name: Metal Storm
+        experienced: 1
+      - name: Secrets of Future Strife
+        creation: 1
+      - name: Violet Bier of Sorrows Form
+        experienced: 1
+    Water Dragon Style:
+      - name: Bottomless Depths Defense
+        experienced: 1
+      - name: Crashing Wave Style
+        experienced: 1
+      - name: Drowning-in-Blood Technique
+        experienced: 1
+      - name: Essence-Dousing Wave Attack
+        experienced: 1
+      - name: Flow Reversal Strike
+        experienced: 1
+      - name: Flowing Water Defense
+        experienced: 1
+      - name: Ghost-Restraining Whirlpool Stance
+        experienced: 1
+      - name: Rippling Water Strike
+        experienced: 1
+      - name: Shrugging Water Dragon Escape
+        experienced: 1
+      - name: Theft-of-Essence Method
+        experienced: 1
+      - name: Tsunami Force Shout
+        experienced: 1
+      - name: Water Dragon Form
+        experienced: 1
+  Terrestrial Martial Arts:
+    Golden Exhalation Style:
+      - name: Flame Eater Stance
+        experienced: 1
+      - name: Flaming River Burns the Boat
+        experienced: 1
+      - name: Garda Takes Flight
+        experienced: 1
+      - name: Golden Exhalation Form
+        experienced: 1
+      - name: Mother Disobeys Father
+        experienced: 1
+      - name: One Eye Follows the Bird
+        experienced: 1
+      - name: Salamander Licks the Pot
+        experienced: 1
+    Golden Janissary Style:
+      - name: Cleansing Flame Strike
+        experienced: 1
+      - name: Golden Janissary Form
+        experienced: 1
+      - name: Light-on-Dark Shield
+        experienced: 1
+      - name: Lone Spark Lights the Conflagration
+        experienced: 1
+      - name: Paralyzing Combustion Imbuement
+        experienced: 1
+      - name: Rotten Leaf Arrested
+        experienced: 1
+      - name: Where Is Doom Inquisition
+        experienced: 1
+    White Veil Style:
+      - name: Alehouse Memory Stance
+        experienced: 1
+      - name: Birdsong Over Blades
+        experienced: 1
+      - name: Blinded by Laughter
+        experienced: 1
+      - name: Owl Clutches at the Night
+        experienced: 1
+      - name: White Veil Form
+        experienced: 1
+spells:
+  Terrestrial:
+    - name: Calling the Stalwart Servitor
+      experienced: 1
+    - name: Coin of Distant Vision
+      experienced: 1
+    - name: Death of Obsidian Butterflies
+      experienced: 1
+    - name: Demon of the First Circle
+      experienced: 1
+    - name: Emerald Circle Banishment
+      experienced: 1
+    - name: Emerald Countermagic
+      experienced: 1
+    - name: The Eye and the Mouth
+      experienced: 1
+    - name: Flight of Separation
+      experienced: 1
+    - name: Open the Spirit Door
+      experienced: 1
+    - name: Raising the Earth’s Bones
+      experienced: 1
+    - name: Ritual of Elemental Empowerment
+      experienced: 1
+    - name: Summon Elemental
+      experienced: 1
+    - name: The Violent Opening of Closed Portals
+      experienced: 1
+    - name: Written Upon the Water
+      experienced: 1
+  Celestial:
+    - name: The Battle’s End
+      experienced: 1
+    - name: Cantata of Empty Voices
+      experienced: 1
+    - name: Cloud Trapeze
+      experienced: 1
+    - name: Demon of the Second Circle
+      experienced: 1
+    - name: The Faithful Ally
+      experienced: 1
+    - name: Gift of Knowledge
+      experienced: 1
+    - name: God-Forged Champion of War
+      experienced: 1
+    - name: Ivory Orchid Pavilion
+      experienced: 1
+    - name: Outside Worlds Within
+      experienced: 1
+    - name: Raise the Puissant Sanctum
+      experienced: 1
+    - name: Sapphire Circle Banishment
+      experienced: 1
+    - name: Sapphire Countermagic
+      experienced: 1
+    - name: Summon the Heavenly Portal
+      experienced: 1
+    - name: Swift Spirit of Winged Transportation
+      experienced: 1
+    - name: Travel Without Distance
+      experienced: 1
+    - name: Warding the Created Mind
+      experienced: 1
+thaumaturgy:
+  Astrology:
+    degrees:
+      experienced: 3
+colleges:
+  Captain:
+    creation: 1
+    experienced: 5
+  Gull:
+    experienced: 5
+  Mast:
+    experienced: 5
+  Messenger:
+    experienced: 5
+  Ship’s Wheel:
+    experienced: 5
+  Ewer:
+    experienced: 5
+  Lovers:
+    creation: 1
+    experienced: 7
+  Musician:
+    experienced: 5
+  Peacock:
+    experienced: 5
+  Pillar:
+    experienced: 8
+  Banner:
+    experienced: 6
+    caste: true
+  Gauntlet:
+    experienced: 7
+    caste: true
+  Quiver:
+    creation: 3
+    experienced: 8
+    caste: true
+  Shield:
+    creation: 1
+    experienced: 8
+    caste: true
+  Spear:
+    creation: 1
+    experienced: 8
+    caste: true
+  Guardians:
+    experienced: 5
+  Key:
+    experienced: 5
+  Mask:
+    experienced: 5
+  Sorcerer:
+    creation: 1
+    experienced: 8
+  Treasure Trove:
+    experienced: 5
+  Corpse:
+    experienced: 5
+  Crow:
+    experienced: 5
+  Haywain:
+    experienced: 5
+  Rising Smoke:
+    experienced: 8
+  Sword:
+    experienced: 8
+experience:
+  - memo: LTE 1 (20-100)
+    points: 800
+  - memo: LTE 2 (101-250)
+    points: 750
+  - memo: LTE 3 (251-500)
+    points: 1000
+  - memo: LTE 4 (501-1000)
+    points: 1500
+  - memo: LTE 5 (1001-2576)
+    points: 3152
+  - memo: 1/5 (K-0)
+    points: 222
+  - memo: Motivation changed
+    points: -2
+  - memo: Wrapped Diamond
+    points: -1
+  - memo: Perfect Reconstruction Method use
+    points: -11

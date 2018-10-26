@@ -1,0 +1,265 @@
+name: Vau-Chen
+splat: Raksha
+caste: Vagabond
+motivation: study Nirupadhika through travel
+lure: standing fast in the face of determined opposition
+attributes:
+  Strength:
+    creation: 3
+  Dexterity:
+    creation: 5
+  Stamina:
+    creation: 5
+    experienced: 7
+  Charisma:
+    creation: 6
+    experienced: 7
+  Manipulation:
+    creation: 6
+    experienced: 7
+  Appearance:
+    creation: 7
+  Perception:
+    creation: 5
+  Intelligence:
+    creation: 6
+  Wits:
+    creation: 5
+    experienced: 6
+abilities:
+  Athletics:
+    creation: 1
+    experienced: 3
+  Awareness:
+    creation: 3
+    experienced: 5
+  Dodge:
+    creation: 3
+    experienced: 5
+  Sail:
+    experienced: 5
+  Survival:
+    creation: 1
+    experienced: 5
+  Investigation:
+    caste: true
+    creation: 1
+    experienced: 5
+  Larceny:
+    experienced: 1
+  Medicine:
+    experienced: 1
+  Performance:
+    favored: true
+    creation: 5
+    bonus: 7
+  Stealth:
+    creation: 1
+    experienced: 5
+  Linguistics:
+    caste: true
+    creation: 1
+    experienced: 6
+  Occult:
+    caste: true
+    creation: 4
+    experienced: 6
+  Ride:
+    caste: true
+    creation: 1
+    experienced: 6
+  Socialize:
+    caste: true
+    creation: 4
+    experienced: 6
+  Martial Arts:
+    experienced: 1
+  Melee:
+    experienced: 1
+  Presence:
+    favored: true
+    creation: 5
+    bonus: 7
+  War:
+    experienced: 1
+  Bureaucracy:
+    experienced: 1
+  Craft (Glamour):
+    experienced: 3
+  Integrity:
+    favored: true
+    creation: 4
+    bonus: 5
+    experienced: 7
+  Lore:
+    creation: 1
+    experienced: 4
+  Resistance:
+    creation: 1
+    experienced: 4
+specialties:
+  Lore:
+    - name: geography
+      creation: 3
+languages:
+  - Old Realm
+  - Skytongue
+  - Forest-tongue
+  - Riverspeak
+  - High Holy Speech
+  - Autochthonic
+  - '?'
+virtues:
+  Compassion:
+    creation: 4
+    bonus: 5
+  Conviction:
+    primary: true
+    creation: 4
+    bonus: 5
+  Temperance:
+    creation: 1
+    bonus: 2
+  Valor:
+    creation: 1
+    bonus: 2
+willpower:
+  creation: 5
+  bonus: 8
+  experienced: 10
+essence:
+  permanent:
+    creation: 2
+    experienced: 6
+  personal:
+    committed: 10
+    maximum: 60
+graces:
+  Cup:
+    major: true
+    creation: 5
+    experienced: 6
+  Staff:
+    major: true
+    creation: 5
+    experienced: 6
+  Ring:
+    creation: 1
+    experienced: 6
+  Sword:
+    creation: 1
+    experienced: 5
+  Way:
+    major: true
+    experienced: 6
+  Heart:
+    creation: 3
+    experienced: 4
+backgrounds:
+  - name: Birth
+    creation: 3
+  - name: Gossamer
+    creation: 3
+  - name: Style
+    creation: 1
+    bonus: 5
+charms:
+  Raksha:
+    Mask:
+      - name: Assumption of Dreams and Passion
+        creation: 1
+      - name: Mad God Mien
+        experienced: 1
+      - name: Elegant Muse Attitude
+        creation: 1
+      - name: Emotional Evocation
+        creation: 1
+      - name: Unwanted Obsession Provocation Technique
+        creation: 1
+    Heart:
+      - name: Second Heart Excellency
+        creation: 1
+      - name: Unassailable Tower of Glamour
+        creation: 1
+      - name: Assertion of a Greater Vision
+        creation: 1
+    Cup:
+      - name: First Cup Excellency
+        creation: 1
+      - name: Heart-Cutting Style
+        creation: 1
+      - name: Dissonance of Principles
+        creation: 1
+      - name: Thousand Tiny Hooks Technique
+        experienced: 1
+      - name: Swift Wings of Song
+        experienced: 1
+      - name: Subversion and Transformation Artifice
+        experienced: 1
+      - name: Overriding Construct of Fate
+        experienced: 1
+      - name: Peerless Ways of the Cup
+        experienced: 1
+      - name: Rejection of Desire
+        experienced: 1
+      - name: Ravishing the Created Form
+        creation: 1
+      - name: Heart-Stealing Kiss
+        experienced: 1
+      - name: Banquet of Crumbs
+        creation: 1
+      - name: Shiftless Untamed Beauty
+        experienced: 1
+      - name: Compelling Presence
+        experienced: 1
+      - name: Maddening Summons
+        experienced: 1
+      - name: Gladdening Visage
+        experienced: 1
+    Ring:
+      - name: Essence-Forging Art
+        creation: 1
+      - name: Knife-Hand Dream
+        experienced: 1
+      - name: Opalescent Gossamer Raiment
+        experienced: 1
+    Staff:
+      - name: First Staff Excellency
+        creation: 1
+      - name: Peerless Ways of the Staff
+        experienced: 1
+      - name: Rejection of Society
+        experienced: 1
+      - name: Awakened Dream Manufacture
+        creation: 1
+      - name: Shape-Forged Servant
+        experienced: 1
+      - name: Forging the Heart Grace
+        experienced: 1
+      - name: Forging the Way Grace
+        experienced: 1
+      - name: Beguilement
+        experienced: 1
+      - name: Undetectable Lie
+        experienced: 1
+    Sword:
+      - name: Peerless Ways of the Sword
+        experienced: 1
+      - name: Scourging Wind Raid
+        experienced: 1
+      - name: Dream-Sacrificing Method
+        experienced: 1
+      - name: Hiding the Wyld’s Touch
+        experienced: 1
+    Way:
+      - name: First Way Excellency
+        experienced: 1
+      - name: Perfect Reckoning Technique
+        experienced: 1
+      - name: Hound of Land and Seas
+        experienced: 1
+      - name: Trackless Dreamscape Movement
+        experienced: 1
+experience:
+  - memo: K-0
+    points: 1110

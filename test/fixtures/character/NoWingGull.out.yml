@@ -1,0 +1,339 @@
+name: No-Wing Gull
+player: NPC
+splat: Infernal
+caste: Slayer
+yozis:
+  patron: Malfeas
+  favored: Ebon Dragon
+concept: Daystar infiltrator
+motivation: kill every Dragon-Blood
+description:
+  sex: M
+  eyes: violet
+  hair: violet
+  skin: deeply tanned
+anima: brass-furred ape
+age: 26
+essence:
+  permanent:
+    creation: 3
+    experienced: 5
+willpower:
+  creation: 10
+virtues:
+  Compassion:
+    creation: 3
+  Conviction:
+    creation: 3
+    experienced: 4
+    primary: true
+  Temperance:
+    creation: 2
+  Valor:
+    creation: 4
+attributes:
+  Strength:
+    creation: 4
+  Dexterity:
+    creation: 3
+    experienced: 4
+  Stamina:
+    creation: 4
+  Charisma:
+    creation: 4
+    experienced: 5
+  Manipulation:
+    creation: 2
+    experienced: 5
+  Appearance:
+    creation: 1
+    experienced: 2
+  Perception:
+    creation: 4
+    experienced: 5
+  Intelligence:
+    creation: 2
+    experienced: 3
+  Wits:
+    creation: 3
+    experienced: 5
+abilities:
+  Archery:
+    caste: true
+    experienced: 5
+  Martial Arts:
+    caste: true
+    experienced: 5
+  Melee:
+    caste: true
+    creation: 5
+  Thrown:
+    caste: true
+    experienced: 5
+  War:
+    caste: true
+    creation: 5
+  Integrity:
+    creation: 1
+    experienced: 3
+  Performance:
+    favored: true
+    creation: 1
+    experienced: 4
+  Presence:
+    favored: true
+    creation: 1
+    experienced: 5
+  Resistance:
+    creation: 3
+    experienced: 4
+  Survival:
+    experienced: 3
+  Craft (Air):
+    experienced: 2
+  Craft (Fire):
+    experienced: 3
+  Craft (Vitriol):
+    experienced: 1
+  Craft (Magitech):
+    experienced: 5
+  Investigation:
+    experienced: 3
+  Lore:
+    creation: 5
+  Occult:
+    favored: true
+    creation: 1
+    experienced: 5
+  Athletics:
+    creation: 3
+    experienced: 4
+  Awareness:
+    creation: 1
+    experienced: 5
+  Dodge:
+    favored: true
+    creation: 1
+    experienced: 5
+  Larceny:
+    experienced: 3
+  Stealth:
+    creation: 1
+    experienced: 5
+  Linguistics:
+    favored: true
+    creation: 2
+    experienced: 4
+  Ride:
+    creation: 1
+  Sail:
+    experienced: 1
+  Socialize:
+    creation: 1
+    experienced: 3
+specialties:
+  Awareness:
+    - name: Join Battle
+      creation: 3
+  Dodge:
+    - name: in armor
+      creation: 1
+languages:
+  - Low Realm
+  - High Realm
+  - Old Realm
+  - Seatongue
+  - Flametongue
+backgrounds:
+  - name: Cult (Patron)
+    creation: 1
+  - name: Backing (Patron)
+    creation: 3
+  - name: Influence (Patron)
+    creation: 1
+  - name: Artifact (vitriolic jade hearthstone bracers)
+    creation: 2
+  - name: Artifact (vitriolic orichalcum reaver daiklave)
+    creation: 2
+  - name: Manse (sword-and-fist unity stone)
+    creation: 3
+  - name: Unwoven Coadjutor (erymanthos)
+    creation: 5
+charms:
+  Infernal:
+    Malfeas:
+      - name: Kissed by Hellish Noon
+        experienced: 1
+      - name: Radiant Fury Dissolution
+        experienced: 1
+      - name: Wrath-Stoked Bonfire Soul
+        experienced: 1
+      - name: Dim Irrelevancies Unveiled
+        experienced: 1
+      - name: Godscorch Invective
+        experienced: 1
+      - name: Green Sun Nimbus Flare
+        experienced: 1
+      - name: Immolating Terror Technique
+        experienced: 1
+      - name: Insignificant Embers Intuition
+        experienced: 1
+      - name: World Chains Geas
+        experienced: 1
+      - name: World-Weathering Incandescence
+        experienced: 1
+      - name: First Malfeas Excellency
+        experienced: 5
+      - name: Second Malfeas Excellency
+        experienced: 1
+      - name: Malfeas Inevitability Technique
+        experienced: 1
+      - name: So Speaks Malfeas
+        experienced: 1
+      - name: By Agony Empowered
+        experienced: 1
+      - name: Nightmare Fugue Vigilance
+        experienced: 1
+      - name: Ablation of Brass and Fire
+        experienced: 1
+      - name: By Hunger Nourished
+        experienced: 1
+      - name: By Pain Reforged
+        experienced: 1
+      - name: 'Hardened Devil Body: −2×3/−4'
+        experienced: 4
+      - name: Invulnerable Wounding Futility
+        experienced: 1
+      - name: Kneel or Be Knelt
+        experienced: 1
+      - name: Pathetic Distraction Rebuke
+        experienced: 2
+      - name: Purity of Madness Defense
+        experienced: 1
+      - name: Scar-Writ Saga Shield
+        experienced: 3
+      - name: Viridian Legend Exoskeleton
+        experienced: 1
+    Cecelyne:
+      - name: Demonic Primacy of Essence
+        creation: 1
+      - name: Hellscry Chakra
+        creation: 1
+      - name: Wayward Divinity Oversight
+        creation: 1
+        experienced: 2
+      - name: Endless Torment Emanation
+        experienced: 1
+      - name: Sand-Scoured Society Infliction
+        experienced: 1
+      - name: Transcendent Desert Creature
+        creation: 1
+      - name: Withered Soul Wastes
+        experienced: 1
+    Ebon Dragon:
+      - name: First Ebon Dragon Excellency
+        experienced: 5
+      - name: Ebon Dragon Inevitability Technique
+        experienced: 1
+      - name: So Speaks the Ebon Dragon
+        experienced: 1
+      - name: Bible of Broken Truths
+        experienced: 1
+      - name: Dark Claws Seize Dark Hearts
+        experienced: 1
+      - name: Everything Gets Worse
+        experienced: 1
+      - name: Glories That Never Were
+        experienced: 1
+      - name: Golden Years Tarnish Black
+        experienced: 2
+      - name: Memory Poison Mastery
+        experienced: 1
+      - name: Twisted Yesterdays Curse
+        experienced: 1
+      - name: Unreasoning Prejudice Infliction
+        experienced: 1
+      - name: Despair-Choked Spirit Maiming
+        experienced: 1
+      - name: Ever-Hungry Shadow Affliction
+        experienced: 2
+      - name: Hollowing Echo Venom
+        experienced: 1
+      - name: Life-Blighting Emptiness Attack
+        experienced: 1
+      - name: Life-Denying Hate
+        experienced: 2
+      - name: Spite-Fed Wounding Nimbus
+        experienced: 1
+      - name: Sweet Agony Savoured
+        experienced: 1
+      - name: Bloodless Murk Evasion
+        experienced: 1
+      - name: Brooding Resentment Defence
+        experienced: 1
+      - name: Cracked Cell Circumvention
+        experienced: 1
+      - name: Eldritch Secrets Mastery
+        experienced: 1
+      - name: Loom-Snarling Deception
+        experienced: 1
+      - name: Mocking Murmurs Retort
+        experienced: 1
+      - name: Nesmesis Self Imagined Anew
+        experienced: 1
+      - name: Agony of Unwise Adversity
+        experienced: 3
+      - name: Agony of Unwise Adversity (Cost Reduction)
+        experienced: 1
+      - name: Agony of Unwise Adversity (Counterattack)
+        experienced: 1
+      - name: Dragons Lair Obtenebration
+        experienced: 1
+      - name: Noon as Night Evocation
+        experienced: 1
+      - name: Seeing Is Blindness
+        experienced: 1
+      - name: Seizing Coil Atemi
+        experienced: 1
+      - name: Cornered Titan Desperation
+        experienced: 1
+      - name: Our Little Secret
+        experienced: 1
+      - name: Wickedness Beyond Life
+        experienced: 1
+      - name: Witness to Darkness
+        experienced: 1
+    Adorjan:
+      - name: Broken Silence Laughter Defense
+        creation: 1
+      - name: Dread Panoply of the Silent Wind
+        creation: 1
+      - name: Sacred Kamilla's Inhalation
+        creation: 1
+      - name: Joy in Violence Approach
+        creation: 1
+      - name: Threat-Monitoring Excitement
+        creation: 1
+      - name: Wind-Born Stride
+        creation: 1
+  Celestial Martial Arts:
+    Eye of Heaven Style:
+      - name: Armor-Rending Practice
+        experienced: 1
+      - name: Blade-Breaking Practice
+        experienced: 1
+      - name: Bloody Sun Memorial
+        experienced: 1
+      - name: Devotion Through Conflict Display
+        experienced: 1
+      - name: Essence Shredding Practice
+        experienced: 1
+      - name: Eye of Heaven Form
+        experienced: 1
+      - name: Five Forces Defense
+        experienced: 1
+      - name: Savage World Endurance Method
+        experienced: 1
+experience:
+  - memo: K+200
+    points: 1310

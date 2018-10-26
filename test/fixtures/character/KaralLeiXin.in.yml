@@ -1,0 +1,484 @@
+name: Karal Lei-Xin
+player: Meliai
+splat: Solar
+caste: Twilight
+concept: Lookshy DB become Anathema
+motivation: set an example for the people of Creation and beyond of how to fight the Yozis
+description:
+  sex: F
+  eyes: gray
+  hair: blue (dyed to shimmery gray)
+  skin: 'fair, freckled'
+anima: mandala of white and violet frost crystals, chilly breeze
+age: 27
+essence:
+  permanent:
+    creation: 3
+    experienced: 5
+  personal:
+    maximum: 25
+    committed: 0
+  peripheral:
+    maximum: 59
+    committed: 16
+willpower:
+  creation: 8
+  experienced: 10
+virtues:
+  Compassion:
+    creation: 3
+    experienced: 4
+  Conviction:
+    creation: 2
+    experienced: 4
+  Temperance:
+    creation: 3
+  Valor:
+    creation: 2
+    experienced: 3
+attributes:
+  Strength:
+    creation: 2
+    experienced: 3
+  Dexterity:
+    creation: 2
+    experienced: 4
+  Stamina:
+    creation: 4
+  Charisma:
+    creation: 3
+    experienced: 5
+  Manipulation:
+    creation: 2
+  Appearance:
+    creation: 4
+  Perception:
+    creation: 4
+    experienced: 5
+  Intelligence:
+    creation: 5
+  Wits:
+    creation: 2
+    experienced: 4
+abilities:
+  Archery:
+    favored: true
+    creation: 2
+    experienced: 5
+  Martial Arts:
+    creation: 5
+  Melee:
+    creation: 2
+  War:
+    creation: 2
+  Integrity:
+    favored: true
+    creation: 2
+    experienced: 5
+  Performance:
+    favored: true
+    creation: 2
+    experienced: 5
+  Presence:
+    favored: true
+    creation: 2
+    experienced: 5
+  Resistance:
+    creation: 1
+    experienced: 3
+  Survival:
+    creation: 5
+  Craft:
+    caste: true
+    Air:
+      creation: 2
+      experienced: 5
+    Earth:
+      experienced: 5
+    Fire:
+      creation: 2
+      experienced: 3
+    Water:
+      experienced: 4
+    Wood:
+      creation: 1
+      experienced: 2
+    Magitech:
+      creation: 3
+      experienced: 5
+    Genesis:
+      experienced: 1
+  Investigation:
+    caste: true
+    experienced: 5
+  Lore:
+    caste: true
+    creation: 5
+  Medicine:
+    caste: true
+    experienced: 3
+  Occult:
+    caste: true
+    creation: 3
+    experienced: 5
+  Athletics:
+    creation: 3
+  Awareness:
+    creation: 1
+    experienced: 3
+  Dodge:
+    creation: 5
+  Stealth:
+    creation: 1
+  Bureaucracy:
+    creation: 1
+    experienced: 3
+  Linguistics:
+    favored: true
+    creation: 3
+    experienced: 5
+  Ride:
+    creation: 2
+  Socialize:
+    creation: 1
+specialties:
+  Performance:
+    - name: dance
+      creation: 1
+    - name: prayer
+      experienced: 2
+  Presence:
+    - name: gaining trust
+      creation: 1
+  Craft:
+    Magitech:
+      - name: First Age weapons
+        creation: 1
+  Lore:
+    - name: First Age
+      creation: 1
+  Occult:
+    - name: the Yozis
+      experienced: 1
+languages:
+  - Riverspeak
+  - Old Realm
+  - Forest-tongue
+  - Seatongue
+  - Flametongue
+  - Autochthonic
+  - custodian codes
+  - High Holy Speech
+backgrounds:
+  - name: Allies (Andea White Flower)
+    creation: 4
+  - name: Allies (Brand Kernagon)
+    creation: 4
+  - name: Allies (Onre Pelaztuk)
+    creation: 4
+  - name: Allies (Rekka Tarinen)
+    creation: 4
+  - name: Allies (Tepet Valki)
+    creation: 3
+  - name: Allies (Topaz Dog)
+    creation: 4
+  - name: Artifact (bracers of universal crafting)
+    creation: 3
+  - name: Artifact (cache egg)
+    creation: 1
+  - name: Artifact (celestial battle armor)
+    creation: 5
+    notes: + enhanced healing, Essence gauntlets, spirit bane
+  - name: Artifact (clockwork efficacy servitor)
+    creation: 5
+    notes: at Piri
+  - name: Artifact (dragon-tear tiara)
+    creation: 2
+  - name: Artifact (dragonfly’s ranging eye)
+    creation: 4
+    notes: + 1 mile range, Essence sight; in luggage, deattuned
+  - name: Artifact (globe of transport)
+    creation: 4
+  - name: Artifact (hand of the Great Maker)
+    creation: 3
+    notes: in cache egg
+  - name: Artifact (Memory Alpha)
+    'n/a': true
+    notes: in cache egg
+  - name: Artifact (omnikey)
+    'n/a': true
+    notes: in cache egg
+  - name: Artifact (prayer transceiver)
+    creation: 2
+  - name: Artifact (recorder of everlasting glories)
+    creation: 2
+  - name: Artifact (resplendent personal assistant)
+    creation: 1
+  - name: Artifact (skin-mount amulet)
+    creation: 2
+  - name: Artifact (swift rider)
+    creation: 3
+    notes: powered by Janak’s stone potato
+  - name: Manse (counter-sorcerous periapt)
+    creation: 5
+    notes: normally in skin-mount amulet, presently in tiara
+  - name: Manse (crystal of legendary leadership)
+    creation: 3
+    notes: in armor
+  - name: Mentor (Choi Janak)
+    creation: 5
+intimacies:
+  - name: The Great Maker is a valued ally and should be fixed up with Bannery Bu.
+    active: true
+    points: 4
+  - name: 'Rekka is my mate, and I love her.'
+    active: true
+    points: 4
+  - name: The Jadeborn didn’t deserve the Great Geas and I’m glad we ended it.
+    active: true
+    points: 4
+  - name: Rathess should be rebuilt and ruled by the Dragon Kings.
+    active: true
+    points: 4
+  - name: The Fair Folk are confusing and dangerous.
+    active: true
+    points: 4
+  - name: Sunan Jin is still a good man.
+    active: true
+    points: 4
+  - name: I love Choi Janak with every fiber of my being. My heart is his.
+    active: true
+    points: 4
+  - name: Andea White Flower and Brand Kernagon are so cute together~
+    active: true
+    points: 4
+  - name: >-
+      The Yozis are the biggest threat Creation faces and we have to DO
+      SOMETHING
+    active: true
+    points: 4
+    special: RLD
+  - name: GREEN COAT MUST DIE
+    active: true
+    points: 4
+  - name: 'I owe Vau-Chen a rescue, but after that, we’re quits.'
+    active: true
+    points: 4
+  - name: 'Lookshy is no longer my home, but its people will always be dear to me.'
+    active: true
+    points: 4
+  - name: 'If the Seventh Legion falls, I fear the whole Direction will follow it.'
+    active: true
+    points: 4
+  - name: Arianna is selfish and egotistical and makes me grind my teeth.
+    active: true
+    points: 4
+  - name: Yushoto Aro will like me eventually dammit!
+    active: false
+    points: 2
+thaumaturgy:
+  Alchemy:
+    degrees:
+      experienced: 2
+  Geomancy:
+    degrees:
+      experienced: 3
+  Warding and Exorcism:
+    degrees:
+      experienced: 1
+charms:
+  Solar:
+    Archery:
+      - name: First Archery Excellency
+        experienced: 1
+    Athletics:
+      - name: Graceful Crane Stance
+        creation: 1
+    Bureaucracy:
+      - name: Second Bureaucracy Excellency
+        experienced: 1
+    Craft:
+      - name: First Craft Excellency
+        creation: 1
+      - name: Crack-Mending Technique
+        experienced: 1
+      - name: Craftsman Needs No Tools
+        experienced: 1
+      - name: Design beyond Limit
+        experienced: 1
+      - name: Durability-Enhancing Technique
+        experienced: 1
+      - name: Holistic Miracle Understanding
+        experienced: 1
+      - name: Object-Strengthening Touch
+        experienced: 1
+      - name: Wonder-Forging Genius
+        experienced: 2
+      - name: Words-as-Workshop Method
+        experienced: 1
+    Dodge:
+      - name: First Dodge Excellency
+        creation: 1
+      - name: Reflex Sidestep Technique
+        favored caste: Dawn
+        creation: 1
+      - name: Seven Shadow Evasion
+        favored caste: Dawn
+        experienced: 1
+      - name: Shadow over Water
+        experienced: 1
+    Integrity:
+      - name: Second Integrity Excellency
+        experienced: 1
+      - name: Divine Transcendence of Integrity
+        experienced: 1
+      - name: Elusive Dream Defense
+        experienced: 1
+      - name: Final Ray of Light
+        experienced: 1
+      - name: Integrity-Protecting Prana
+        experienced: 1
+      - name: Righteous Lion Defense
+        experienced: 1
+      - name: Sacrosanct Soul Retribution
+        experienced: 1
+      - name: Should the Sun Not Rise
+        experienced: 1
+      - name: Spirit-Maintaining Maneuver
+        experienced: 1
+      - name: Sun King Radiance
+        experienced: 1
+      - name: Temptation-Resisting Stance
+        experienced: 1
+    Investigation:
+      - name: Second Investigation Excellency
+        experienced: 1
+      - name: Judge’s Ear Technique
+        experienced: 1
+    Linguistics:
+      - name: Second Linguistics Excellency
+        experienced: 1
+      - name: Discerning Savant’s Eye
+        experienced: 1
+      - name: Excellent Emissary’s Tongue
+        experienced: 1
+      - name: Flawless Brush Discipline
+        experienced: 1
+      - name: Guiding Words of Solar Wisdom
+        experienced: 1
+      - name: Letter-within-a-Letter Technique
+        experienced: 1
+      - name: Poetic Expression Style
+        experienced: 1
+      - name: Sagacious Reading of Intent
+        experienced: 1
+      - name: Whirling Brush Method
+        experienced: 1
+    Lore:
+      - name: First Lore Excellency
+        creation: 1
+      - name: Second Lore Excellency
+        experienced: 1
+      - name: Chaos-Repelling Pattern
+        experienced: 1
+      - name: Dragon-Soul Enlightening Method
+        experienced: 1
+      - name: Essence-Lending Method
+        experienced: 1
+      - name: Harmonious Academic Methodology
+        experienced: 1
+      - name: Legendary Scholar Curriculum
+        experienced: 1
+      - name: Terrestrial Edification Program
+        experienced: 1
+      - name: Wyld-Shaping Technique
+        experienced: 1
+      - name: Wyld Cauldron Technology
+        experienced: 1
+    Martial Arts:
+      - name: First Martial Arts Excellency
+        creation: 1
+    Occult:
+      - name: First Occult Excellency
+        creation: 1
+      - name: All-Encompassing Sorcerer’s Sight
+        experienced: 1
+      - name: Celestial Circle Sorcery
+        experienced: 1
+      - name: Solar Circle Sorcery
+        experienced: 1
+      - name: Spirit-Detecting Glance
+        experienced: 1
+      - name: Supreme Perfection of Occult
+        experienced: 1
+      - name: Terrestrial Circle Sorcery
+        creation: 1
+      - name: Sun’s Bounty Resonance
+        experienced: 1
+    Performance:
+      - name: First Performance Excellency
+        experienced: 1
+    Presence:
+      - name: First Presence Excellency
+        experienced: 1
+      - name: Enemy-Castigating Solar Judgement
+        experienced: 1
+    Resistance:
+      - name: Hauberk-Lightening Gesture
+        experienced: 1
+      - name: Whirlwind Armor-Donning Prana
+        experienced: 1
+    Survival:
+      - name: Element-Resisting Prana
+        creation: 1
+      - name: Hardship-Surviving Mendicant Spirit
+        creation: 1
+      - name: Steadfast Elemental Emperor Stance
+        experienced: 1
+spells:
+  Terrestrial:
+    - name: Incantation of Effective Restoration
+      creation: 1
+    - name: Cirrus Skiff
+      experienced: 1
+    - name: Emerald Countermagic
+      experienced: 1
+    - name: Flight of the Brilliant Raptor
+      experienced: 1
+    - name: Infallible Messenger
+      experienced: 1
+    - name: Open the Spirit Door
+      experienced: 1
+    - name: Ritual of Elemental Empowerment
+      experienced: 1
+    - name: Written upon the Water
+      experienced: 1
+  Celestial:
+    - name: The Faithful Ally
+      experienced: 1
+    - name: Gift of Knowledge
+      experienced: 1
+    - name: Servant of Infallible Location
+      experienced: 1
+    - name: Swift Spirit of Winged Transportation
+      experienced: 1
+    - name: Warding the Created Mind
+      experienced: 1
+  Solar:
+    - name: Adamant Circle Banishment
+      experienced: 1
+    - name: Adamant Countermagic
+      experienced: 1
+    - name: Spirit-Uplifting Mercy Halo
+      experienced: 1
+experience:
+  - memo: normal sessions
+    points: 1110
+  - memo: Dragon-Blooded XP that got swallowed in the conversion
+    points: -40
+  - memo: Motivation changed
+    points: -2
+  - memo: upgrade Seven Shadow Evasion
+    points: -2
+notes: >-
+  Shopping list: Supreme Perfection of Lore; Phoenix Renewal Tactic (Compassion)
