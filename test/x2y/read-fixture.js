@@ -8,10 +8,10 @@ xmlToJson.stringToXML = (string) => new DOMParser().parseFromString(string, 'tex
 
 export function readFixture (filename) {
   if (filename.endsWith('.yml')) {
-    return loadYaml(path.join(__dirname, 'fixtures', filename));
+    return loadYaml(path.resolve(__dirname, '..', 'fixtures', filename));
   }
   return xmlToJson.parseString(
-    fs.readFileSync(path.join(__dirname, 'fixtures', filename), 'utf8'),
+    fs.readFileSync(path.resolve(__dirname, '..', 'fixtures', filename), 'utf8'),
     { grokText: false, xmlns: false }
   );
 }

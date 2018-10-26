@@ -1,7 +1,7 @@
 import path from 'path';
 
 import { expect } from '../setup';
-import { readFixture } from '../read-fixture';
+import { readFixture } from './read-fixture';
 
 import processCharmXML from '../../src/x2y/root/charmlist';
 import processSpellXML from '../../src/x2y/root/spelllist';
