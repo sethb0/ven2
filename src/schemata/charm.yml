@@ -104,7 +104,7 @@ allOf:
           prerequisites:
             $ref: '#/definitions/prerequisites'
         required: ['name']
-      minProperties: 2
+      minProperties: 1
     excellency:
       $ref: 'common.json#/definitions/true'
     repurchases:
@@ -132,38 +132,33 @@ allOf:
       $ref: 'common.json#/definitions/true'
     raises trait cap:
       $ref: 'common.json#/definitions/true'
+    transcends:
+      $ref: 'common.json#/definitions/true'
     errata:
       $ref: 'common.json#/definitions/true'
-  required: ['id', 'name', 'type']
+  required: ['id', 'type']
 - if:
-    properties:
-      edge cost: true
+    required: ['edge cost']
   then:
-    properties:
-      edges: true
+    required: ['edges']
   else:
-    properties:
-      edges: false
+    not:
+      required: ['edges']
 - if:
-    properties:
-      martial-ready: true
+    required: ['martial-ready']
   then:
-    properties:
-      martial: true
+    required: ['martial']
 - if:
     properties:
       keywords:
-        properties:
-          taint: true
+        required: ['Taint']
   then:
-    properties:
-      taint: true
+    required: ['taint']
   else:
-    properties:
-      taint: false
+    not:
+      required: ['taint']
 - if:
-    properties:
-      excellency: true
+    required: ['excellency']
   then:
     properties:
       type:

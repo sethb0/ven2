@@ -1,13 +1,13 @@
 /* eslint no-process-exit: off */
 import { load as loadYaml } from '@sethb0/yaml-utils';
 
-export const command = 'validate <file..>';
+export const command = 'validate <files..>';
 
-export const describe = "Validate YAML file(s) against Venator's schemata";
+export const describe = "Validate YAML files against Venator's schemata";
 
 export const builder = (yargs) => yargs
-  .positional('file', {
-    description: 'YAML file(s) to validate',
+  .positional('files', {
+    description: 'YAML files to validate',
     normalize: true,
     coerce: (files) => Promise.all(files.map(load)),
   });

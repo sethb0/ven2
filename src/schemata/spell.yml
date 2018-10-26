@@ -1,0 +1,23 @@
+$schema: http://json-schema.org/draft-07/schema#
+$id: https://venator.sharpcla.ws/schema/spell.json
+type: object
+properties:
+  id:
+    $ref: 'common.json#/definitions/idString'
+  type:
+    type: string
+    const: spell
+  name:
+    $ref: 'common.json#/definitions/nonEmptyString'
+  circle:
+    type: string
+    enum:
+    - Terrestrial
+    - Celestial
+    - Solar
+    - Shadowlands
+    - Labyrinth
+    - Void
+  errata:
+    $ref: 'common.json#/definitions/true'
+required: ['id', 'type', 'circle']

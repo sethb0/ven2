@@ -9,7 +9,7 @@
     "prepare": "rm -rf dist && babel src --out-dir dist --copy-files",
     "start": "node --require @babel/register src",
     "test": "mocha",
-    "web": "rm -rf web/schema && mkdir -p web/schema && (for x in src/schemata/*.yml; do node bin/y2j.js \"$x\" web/schema/$(basename \"$x\" .yml).json; done) && firebase deploy --only hosting"
+    "web": "rm -rf web/schema && mkdir -p web/schema && (for x in src/schemata/*.yml; do node utils/y2j.js \"$x\" web/schema/$(basename \"$x\" .yml).json; done) && firebase deploy --only hosting"
   },
   "bin": {
     "ven2": "./bin/ven2.js"
@@ -43,6 +43,8 @@
     "js-yaml": "^3.12.0",
     "mkdirp": "^0.5.1",
     "object.fromentries": "^2.0.0",
+    "xmldom": "^0.1.27",
+    "xmltojson": "^1.3.5",
     "yargs": "^12.0.2"
   },
   "devDependencies": {

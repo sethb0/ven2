@@ -12,6 +12,7 @@ const readFile = promisify(fs.readFile);
 const ITEM_SCHEMA_ID = 'urn:mfllc:venator:schema:master-item-schema';
 const ROOT_SCHEMA_IDS = [
   'https://venator.sharpcla.ws/schema/charm.json',
+  'https://venator.sharpcla.ws/schema/spell.json',
 ];
 
 export default async function validate (argv) {
@@ -31,7 +32,6 @@ export default async function validate (argv) {
     jsonPointers: true,
     unicode: false,
     extendRefs: 'fail',
-    coerceTypes: true,
     schemas: schemata,
   });
   ajvMergePatch(ajv);
@@ -39,7 +39,7 @@ export default async function validate (argv) {
     oneOf: [{ $ref: ITEM_SCHEMA_ID }, { type: 'array', items: { $ref: ITEM_SCHEMA_ID } }],
   };
   const validator = ajv.compile(masterSchema);
-  for (const { filename, data } of await argv.file) {
+  for (const { filename, data } of await argv.files) {
     if (validator(data)) {
       console.log(`${filename} is valid`);
     } else {
