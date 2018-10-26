@@ -1,0 +1,16 @@
+$schema: http://json-schema.org/draft-07/schema#
+$id: https://venator.sharpcla.ws/schema/character.json
+definitions:
+  stat:
+    type: object
+    properties:
+      creation:
+        $ref: 'common.json#/definitions/nonNegativeInteger'
+      bonus:
+        $ref: 'common.json#/definitions/nonNegativeInteger'
+      experienced:
+        $ref: 'common.json#/definitions/nonNegativeInteger'
+      augmented:
+        $ref: 'common.json#/definitions/nonNegativeInteger'
+      diminished:
+        $ref: 'common.json#/definitions/nonNegativeInteger'

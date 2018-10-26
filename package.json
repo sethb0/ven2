@@ -6,9 +6,10 @@
   "license": "MIT",
   "scripts": {
     "posttest": "eslint .",
-    "prepare": "rm -rf dist && babel src --out-dir dist --copy-files",
+    "prepare": "rm -rf dist && babel src --out-dir dist && cp -pr src/assets dist/",
     "start": "node --require @babel/register src",
-    "test": "mocha"
+    "test": "mocha",
+    "web": "rm -rf web/schema && mkdir -p web/schema && (for x in src/schemata/*.yml; do ./y2j \"$x\" web/schema/$(basename \"$x\" .yml).json; done) && firebase deploy --only hosting"
   },
   "bin": {
     "ven2": "./bin/ven2.js"
@@ -37,6 +38,7 @@
   },
   "dependencies": {
     "@sethb0/yaml-utils": "^0.5.0",
+    "ajv": "^6.5.4",
     "js-yaml": "^3.12.0",
     "mkdirp": "^0.5.1",
     "object.fromentries": "^2.0.0",

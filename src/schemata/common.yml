@@ -1,0 +1,30 @@
+$schema: http://json-schema.org/draft-07/schema#
+$id: https://venator.sharpcla.ws/schema/common.json
+definitions:
+  true:
+    type: boolean
+    const: true
+  nonEmptyString:
+    type: string
+    minLength: 1
+  idString:
+    $ref: '#/definitions/nonEmptyString'
+  nonNegativeInteger:
+    type: integer
+    minimum: 0
+  positiveInteger:
+    type: integer
+    minimum: 1
+  nonPositiveInteger:
+    type: integer
+    maximum: 0
+  charmReference:
+    oneOf:
+    - type: object
+      properties:
+        id:
+          $ref: '#/definitions/idString'
+        variant:
+          $ref: '#/definitions/idString'
+      required: ['id']
+    - $ref: '#/definitions/idString'

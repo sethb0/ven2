@@ -1,0 +1,168 @@
+$schema: http://json-schema.org/draft-07/schema#
+$id: https://venator.sharpcla.ws/schema/charm.json
+definitions:
+  prerequisites:
+    type: object
+    properties:
+      essence:
+        $ref: 'common.json#/definitions/positiveInteger'
+      traits:
+        type: object
+        additionalProperties:
+          $ref: 'common.json#/definitions/positiveInteger'
+      charms:
+        type: array
+        items:
+          $ref: 'common.json#/definitions/charmReference'
+        uniqueItems: true
+      excellencies:
+        $ref: 'common.json#/definitions/positiveInteger'
+      groups:
+        type: array
+        items:
+          type: object
+          properties:
+            threshold:
+              $ref: 'common.json#/definitions/positiveInteger'
+            charms:
+              type: array
+              items:
+                $ref: 'common.json#/definitions/charmReference'
+              uniqueItems: true
+              minItems: 2
+          required: ['threshold', 'charms']
+allOf:
+- type: object
+  properties:
+    name:
+      $ref: 'common.json#/definitions/nonEmptyString'
+    type:
+      type: string
+      enum:
+      - charm
+      - generic
+      - knack
+    exalt:
+      $ref: 'common.json#/definitions/nonEmptyString'
+    group:
+      $ref: 'common.json#/definitions/nonEmptyString'
+    treat as:
+      $ref: 'common.json#/definitions/nonEmptyString'
+    prerequisites:
+      allOf:
+      - $ref: '#/definitions/prerequisites'
+      - required: ['essence']
+    action:
+      $ref: 'common.json#/definitions/nonEmptyString'
+    keywords:
+      type: object
+      additionalProperties:
+        oneOf:
+        - $ref: 'common.json#/definitions/nonNegativeInteger'
+        - $ref: 'common.json#/definitions/true'
+    edge cost:
+      $ref: 'common.json#/definitions/positiveInteger'
+    edges:
+      type: object
+      additionalProperties:
+        $ref: 'common.json#/definitions/nonEmptyString'
+      minProperties: 1
+    martial:
+      type: object
+      additionalProperties:
+        $ref: 'common.json#/definitions/true'
+      minProperties: 1
+    martial-ready:
+      $ref: 'common.json#/definitions/true'
+    virtue:
+      type: object
+      properties:
+        Compassion:
+          $ref: 'common.json#/definitions/true'
+        Conviction:
+          $ref: 'common.json#/definitions/true'
+        Temperance:
+          $ref: 'common.json#/definitions/true'
+        Valor:
+          $ref: 'common.json#/definitions/true'
+      additionalProperties: false
+      minProperties: 1
+    taint:
+      type: object
+      additionalProperties:
+        $ref: 'common.json#/definitions/nonNegativeInteger'
+      minProperties: 1
+    variants:
+      type: object
+      additionalProperties:
+        type: object
+        properties:
+          name:
+            $ref: 'common.json#/definitions/nonEmptyString'
+          prerequisites:
+            $ref: '#/definitions/prerequisites'
+        required: ['name']
+      minProperties: 2
+    excellency:
+      $ref: 'common.json#/definitions/true'
+    repurchases:
+      type: object
+      oneOf:
+      - properties:
+          limit:
+            oneOf:
+            - $ref: 'common.json#/definitions/positiveInteger'
+            - $ref: 'common.json#/definitions/nonEmptyString'
+          required:
+            $ref: 'common.json#/definitions/true'
+        required: ['limit']
+      - properties:
+          when:
+            type: array
+            items:
+              type: object
+              additionalProperties:
+                $ref: 'common.json#/definitions/positiveInteger'
+              minProperties: 1
+            minItems: 1
+        required: ['when']
+    raises Essence cap:
+      $ref: 'common.json#/definitions/true'
+    raises trait cap:
+      $ref: 'common.json#/definitions/true'
+    errata:
+      $ref: 'common.json#/definitions/true'
+  required: ['name', 'type']
+- if:
+    properties:
+      edge cost: true
+  then:
+    properties:
+      edges: true
+  else:
+    properties:
+      edges: false
+- if:
+    properties:
+      martial-ready: true
+  then:
+    properties:
+      martial: true
+- if:
+    properties:
+      keywords:
+        properties:
+          taint: true
+  then:
+    properties:
+      taint: true
+  else:
+    properties:
+      taint: false
+- if:
+    properties:
+      excellency: true
+  then:
+    properties:
+      type:
+        const: generic
