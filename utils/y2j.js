@@ -8,7 +8,6 @@ const yargs = require('yargs');
 const argv = yargs
   .usage('$0 <in> <out>')
   .demandCommand(2)
-  .help()
   .argv;
 
 fs.writeFileSync(argv._[1], JSON.stringify(loadSync(argv._[0])));
