@@ -13,17 +13,6 @@ env:
   es6: true
   node: true
 rules:
-  object-curly-newline:
-  - warn
-  - ObjectExpression:
-      consistent: true
-      multiline: true
-      minProperties: 3
-    ObjectPattern: never
-    ImportDeclaration: never
-    ExportDeclaration: never
-  require-await: off
-
   new-cap: off
   babel/new-cap: warn
   no-invalid-this: off
@@ -44,21 +33,7 @@ rules:
   valid-typeof: off
   babel/valid-typeof: warn
 overrides:
-- files: bin/*.js
-  parserOptions:
-    sourceType: script
-- files: utils/*.js
-  parserOptions:
-    sourceType: script
-- files: src/commands/*.js
-  rules:
-    no-console: off
 - files: "**/*.spec.js"
-  env:
-    mocha: true
   rules:
-    func-names: off
-    max-lines: off
     babel/no-invalid-this: off
     babel/no-unused-expressions: off
-    prefer-arrow-callback: off

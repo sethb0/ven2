@@ -1,4 +1,3 @@
-/* eslint no-process-exit: off */
 import { createWriteStream, readFile as readFileAsync } from 'fs';
 import { DOMParser } from 'xmldom';
 import { dumpStream as dumpYamlStream } from '@sethb0/yaml-utils';
@@ -13,26 +12,28 @@ export const command = 'x2y <files..>';
 
 export const describe = 'Convert and merge Anathema XML and properties files to YAML';
 
-export const builder = (yargs) => yargs
-  .positional('files', {
-    description: 'Files to convert',
-    normalize: true,
-    coerce: (files) => Promise.all(files.map(load)),
-    // argv.files will be a Promise for an array of data items.
-    // Each data item is either an array of [key, value] pairs, or an object.
-    // Arrays come from properties files, objects from XML files.
-  })
-  .options({
-    output: {
-      description: 'Output filename',
-      defaultDescription: 'stdout',
-      alias: 'o',
-      nargs: 1,
+export function builder (yargs) {
+  return yargs
+    .positional('files', {
+      description: 'Files to convert',
       normalize: true,
-      requiresArg: true,
-      type: 'string',
-    },
-  });
+      coerce: (files) => Promise.all(files.map(load)),
+      // argv.files will be a Promise for an array of data items.
+      // Each data item is either an array of [key, value] pairs, or an object.
+      // Arrays come from properties files, objects from XML files.
+    })
+    .options({
+      output: {
+        description: 'Output filename',
+        defaultDescription: 'stdout',
+        alias: 'o',
+        nargs: 1,
+        normalize: true,
+        requiresArg: true,
+        type: 'string',
+      },
+    });
+}
 
 export function handler (argv) {
   return import('../handlers/x2y')
