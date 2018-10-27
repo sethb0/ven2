@@ -1,0 +1,21 @@
+Attributes: 92
+Abilities: 193
+Specialties: 9
+Charms: 460
+Knacks: 0
+Spells: 120
+Protocols: 0
+Virtues: 30
+Willpower: 34
+Essence: 56
+Thaumaturgy: 24
+Backgrounds: 0
+Graces: 0
+Slots: 0
+Paths: 0
+Colleges: 0
+Mutations: 0
+Misc: 44
+
+TOTAL SPENT: 1062
+EARNED: 1110

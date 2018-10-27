@@ -6,7 +6,7 @@ import { Character } from '../src/character';
 
 const FIXTURES_DIR = path.join(__dirname, 'fixtures', 'character');
 
-describe.only('character', function () {
+describe('character', function () {
   before(shim);
 
   describe('load and dump', function () {
