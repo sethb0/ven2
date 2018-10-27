@@ -1,16 +1,579 @@
 $schema: http://json-schema.org/draft-07/schema#
 $id: https://venator.sharpcla.ws/schema/character.json
 definitions:
+  ability:
+    $patch:
+      source:
+        $ref: '#/definitions/stat'
+      with:
+      - op: add
+        path: /properties/caste
+        value:
+          $ref: 'common.json#/definitions/true'
+      - op: add
+        path: '/propertyNames/enum/-'
+        value: caste
+      - op: add
+        path: /properties/favored
+        value:
+          $ref: 'common.json#/definitions/true'
+      - op: add
+        path: '/propertyNames/enum/-'
+        value: favored
+      - op: add
+        path: /properties/prodigy
+        value:
+          $ref: 'common.json#/definitions/true'
+      - op: add
+        path: '/propertyNames/enum/-'
+        value: prodigy
+  abilityNames:
+    enum:
+    - Archery
+    - Athletics
+    - Awareness
+    - Bureaucracy
+    - Craft
+    - Dodge
+    - Integrity
+    - Investigation
+    - Larceny
+    - Linguistics
+    - Lore
+    - Martial Arts
+    - Medicine
+    - Melee
+    - Occult
+    - Performance
+    - Presence
+    - Resistance
+    - Ride
+    - Sail
+    - Socialize
+    - Stealth
+    - Survival
+    - Thrown
+    - War
+  attribute:
+    $patch:
+      source:
+        $ref: '#/definitions/stat'
+      with:
+      - op: add
+        path: /properties/caste
+        value:
+          $ref: 'common.json#/definitions/true'
+      - op: add
+        path: '/propertyNames/enum/-'
+        value: caste
+      - op: add
+        path: /properties/favored
+        value:
+          $ref: 'common.json#/definitions/true'
+      - op: add
+        path: '/propertyNames/enum/-'
+        value: favored
+  attributeNames:
+    enum:
+    - Appearance
+    - Charisma
+    - Dexterity
+    - Intelligence
+    - Manipulation
+    - Perception
+    - Stamina
+    - Strength
+    - Wits
+  background:
+    $patch:
+      source:
+        $ref: '#/definitions/stat'
+      with:
+      - op: add
+        path: /properties/name
+        value:
+          $ref: 'common.json#/definitions/nonEmptyString'
+      - op: add
+        path: '/propertyNames/enum/-'
+        value: name
+      - op: add
+        path: /properties/notes
+        value:
+          $ref: 'common.json#/definitions/nonEmptyString'
+      - op: add
+        path: '/propertyNames/enum/-'
+        value: notes
+      - op: add
+        path: /properties/n~1a # that is how JSON Pointer escapes a /
+        value:
+          $ref: 'common.json#/definitions/true'
+      - op: add
+        path: '/propertyNames/enum/-'
+        value: 'n/a'
+      - op: add
+        path: /required
+        value: ['name']
+  charm:
+    allOf:
+    - $patch:
+        source:
+          $ref: 'charm.json#'
+        with:
+        - op: add
+          path: /allOf/0/properties/edges
+          value:
+            type: array
+            items:
+              $ref: 'character.json#/definitions/namedStat'
+        - op: add
+          path: /allOf/0/properties/variants
+          value:
+            type: array
+            items:
+              $ref: 'character.json#/definitions/namedStat'
+        - op: remove
+          path: /allOf/0/required
+    - anyOf:
+      - required: ['id']
+      - required: ['name']
+  college:
+    $patch:
+      source:
+        $ref: '#/definitions/stat'
+      with:
+      - op: add
+        path: /properties/caste
+        value:
+          $ref: 'common.json#/definitions/true'
+      - op: add
+        path: '/propertyNames/enum/-'
+        value: caste
+  craftNames:
+    pattern: '^[A-Z][a-z]*([- ][A-Z][a-z]*)*$'
+  essencePool:
+    type: object
+    properties:
+      committed:
+        allOf:
+        - $ref: 'common.json#/definitions/nonNegativeInteger'
+        - maximum:
+            $data: '1/maximum'
+      maximum:
+        $ref: 'common.json#/definitions/nonNegativeInteger'
+    propertyNames:
+      enum: ['committed', 'maximum']
+  grace:
+    $patch:
+      source:
+        $ref: '#/definitions/stat'
+      with:
+      - op: add
+        path: /properties/major
+        value:
+          $ref: 'common.json#/definitions/true'
+      - op: add
+        path: '/propertyNames/enum/-'
+        value: major
+  namedStat:
+    $patch:
+      source:
+        $ref: '#/definitions/stat'
+      with:
+      - op: add
+        path: /properties/name
+        value:
+          $ref: 'common.json#/definitions/nonEmptyString'
+      - op: add
+        path: '/propertyNames/enum/-'
+        value: name
+      - op: add
+        path: /required
+        value: ['name']
+  path:
+    $patch:
+      source:
+        $ref: '#/definitions/stat'
+      with:
+      - op: add
+        path: /properties/caste
+        value:
+          $ref: 'common.json#/definitions/true'
+      - op: add
+        path: '/propertyNames/enum/-'
+        value: caste
+      - op: add
+        path: /properties/dark
+        value:
+          $ref: 'common.json#/definitions/true'
+      - op: add
+        path: '/propertyNames/enum/-'
+        value: dark
+      - op: add
+        path: /properties/favored
+        value:
+          $ref: 'common.json#/definitions/true'
+      - op: add
+        path: '/propertyNames/enum/-'
+        value: favored
+  specialty:
+    $patch:
+      source:
+        $ref: '#/definitions/stat'
+      with:
+      - op: add
+        path: /properties/name
+        value:
+          $ref: 'common.json#/definitions/nonEmptyString'
+      - op: add
+        path: '/propertyNames/enum/-'
+        value: name
+      - op: add
+        path: /required
+        value: ['name']
+  specialtyArray:
+    type: array
+    items:
+      $ref: '#/definitions/specialty'
+  spell:
+    allOf:
+    - $patch:
+        source:
+          $ref: '#/definitions/stat'
+        with:
+        - op: add
+          path: /properties/id
+          value:
+            $ref: 'common.json#/definitions/idString'
+        - op: add
+          path: '/propertyNames/enum/-'
+          value: id
+        - op: add
+          path: /properties/name
+          value:
+            $ref: 'common.json#/definitions/nonEmptyString'
+        - op: add
+          path: '/propertyNames/enum/-'
+          value: name
+    - anyOf:
+      - required: ['id']
+      - required: ['name']
   stat:
     type: object
     properties:
-      creation:
-        $ref: 'common.json#/definitions/nonNegativeInteger'
-      bonus:
-        $ref: 'common.json#/definitions/nonNegativeInteger'
-      experienced:
-        $ref: 'common.json#/definitions/nonNegativeInteger'
       augmented:
+        allOf:
+        - $ref: 'common.json#/definitions/nonNegativeInteger'
+        - minimum:
+            $data: '1/bonus'
+        - minimum:
+            $data: '1/creation'
+        - minimum:
+            $data: '1/experienced'
+      bonus:
+        allOf:
+        - $ref: 'common.json#/definitions/nonNegativeInteger'
+        - minimum:
+            $data: '1/creation'
+      creation:
         $ref: 'common.json#/definitions/nonNegativeInteger'
       diminished:
         $ref: 'common.json#/definitions/nonNegativeInteger'
+      experienced:
+        allOf:
+        - $ref: 'common.json#/definitions/nonNegativeInteger'
+        - minimum:
+            $data: '1/bonus'
+        - minimum:
+            $data: '1/creation'
+    propertyNames:
+      enum: ['augmented', 'bonus', 'creation', 'diminished', 'experienced']
+  virtue:
+    $patch:
+      source:
+        $ref: '#/definitions/stat'
+      with:
+      - op: add
+        path: /properties/primary
+        value:
+          $ref: 'common.json#/definitions/true'
+      - op: add
+        path: '/propertyNames/enum/-'
+        value: primary
+type: object
+properties:
+  abilities:
+    type: object
+    properties:
+      Craft:
+        type: object
+        properties:
+          caste:
+            $ref: 'common.json#/definitions/true'
+          favored:
+            $ref: 'common.json#/definitions/true'
+        additionalProperties:
+          $ref: '#/definitions/ability'
+        propertyNames:
+          oneOf:
+          - $ref: '#/definitions/craftNames'
+          - enum: ['caste', 'favored']
+    additionalProperties:
+      $ref: '#/definitions/ability'
+    propertyNames:
+      $ref: '#/definitions/abilityNames'
+  age:
+    $ref: 'common.json#/definitions/nonNegativeInteger'
+  anima:
+    $ref: 'common.json#/definitions/nonEmptyString'
+  attributes:
+    type: object
+    additionalProperties:
+      $ref: '#/definitions/attribute'
+    propertyNames:
+      $ref: '#/definitions/attributeNames'
+    required: # why is there no way to share a data list between enum and required?
+    - Appearance
+    - Charisma
+    - Dexterity
+    - Intelligence
+    - Manipulation
+    - Perception
+    - Stamina
+    - Strength
+    - Wits
+  backgrounds:
+    type: array
+    items:
+      $ref: '#/definitions/background'
+  caste:
+    $ref: 'common.json#/definitions/nonEmptyString'
+  charms:
+    type: object
+    additionalProperties:
+      type: object
+      additionalProperties:
+        type: array
+        items:
+          $ref: '#/definitions/charm'
+  concept:
+    $ref: 'common.json#/definitions/nonEmptyString'
+  description:
+    type: object
+    additionalProperties:
+      $ref: 'common.json#/definitions/nonEmptyString'
+  essence:
+    type: object
+    properties:
+      permanent:
+        $ref: '#/definitions/stat'
+    additionalProperties:
+      $ref: '#/definitions/essencePool'
+    required: ['permanent']
+  experience:
+    type: array
+    items:
+      type: object
+      properties:
+        memo:
+          $ref: 'common.json#/definitions/nonEmptyString'
+        points:
+          type: integer
+      propertyNames:
+        enum: ['memo', 'points']
+      required: ['memo', 'points']
+  graces:
+    type: object
+    additionalProperties:
+      $ref: '#/definitions/grace'
+  installed:
+    type: array
+    items:
+      oneOf:
+      - $ref: '#/definitions/charm'
+      - type: array
+        items:
+          $ref: '#/definitions/charm'
+  intimacies:
+    type: array
+    items:
+      type: object
+      properties:
+        active:
+          type: boolean
+        name:
+          $ref: 'common.json#/definitions/nonEmptyString'
+        points:
+          $ref: 'common.json#/definitions/positiveInteger'
+        special:
+          $ref: 'common.json#/definitions/nonEmptyString'
+      propertyNames:
+        enum: ['active', 'name', 'points', 'special']
+      required: ['active', 'name', 'points']
+  knacks:
+    type: array
+    items:
+      $ref: '#/definitions/charm'
+  languages:
+    type: array
+    items:
+      $ref: 'common.json#/definitions/nonEmptyString'
+  lure:
+    $ref: 'common.json#/definitions/nonEmptyString'
+  motivation:
+    $ref: 'common.json#/definitions/nonEmptyString'
+  mutations:
+    type: object
+    additionalProperties:
+      $ref: '#/definitions/specialtyArray'
+    propertyNames:
+      enum:
+      - abominations
+      - afflictions
+      - blights
+      - debilities
+      - deficiencies
+      - deformities
+      - poxes
+  name:
+    $ref: 'common.json#/definitions/nonEmptyString'
+  notes:
+    anyOf:
+    - type: array
+      items:
+        type: string
+    - type: string
+  paths:
+    type: object
+    additionalProperties:
+      $ref: '#/definitions/path'
+  player:
+    $ref: 'common.json#/definitions/nonEmptyString'
+  protocols:
+    type: object
+    additionalProperties:
+      $ref: '#/properties/spells/additionalProperties'
+    propertyNames:
+      enum: ['God-Machine', 'Man-Machine']
+  slots:
+    type: object
+    additionalProperties:
+      $ref: '#/definitions/stat'
+    propertyNames:
+      enum: ['dedicated', 'general']
+  specialties:
+    type: object
+    properties:
+      Craft:
+        type: object
+        additionalProperties:
+          $ref: '#/definitions/specialtyArray'
+        propertyNames:
+          $ref: '#/definitions/craftNames'
+    additionalProperties:
+      $ref: '#/definitions/specialtyArray'
+    propertyNames:
+      oneOf:
+      - $ref: '#/definitions/abilityNames'
+      - $ref: '#/definitions/attributeNames'
+  spells:
+    type: object
+    additionalProperties:
+      type: array
+      items:
+        $ref: '#/definitions/spell'
+    propertyNames:
+      enum: ['Celestial', 'Labyrinth', 'Shadowlands', 'Solar', 'Terrestrial', 'Void']
+  splat:
+    $ref: 'common.json#/definitions/nonEmptyString'
+  thaumaturgy:
+    type: object
+    additionalProperties:
+      type: object
+      properties:
+        degrees:
+          $ref: '#/definitions/stat'
+        procedures:
+          $ref: '#/definitions/specialtyArray'
+      propertyNames:
+        enum: ['degrees', 'procedures']
+  uninstalled:
+    $ref: '#/properties/installed'
+  urge:
+    $ref: 'common.json#/definitions/nonEmptyString'
+  variant:
+    $ref: 'common.json#/definitions/nonEmptyString'
+  virtue flaw:
+    type: object
+    properties:
+      name:
+        $ref: 'common.json#/definitions/nonEmptyString'
+      condition:
+        $ref: 'common.json#/definitions/nonEmptyString'
+      description:
+        $ref: 'common.json#/definitions/nonEmptyString'
+    propertyNames:
+      enum: ['condition', 'description', 'name']
+    required: ['name']
+  virtues:
+    type: object
+    properties:
+      Compassion:
+        $ref: '#/definitions/virtue'
+      Conviction:
+        $ref: '#/definitions/virtue'
+      Temperance:
+        $ref: '#/definitions/virtue'
+      Valor:
+        $ref: '#/definitions/virtue'
+    propertyNames:
+      enum: ['Compassion', 'Conviction', 'Temperance', 'Valor']
+    required: ['Compassion', 'Conviction', 'Temperance', 'Valor']
+  willpower:
+    $ref: '#/definitions/stat'
+  yozis:
+    type: object
+    additionalProperties:
+      $ref: 'common.json#/definitions/nonEmptyString'
+    propertyNames:
+      enum: ['patron', 'favored']
+    required: ['patron']
+propertyNames:
+  enum:
+  - abilities
+  - age
+  - anima
+  - attributes
+  - backgrounds
+  - caste
+  - charms
+  - colleges
+  - concept
+  - description
+  - essence
+  - experience
+  - graces
+  - installed
+  - intimacies
+  - knacks
+  - languages
+  - lure
+  - motivation
+  - mutations
+  - name
+  - notes
+  - paths
+  - player
+  - protocols
+  - slots
+  - specialties
+  - spells
+  - splat
+  - thaumaturgy
+  - uninstalled
+  - urge
+  - variant
+  - virtue flaw
+  - virtues
+  - willpower
+  - yozis
+required: ['abilities', 'attributes', 'essence', 'splat', 'virtues', 'willpower']

@@ -11,6 +11,7 @@ const readFile = promisify(fs.readFile);
 
 const ITEM_SCHEMA_ID = 'urn:mfllc:venator:schema:master-item-schema';
 const ROOT_SCHEMA_IDS = [
+  'https://venator.sharpcla.ws/schema/character.json',
   'https://venator.sharpcla.ws/schema/charm.json',
   'https://venator.sharpcla.ws/schema/spell.json',
 ];

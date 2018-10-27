@@ -4,17 +4,13 @@ definitions:
   prerequisites:
     type: object
     properties:
-      essence:
-        $ref: 'common.json#/definitions/positiveInteger'
-      traits:
-        type: object
-        additionalProperties:
-          $ref: 'common.json#/definitions/positiveInteger'
       charms:
         type: array
         items:
           $ref: 'common.json#/definitions/charmReference'
         uniqueItems: true
+      essence:
+        $ref: 'common.json#/definitions/positiveInteger'
       excellencies:
         $ref: 'common.json#/definitions/positiveInteger'
       groups:
@@ -31,37 +27,15 @@ definitions:
               uniqueItems: true
               minItems: 2
           required: ['threshold', 'charms']
+      traits:
+        type: object
+        additionalProperties:
+          $ref: 'common.json#/definitions/positiveInteger'
 allOf:
 - type: object
   properties:
-    id:
-      $ref: 'common.json#/definitions/idString'
-    name:
-      $ref: 'common.json#/definitions/nonEmptyString'
-    type:
-      type: string
-      enum:
-      - charm
-      - generic
-      - knack
-    exalt:
-      $ref: 'common.json#/definitions/nonEmptyString'
-    group:
-      $ref: 'common.json#/definitions/nonEmptyString'
-    treat as:
-      $ref: 'common.json#/definitions/nonEmptyString'
-    prerequisites:
-      allOf:
-      - $ref: '#/definitions/prerequisites'
-      - required: ['essence']
     action:
       $ref: 'common.json#/definitions/nonEmptyString'
-    keywords:
-      type: object
-      additionalProperties:
-        oneOf:
-        - $ref: 'common.json#/definitions/nonNegativeInteger'
-        - $ref: 'common.json#/definitions/true'
     edge cost:
       $ref: 'common.json#/definitions/positiveInteger'
     edges:
@@ -69,6 +43,22 @@ allOf:
       additionalProperties:
         $ref: 'common.json#/definitions/nonEmptyString'
       minProperties: 1
+    errata:
+      $ref: 'common.json#/definitions/true'
+    exalt:
+      $ref: 'common.json#/definitions/nonEmptyString'
+    excellency:
+      $ref: 'common.json#/definitions/true'
+    group:
+      $ref: 'common.json#/definitions/nonEmptyString'
+    id:
+      $ref: 'common.json#/definitions/idString'
+    keywords:
+      type: object
+      additionalProperties:
+        oneOf:
+        - $ref: 'common.json#/definitions/nonNegativeInteger'
+        - $ref: 'common.json#/definitions/true'
     martial:
       type: object
       additionalProperties:
@@ -76,36 +66,15 @@ allOf:
       minProperties: 1
     martial-ready:
       $ref: 'common.json#/definitions/true'
-    virtue:
-      type: object
-      properties:
-        Compassion:
-          $ref: 'common.json#/definitions/true'
-        Conviction:
-          $ref: 'common.json#/definitions/true'
-        Temperance:
-          $ref: 'common.json#/definitions/true'
-        Valor:
-          $ref: 'common.json#/definitions/true'
-      additionalProperties: false
-      minProperties: 1
-    taint:
-      type: object
-      additionalProperties:
-        $ref: 'common.json#/definitions/nonNegativeInteger'
-      minProperties: 1
-    variants:
-      type: object
-      additionalProperties:
-        type: object
-        properties:
-          name:
-            $ref: 'common.json#/definitions/nonEmptyString'
-          prerequisites:
-            $ref: '#/definitions/prerequisites'
-        required: ['name']
-      minProperties: 1
-    excellency:
+    name:
+      $ref: 'common.json#/definitions/nonEmptyString'
+    prerequisites:
+      allOf:
+      - $ref: '#/definitions/prerequisites'
+      - required: ['essence']
+    raises Essence cap:
+      $ref: 'common.json#/definitions/true'
+    raises trait cap:
       $ref: 'common.json#/definitions/true'
     repurchases:
       type: object
@@ -128,14 +97,49 @@ allOf:
               minProperties: 1
             minItems: 1
         required: ['when']
-    raises Essence cap:
-      $ref: 'common.json#/definitions/true'
-    raises trait cap:
-      $ref: 'common.json#/definitions/true'
+    taint:
+      type: object
+      additionalProperties:
+        $ref: 'common.json#/definitions/nonNegativeInteger'
+      minProperties: 1
     transcends:
       $ref: 'common.json#/definitions/true'
-    errata:
-      $ref: 'common.json#/definitions/true'
+    treat as:
+      enum:
+      - Celestial Martial Arts
+      - Sidereal Martial Arts
+      - Terrestrial Martial Arts
+    type:
+      type: string
+      enum:
+      - charm
+      - generic
+      - knack
+    variants:
+      type: object
+      additionalProperties:
+        type: object
+        properties:
+          name:
+            $ref: 'common.json#/definitions/nonEmptyString'
+          prerequisites:
+            $ref: '#/definitions/prerequisites'
+        required: ['name']
+      minProperties: 1
+    virtue:
+      type: object
+      properties:
+        Compassion:
+          $ref: 'common.json#/definitions/true'
+        Conviction:
+          $ref: 'common.json#/definitions/true'
+        Temperance:
+          $ref: 'common.json#/definitions/true'
+        Valor:
+          $ref: 'common.json#/definitions/true'
+      propertyNames:
+        enum: ['Compassion', 'Conviction', 'Temperance', 'Virtue']
+      minProperties: 1
   required: ['id', 'type']
 - if:
     required: ['edge cost']
@@ -145,6 +149,12 @@ allOf:
     not:
       required: ['edges']
 - if:
+    required: ['excellency', 'type']
+  then:
+    properties:
+      type:
+        const: generic
+- if:
     required: ['martial-ready']
   then:
     required: ['martial']
@@ -152,14 +162,9 @@ allOf:
     properties:
       keywords:
         required: ['Taint']
+    required: ['keywords']
   then:
     required: ['taint']
   else:
     not:
       required: ['taint']
-- if:
-    required: ['excellency']
-  then:
-    properties:
-      type:
-        const: generic
