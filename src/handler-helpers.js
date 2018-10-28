@@ -1,0 +1,15 @@
+export const DISPATCH = {
+  Abyssal: 'abyssal',
+  Alchemical: 'alchemical',
+  'Dragon-Blooded': 'dragonblooded',
+  'Dragon King': 'dragonking',
+  // Ghost: 'ghost',
+  // 'God-Blooded': 'godblooded',
+  Infernal: 'infernal',
+  Jadeborn: 'jadeborn',
+  Lunar: 'lunar',
+  Mortal: 'mortal',
+  Raksha: 'raksha',
+  Sidereal: 'sidereal',
+  Solar: 'solar',
+};

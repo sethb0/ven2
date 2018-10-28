@@ -8,9 +8,9 @@ defaultStyle:
   columnGap: 18
 styles:
   title:
-    font: 'Trebuchet'
+    font: Trebuchet
     fontSize: 21
-    alignment: 'center'
+    alignment: center
     margin: &titleMargins [36, 28, 36, 0]
   subtitle:
     font: Trebuchet

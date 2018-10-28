@@ -1,23 +1,8 @@
 /* eslint no-console: off */
+import { DISPATCH } from '../handler-helpers';
 import path from 'path';
 
 import { Character } from '../character';
-
-const AUDITORS = {
-  Abyssal: 'abyssal',
-  Alchemical: 'alchemical',
-  'Dragon-Blooded': 'dragonblooded',
-  'Dragon King': 'dragonking',
-  // Ghost: 'ghost',
-  // 'God-Blooded': 'godblooded',
-  Infernal: 'infernal',
-  Jadeborn: 'jadeborn',
-  Lunar: 'lunar',
-  Mortal: 'mortal',
-  Raksha: 'raksha',
-  Sidereal: 'sidereal',
-  Solar: 'solar',
-};
 
 export default async function audit (argv) {
   const { debug, verbose } = argv;
@@ -38,7 +23,7 @@ export default async function audit (argv) {
   if (!ch.splat) {
     throw new Error('No splat in input, use --mode');
   }
-  const auditorName = AUDITORS[ch.splat];
+  const auditorName = DISPATCH[ch.splat];
   if (!auditorName) {
     throw new Error(`No auditor found for ${ch.splat}`);
   }
