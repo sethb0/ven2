@@ -14,9 +14,9 @@ const SPELLS = loadYamlSync(path.resolve(__dirname, '..', 'ecg', 'spells.yml'));
 const CASTE_TRAITS = loadCasteTraits();
 const CASTE_YOZIS = loadCasteYozis();
 
-export default function transform (argv) {
-  // const { debug } = argv;
-  const ecg = xmlToJson.parseString(argv.file, { grokText: false, xmlns: false });
+export default async function transform (argv) {
+  const { debug } = argv;
+  const ecg = xmlToJson.parseString((await argv.file).data, { grokText: false, xmlns: false });
   const out = {};
 
   const ch = ecg.ExaltedCharacter[0];
@@ -51,8 +51,8 @@ export default function transform (argv) {
   }
   if (models['Infernal.Urge.Template']) {
     const vf = models['Infernal.Urge.Template'].Content[0].VirtueFlaw[0];
-    if (vf.Description) {
-      out.urge = vf.Description[0]._text;
+    if (vf.description) {
+      out.urge = vf.description[0]._text;
     }
   }
   out.description = {};
@@ -123,9 +123,9 @@ export default function transform (argv) {
 
   const attrs = st.Attributes[0];
   out.attributes = {};
-  for (const attrGroup of [attrs.Physica[0], attrs.Social[0], attrs.Mental[0]]) {
+  for (const attrGroup of [attrs.Physical[0], attrs.Social[0], attrs.Mental[0]]) {
     for (const attribute of Object.keys(attrGroup)) {
-      if (!attribute.startsWith(')')) {
+      if (!attribute.startsWith('_')) {
         out.attributes[attribute] = {};
         if (casteTraits.has(attribute)) {
           out.attributes[attribute].caste = true;
@@ -145,7 +145,7 @@ export default function transform (argv) {
 
   const abils = st.Abilities[0];
   out.abilities = {};
-  for (const ability of abils) {
+  for (const ability of Object.keys(abils)) {
     if (!ability.startsWith('_')) {
       const key = ability === 'MartialArts' ? 'Martial Arts' : ability;
       out.abilities[key] = {};
@@ -173,7 +173,7 @@ export default function transform (argv) {
         } else {
           const a = abils[ability][0];
           Object.assign(out.abilities[key], readCrExpItem(a));
-          specialties[a] = readSpecialties(a);
+          specialties[key] = readSpecialties(a);
         }
       } catch (e) {
         e.message = `${e.message} (ability = ${ability})`;
@@ -196,10 +196,21 @@ export default function transform (argv) {
   if (st.Backgrounds) {
     out.backgrounds = [];
     for (const background of st.Backgrounds[0].Background || []) {
-      const bg = { name: background._text, ...readCrExpItem(background) };
-      if (background.Description) {
-        bg.name += ` (${background.Description[0]._text})`;
+      let name = background._text;
+      switch (name) {
+      case 'UnderworldManse':
+        name = 'Underworld Manse';
+        break;
+      case 'UnwovenCoadjutor':
+        name = 'Unwoven Coadjutor';
+        break;
+      default:
+        // NOOP
       }
+      if (background.Description) {
+        name = `${name} (${background.Description[0]._text})`;
+      }
+      const bg = { name, ...readCrExpItem(background) };
       out.backgrounds.push(bg);
     }
   }
@@ -398,6 +409,9 @@ export default function transform (argv) {
   }
 
   scrub(out);
+  if (debug) {
+    console.log(out);
+  }
   return dumpYamlString(out);
 }
 
@@ -428,6 +442,7 @@ function readCrExpItem (node) {
     out.favored = a.favored?._value;
     out.creation = a.creationValue?._value;
     out.experienced = a.experiencedValue?._value;
+    scrub(out);
   }
   return out;
 }
@@ -468,8 +483,11 @@ function readSpecialties (node) {
 
 function scrub (obj) {
   for (const [key, value] of Object.entries(obj)) {
-    if (value === null || (typeof value === 'object' && !Object.keys(value).length)) {
-      obj[key] = undefined;
+    if (
+      value === null || typeof value === 'undefined'
+      || (typeof value === 'object' && !Object.keys(value).length)
+    ) {
+      delete obj[key];
     }
   }
 }
