@@ -1,10 +1,8 @@
-import { join, relative, resolve } from 'path';
+import { relative } from 'path';
 
 export function makeAbsoluteFontDescriptor () {
-  const fontDir = resolve(__dirname, '..', 'assets', 'pdf');
-
   function fontPath (...args) {
-    return join(fontDir, ...args);
+    return require.resolve(`@ven2/images/fonts/${args.join('/')}`);
   }
 
   return {
@@ -43,12 +41,12 @@ export function makeAbsoluteFontDescriptor () {
 
 export function makeRelativeFontDescriptor (relativeTo) {
   const out = {};
-  Object.entries(makeAbsoluteFontDescriptor()).forEach(([font, descriptor]) => {
+  for (const [font, descriptor] of Object.entries(makeAbsoluteFontDescriptor())) {
     const relativeDescriptor = {};
-    Object.entries(descriptor).forEach(([style, path]) => {
+    for (const [style, path] of Object.entries(descriptor)) {
       relativeDescriptor[style] = relative(relativeTo, path);
-    });
+    }
     out[font] = relativeDescriptor;
-  });
+  }
   return out;
 }
