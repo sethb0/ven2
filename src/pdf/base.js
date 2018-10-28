@@ -507,7 +507,7 @@ export class Generator {
       return [];
     }
     const out = [{ text: ['Mutations:'], style: 'section' }];
-    for (const [k, v] of mutations) {
+    for (const [k, v] of Object.entries(mutations)) {
       const kk = k[0].toUpperCase() + k.substring(1);
       if (v.length) {
         const para = [`${kk}\u2014`];
