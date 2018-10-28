@@ -1,4 +1,3 @@
-/* eslint no-console: off */
 import Ajv from 'Ajv';
 import ajvMergePatch from 'ajv-merge-patch';
 import fs from 'fs';

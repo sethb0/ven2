@@ -1,4 +1,4 @@
-/* eslint no-console: off, no-undefined: off */
+/* eslint no-undefined: off */
 import { casteTraits as loadCasteTraits, casteYozis as loadCasteYozis } from '@ven2/data';
 import { DOMParser } from 'xmldom';
 import { dumpString as dumpYamlString, loadSync as loadYamlSync } from '@sethb0/yaml-utils';

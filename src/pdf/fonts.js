@@ -2,7 +2,7 @@ import { relative } from 'path';
 
 export function makeAbsoluteFontDescriptor () {
   function fontPath (...args) {
-    return require.resolve(`@ven2/images/fonts/${args.join('/')}`);
+    return require.resolve(`@ven2/images/data/fonts/${args.join('/')}`);
   }
 
   return {

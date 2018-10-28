@@ -1,4 +1,3 @@
-/* eslint no-console: off */
 import { DISPATCH } from '../handler-helpers';
 import path from 'path';
 
