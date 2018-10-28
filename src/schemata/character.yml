@@ -408,7 +408,7 @@ properties:
           $ref: 'common.json#/definitions/nonEmptyString'
       propertyNames:
         enum: ['active', 'name', 'points', 'special']
-      required: ['active', 'name', 'points']
+      required: ['active', 'name']
   knacks:
     type: array
     items:
@@ -513,7 +513,6 @@ properties:
         $ref: 'common.json#/definitions/nonEmptyString'
     propertyNames:
       enum: ['condition', 'description', 'name']
-    required: ['name']
   virtues:
     type: object
     properties:
