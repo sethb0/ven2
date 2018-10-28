@@ -44,11 +44,11 @@ styles:
   creation:
     color: black
   bonus:
-    color: crimson
+    color: '#C40233' # NCS red
   experienced:
-    color: dodgerblue
+    color: '#0087BD' # NCS blue
   augmented:
-    color: yellowgreen
+    color: '#FFD300' # NCS yellow
   diminished:
     color: darkgray
   N/A:
