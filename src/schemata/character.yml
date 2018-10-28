@@ -1,5 +1,7 @@
 $schema: http://json-schema.org/draft-07/schema#
 $id: https://venator.sharpcla.ws/schema/character.json
+
+##### BEGIN DEFINITIONS SECTION #####
 definitions:
   ability:
     $patch:
@@ -299,6 +301,9 @@ definitions:
       - op: add
         path: '/propertyNames/enum/-'
         value: primary
+##### END DEFINITIONS SECTION #####
+
+##### BEGIN SCHEMA #####
 type: object
 properties:
   abilities:
@@ -576,3 +581,4 @@ propertyNames:
   - willpower
   - yozis
 required: ['abilities', 'attributes', 'essence', 'splat', 'virtues', 'willpower']
+##### END SCHEMA #####

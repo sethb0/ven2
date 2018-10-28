@@ -1,5 +1,7 @@
 $schema: http://json-schema.org/draft-07/schema#
 $id: https://venator.sharpcla.ws/schema/common.json
+
+##### BEGIN DEFINITIONS SECTION #####
 definitions:
   true:
     type: boolean
@@ -28,3 +30,4 @@ definitions:
           $ref: '#/definitions/idString'
       required: ['id']
     - $ref: '#/definitions/idString'
+##### END DEFINITIONS SECTION #####

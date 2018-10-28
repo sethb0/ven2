@@ -1,5 +1,7 @@
 $schema: http://json-schema.org/draft-07/schema#
 $id: https://venator.sharpcla.ws/schema/charm.json
+
+##### BEGIN DEFINITIONS SECTION #####
 definitions:
   prerequisites:
     type: object
@@ -31,6 +33,9 @@ definitions:
         type: object
         additionalProperties:
           $ref: 'common.json#/definitions/positiveInteger'
+##### END DEFINITIONS SECTION #####
+
+##### BEGIN SCHEMA #####
 allOf:
 - type: object
   properties:
@@ -168,3 +173,4 @@ allOf:
   else:
     not:
       required: ['taint']
+##### END SCHEMA #####
