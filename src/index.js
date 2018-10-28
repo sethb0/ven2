@@ -10,7 +10,7 @@ const p = Object.fromEntries
 
 p.then(() => {
   const y = yargs
-    .scriptName('ven2')
+    .scriptName('venator')
     .usage('Usage: $0 <command> [options]')
     .strict()
     .commandDir('commands')

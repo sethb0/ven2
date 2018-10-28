@@ -12,7 +12,7 @@
     "web": "rm -rf web/schema && mkdir -p web/schema && (for x in src/schemata/*.yml; do node utils/y2j.js \"$x\" web/schema/$(basename \"$x\" .yml).json; done) && firebase deploy --only hosting"
   },
   "bin": {
-    "ven2": "./bin/ven2.js"
+    "venator": "./bin/venator.js"
   },
   "files": [
     "/bin",
