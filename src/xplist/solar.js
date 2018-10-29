@@ -1,4 +1,5 @@
-import { BaseAuditor, BaseCoster, BaseParser } from './base';
+import { BaseAuditor } from './base';
+import { SolarCoster, SolarParser } from '../audit/solar';
 
 export default class SolarAuditor extends BaseAuditor {
   constructor (character, options) {
@@ -6,11 +7,3 @@ export default class SolarAuditor extends BaseAuditor {
     super(character, new SolarCoster(parser), parser, options);
   }
 }
-
-export class SolarParser extends BaseParser {
-  get nativeSplat () {
-    return 'Solar';
-  }
-}
-
-export class SolarCoster extends BaseCoster {}

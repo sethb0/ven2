@@ -1,4 +1,5 @@
-import { BaseAuditor, BaseCoster, BaseParser } from './base';
+import { BaseAuditor } from './base';
+import { AbyssalCoster, AbyssalParser } from '../audit/abyssal';
 
 export default class AbyssalAuditor extends BaseAuditor {
   constructor (character, options) {
@@ -6,11 +7,3 @@ export default class AbyssalAuditor extends BaseAuditor {
     super(character, new AbyssalCoster(parser), parser, options);
   }
 }
-
-export class AbyssalParser extends BaseParser {
-  get nativeSplat () {
-    return 'Abyssal';
-  }
-}
-
-export class AbyssalCoster extends BaseCoster {}

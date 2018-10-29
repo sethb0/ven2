@@ -1,22 +1,38 @@
-import { BaseAuditor } from './base';
+import { BaseAuditor, BaseCoster, BaseParser } from './base';
 
 export default class LunarAuditor extends BaseAuditor {
-  get nativeSplat () {
-    return 'Lunar';
+  constructor (character, options) {
+    const parser = new LunarParser(character);
+    super(character, new LunarCoster(parser), parser, options);
   }
+}
 
-  get lotusRootCharmName () {
-    return 'Terrestrial Bloodline Integration';
-  }
-
+export class LunarParser extends BaseParser {
   get favorsSpells () {
     return this.favors('Intelligence');
   }
 
-  get essenceCostMultiplier () {
-    return 9;
+  get knowsShiftingWyldTides () {
+    if (this.character.charms) {
+      for (const x of Object.values(this.character.charms)) {
+        for (const y of Object.values(x)) {
+          for (const z of Object.values(y)) {
+            if (z.id === 'Lunar.ShiftingWyldTides' || z.name === 'Shifting Wyld Tides') {
+              return true;
+            }
+          }
+        }
+      }
+    }
+    return false;
   }
 
+  get nativeSplat () {
+    return 'Lunar';
+  }
+}
+
+export class LunarCoster extends BaseCoster {
   get favoredCharmCost () {
     return 10;
   }
@@ -26,11 +42,19 @@ export default class LunarAuditor extends BaseAuditor {
   }
 
   get favoredCelestialMACharmCost () {
-    return this.isAkuma ? 10 : 12;
+    return this.parser.isAkuma ? 10 : 12;
   }
 
   get unfavoredCelestialMACharmCost () {
     return 12;
+  }
+
+  get rakshaCharmCost () {
+    return this.parser.knowsShiftingWyldTides ? this.favoredCharmCost : super.rakshaCharmCost;
+  }
+
+  get essenceCostMultiplier () {
+    return 9;
   }
 
   get knackCost () {
@@ -43,20 +67,5 @@ export default class LunarAuditor extends BaseAuditor {
 
   get unfavoredSpellCost () {
     return 12;
-  }
-
-  get rakshaCharmCost () {
-    if (this.character.charms) {
-      for (const x of Object.values(this.character.charms)) {
-        for (const y of Object.values(x)) {
-          for (const z of Object.values(y)) {
-            if (z.name === 'Shifting Wyld Tides') {
-              return this.favoredCharmCost;
-            }
-          }
-        }
-      }
-    }
-    return super.rakshaCharmCost;
   }
 }

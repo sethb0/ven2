@@ -1,18 +1,23 @@
-import { BaseAuditor } from './base';
+import { BaseAuditor, BaseCoster, BaseParser } from './base';
 
 export default class InfernalAuditor extends BaseAuditor {
-  get nativeSplat () {
-    return 'Infernal';
+  constructor (character, options) {
+    const parser = new InfernalParser(character);
+    super(character, new InfernalCoster(parser), parser, options);
   }
+}
 
-  get lotusRootCharmName () {
-    return 'Roots of the Brass Lotus';
-  }
-
+export class InfernalParser extends BaseParser {
   get isAkuma () {
     return false;
   }
 
+  get nativeSplat () {
+    return 'Infernal';
+  }
+}
+
+export class InfernalCoster extends BaseCoster {
   get favoredSpellCost () {
     return 9;
   }

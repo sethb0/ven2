@@ -16,14 +16,14 @@ export function builder (yargs) {
 export function handler (argv) {
   return import('../handlers/validate')
     .then((i) => i.default(argv))
-    .catch(console.error);
+    .catch((e) => console.error(argv.debug ? e : e.message));
 }
 
 function load (filename) {
   return loadYaml(filename)
     .then((data) => ({ filename, data }))
     .catch((err) => {
-      console.error(err);
+      console.error(err.message);
       process.exit(1);
     });
 }

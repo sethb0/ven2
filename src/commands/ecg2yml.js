@@ -14,5 +14,5 @@ export function handler (argv) {
   return import('../handlers/ecg2yml')
     .then((i) => i.default(argv))
     .then((output) => stdOutput(argv, output))
-    .catch(console.error);
+    .catch((e) => console.error(argv.debug ? e : e.message));
 }

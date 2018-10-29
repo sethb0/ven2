@@ -1,18 +1,19 @@
-import { BaseAuditor } from './base';
+import { BaseAuditor, BaseParser, BaseCoster } from './base';
 
 export default class SiderealAuditor extends BaseAuditor {
+  constructor (character, options) {
+    const parser = new SiderealParser(character);
+    super(character, new SiderealCoster(parser), parser, options);
+  }
+}
+
+export class SiderealParser extends BaseParser {
   get nativeSplat () {
     return 'Sidereal';
   }
+}
 
-  get lotusRootCharmName () {
-    return 'Perfected Lotus Mastery';
-  }
-
-  get essenceCostMultiplier () {
-    return 9;
-  }
-
+export class SiderealCoster extends BaseCoster {
   get favoredCharmCost () {
     return 9;
   }
@@ -35,6 +36,10 @@ export default class SiderealAuditor extends BaseAuditor {
 
   get unfavoredSiderealMACharmCost () {
     return 12;
+  }
+
+  get essenceCostMultiplier () {
+    return 9;
   }
 
   get favoredSpellCost () {

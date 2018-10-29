@@ -23,6 +23,7 @@ Solar.SwallowingTheLotusRoot:
   exalt: Solar
   group: Martial Arts
   treat as: Celestial Martial Arts
+  lotus root: true
 Solar.WickedDissolveDust:
   name: Wicked Dissolve Dust
   exalt: Solar
@@ -33,21 +34,25 @@ Abyssal.BloodSoakedLotusRoots:
   exalt: Abyssal
   group: Martial Arts
   treat as: Celestial Martial Arts
+  lotus root: true
 Infernal.RootsOfTheBrassLotus:
   name: Roots of the Brass Lotus
   exalt: Infernal
   group: Martial Arts
   treat as: Celestial Martial Arts
+  lotus root: true
 Sidereal.PerfectedLotusMastery:
   name: Perfected Lotus Mastery
   exalt: Sidereal
   group: Martial Arts
   treat as: Celestial Martial Arts
+  lotus root: true
 Lunar.TerrestrialBloodlineIntegration:
   name: Terrestrial Bloodline Integration
   exalt: Lunar
   group: Martial Arts
   treat as: Celestial Martial Arts
+  lotus root: true
 Lunar.PredatorDistractionMethod:
   name: Predator Distraction Method
   exalt: Lunar
@@ -11483,7 +11488,7 @@ Sidereal.EfficientSecretaryTechnique:
   exalt: Sidereal
   group: Investigation
 Sidereal.ResearchAssistantInvocation:
-  name: Research  Assistant Invocation
+  name: Research Assistant Invocation
   exalt: Sidereal
   group: Investigation
 Sidereal.EmbracingLifeMethod:

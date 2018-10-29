@@ -1,20 +1,39 @@
-import { BaseAuditor } from './base';
+import { BaseAuditor, BaseCoster, BaseParser } from './base';
 
 export default class JadebornAuditor extends BaseAuditor {
-  get nativeSplat () {
-    return 'Jadeborn';
+  constructor (character, options) {
+    const parser = new JadebornParser(character);
+    super(character, new JadebornCoster(parser), parser, options);
+  }
+}
+
+export class JadebornParser extends BaseParser {
+  favors (thing) {
+    if (thing === this.character.caste || (thing === 'Enlightened' && this.isEnlightened)) {
+      return true;
+    }
+    return super.favors(thing);
   }
 
   get isEnlightened () {
     return this.character.caste === 'Artisan' || this.character.variant === 'Enlightened';
   }
 
-  get lotusRootCharmName () {
-    return 'Roots of the Brass Lotus';
+  get nativeSplat () {
+    return 'Jadeborn';
+  }
+}
+
+export class JadebornCoster extends BaseCoster {
+  getAbilityDotCost (name, i, favored) {
+    if (name.startsWith('Craft')) {
+      return i ? i : 2;
+    }
+    return super.getAbilityDotCost(name, i, favored);
   }
 
-  get essenceCostMultiplier () {
-    return 10;
+  getSpecialtyDotCost (name) {
+    return name.startsWith('Craft') ? 2 : super.getSpecialtyDotCost(name);
   }
 
   get favoredCharmCost () {
@@ -25,28 +44,12 @@ export default class JadebornAuditor extends BaseAuditor {
     return 12;
   }
 
-  get favoredSpellCost () {
-    return this.unfavoredSpellCost;
-  }
-
-  get unfavoredSpellCost () {
-    return 12;
-  }
-
-  get favoredDegreeCost () {
-    return this.unfavoredDegreeCost;
-  }
-
-  get unfavoredDegreeCost () {
-    return this.isEnlightened ? 6 : 12;
-  }
-
   get favoredTerrestrialMACharmCost () {
     return this.unfavoredTerrestrialMACharmCost;
   }
 
   get unfavoredTerrestrialMACharmCost () {
-    return this.knowsLotusRoot ? 6 : 12;
+    return this.getKnowsLotusRoot() ? 6 : 12;
   }
 
   get favoredCelestialMACharmCost () {
@@ -65,21 +68,23 @@ export default class JadebornAuditor extends BaseAuditor {
     throw new Error('unable to compute Sidereal MA cost for Jadeborn');
   }
 
-  favors (thing) {
-    if (thing === this.character.caste || (thing === 'Enlightened' && this.isEnlightened)) {
-      return true;
-    }
-    return super.favors(thing);
+  get favoredDegreeCost () {
+    return this.unfavoredDegreeCost;
   }
 
-  getAbilityDotCost (name, i, favored) {
-    if (name.startsWith('Craft')) {
-      return i ? i : 2;
-    }
-    return super.getAbilityDotCost(name, i, favored);
+  get unfavoredDegreeCost () {
+    return this.parser.isEnlightened ? 6 : 12;
   }
 
-  getSpecialtyDotCost (name) {
-    return name.startsWith('Craft') ? 2 : super.getSpecialtyDotCost(name);
+  get essenceCostMultiplier () {
+    return 10;
+  }
+
+  get favoredSpellCost () {
+    return this.unfavoredSpellCost;
+  }
+
+  get unfavoredSpellCost () {
+    return 12;
   }
 }

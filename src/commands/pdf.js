@@ -27,5 +27,5 @@ export function handler (argv) {
       pdf.pipe(out);
       pdf.end();
     })
-    .catch(console.error);
+    .catch((e) => console.error(argv.debug ? e : e.message));
 }

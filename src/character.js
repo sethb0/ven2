@@ -34,7 +34,7 @@ export class Character {
   }
 
   static deepCopy (data) {
-    return JSON.parse(JSON.stringify(data));
+    return JSON.parse(JSON.stringify(data || null));
   }
 
   static load (data) {

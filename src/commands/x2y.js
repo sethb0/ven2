@@ -39,7 +39,7 @@ export function handler (argv) {
   return import('../handlers/x2y')
     .then((i) => i.default(argv))
     .then((data) => dump(argv.output, data))
-    .catch(console.error);
+    .catch((e) => console.error(argv.debug ? e : e.message));
 }
 
 function load (path) {
@@ -50,7 +50,12 @@ function load (path) {
       xmlData._path = path; // for error messages
       return xmlData;
     };
-  return readFile(path, 'utf8').then(fn);
+  return readFile(path, 'utf8')
+    .then(fn)
+    .catch((e) => {
+      console.error(e.message);
+      process.exit(1);
+    });
 }
 
 async function dump (path, data) {

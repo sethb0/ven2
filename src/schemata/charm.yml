@@ -64,6 +64,8 @@ allOf:
         oneOf:
         - $ref: 'common.json#/definitions/nonNegativeInteger'
         - $ref: 'common.json#/definitions/true'
+    lotus root:
+      $ref: 'common.json#/definitions/true'
     martial:
       type: object
       additionalProperties:

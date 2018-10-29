@@ -1,11 +1,10 @@
-import { BaseAuditor, discountedXP } from './base';
+/* eslint no-invalid-this: off, babel/no-invalid-this: off */
+import { BaseAuditor, BaseCoster, BaseParser, discountedXP } from './base';
 
 export default class RakshaAuditor extends BaseAuditor {
-  categorizeCharms () {
-    super.categorizeCharms();
-    this._charms.Raksha = this._charms.FavoredNative.concat(this._charms.UnfavoredNative);
-    this._charms.FavoredNative = [];
-    this._charms.UnfavoredNative = [];
+  constructor (character, options) {
+    const parser = new RakshaParser(character);
+    super(character, new RakshaCoster(parser), parser, options);
   }
 
   abilities () {
@@ -20,23 +19,34 @@ export default class RakshaAuditor extends BaseAuditor {
     return total;
   }
 
-  get nativeSplat () {
-    return 'Raksha';
+  categorizeCharms () {
+    super.categorizeCharms();
+    this::rakshaCategorizeCharms();
   }
+}
 
+export function rakshaCategorizeCharms () {
+  this._charms.Raksha = this._charms.FavoredNative.concat(this._charms.UnfavoredNative);
+  this._charms.FavoredNative = [];
+  this._charms.UnfavoredNative = [];
+}
+
+export class RakshaParser extends BaseParser {
   get knowsLotusRoot () {
     return false;
   }
 
-  get isNoble () {
+  get nativeSplat () {
+    return 'Raksha';
+  }
+
+  get noble () {
     return !['Diplomat', 'Entertainer', 'Guide', 'Warrior', 'Worker']
       .includes(this.character.caste);
   }
+}
 
-  get essenceCostMultiplier () {
-    return 10;
-  }
-
+export class RakshaCoster extends BaseCoster {
   get rakshaCharmCost () {
     return 6;
   }
@@ -65,15 +75,19 @@ export default class RakshaAuditor extends BaseAuditor {
     throw new Error('unable to compute Sidereal MA cost for raksha');
   }
 
-  get specialtyCost () {
-    return this.isNoble ? 5 : 2;
-  }
-
   get favoredDegreeCost () {
     return 8;
   }
 
   get unfavoredDegreeCost () {
     return 10;
+  }
+
+  get essenceCostMultiplier () {
+    return 10;
+  }
+
+  get specialtyCost () {
+    return this.parser.noble ? 5 : 2;
   }
 }

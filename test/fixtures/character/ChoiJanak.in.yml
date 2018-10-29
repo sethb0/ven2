@@ -417,7 +417,7 @@ charms:
         experienced: 1
       - name: Propitious Investigation Alignment
         experienced: 1
-      - name: Research  Assistant Invocation
+      - name: Research Assistant Invocation
         experienced: 1
     Larceny:
       - name: Second Larceny Excellency
@@ -489,6 +489,7 @@ charms:
         experienced: 1
       - name: Perfected Lotus Mastery
         treat as: Celestial Martial Arts
+        lotus root: true
         experienced: 1
       - name: Propitious Martial Arts Alignment
         experienced: 1

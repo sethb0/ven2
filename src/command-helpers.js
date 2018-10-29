@@ -69,6 +69,6 @@ function drainStream (stream) {
 }
 
 function errorHandler (err) {
-  console.error(err);
+  console.error(err.message);
   process.exit(1);
 }

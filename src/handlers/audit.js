@@ -3,7 +3,7 @@ import path from 'path';
 
 import { Character } from '../character';
 
-export default async function audit (argv) {
+export default async function audit (argv, dir) {
   const { debug, verbose } = argv;
   const { filename, data } = await argv.file;
   const ch = new Character(data);
@@ -29,7 +29,7 @@ export default async function audit (argv) {
   if (debug) {
     console.log(`Selected auditor: ${auditorName}`);
   }
-  const Auditor = (await import(path.resolve(__dirname, '..', 'audit', auditorName))).default;
+  const Auditor = (await import(path.resolve(__dirname, '..', dir, auditorName))).default;
   const auditor = new Auditor(ch, { debug, verbose, filename });
   console.log(auditor.audit());
 }

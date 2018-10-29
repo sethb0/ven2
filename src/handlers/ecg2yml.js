@@ -14,6 +14,11 @@ const SPELLS = loadYamlSync(path.resolve(__dirname, '..', 'ecg', 'spells.yml'));
 const CASTE_TRAITS = loadCasteTraits();
 const CASTE_YOZIS = loadCasteYozis();
 
+const COPY_CHARM_FIELDS = [
+  'any akuma', 'edge cost', 'edges', 'favored caste', 'gather', 'lotus root', 'merge',
+  'treat as',
+];
+
 export default async function transform (argv) {
   const { debug } = argv;
   const ecg = xmlToJson.parseString((await argv.file).data, { grokText: false, xmlns: false });
@@ -417,20 +422,10 @@ export default async function transform (argv) {
 
 function copyCharmData (charm) {
   const out = {};
-  if (charm['edge cost']) {
-    out['edge cost'] = charm['edge cost'];
-  }
-  if (charm['favored caste']) {
-    out['favored caste'] = charm['favored caste'];
-  }
-  if (charm['treat as']) {
-    out['treat as'] = charm['treat as'];
-  }
-  if (charm.merge) {
-    out.merge = charm.merge;
-  }
-  if (charm.gather) {
-    out.gather = charm.gather;
+  for (const key of COPY_CHARM_FIELDS) {
+    if (charm[key]) {
+      out[key] = charm[key];
+    }
   }
   return out;
 }

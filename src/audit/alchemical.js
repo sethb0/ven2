@@ -1,40 +1,32 @@
-import { BaseAuditor } from './base';
+import { BaseAuditor, BaseCoster, BaseParser } from './base';
 
 export default class AlchemicalAuditor extends BaseAuditor {
-  get nativeSplat () {
-    return 'Alchemical';
+  constructor (character, options) {
+    const parser = new AlchemicalParser(character);
+    super(character, new AlchemicalCoster(parser), parser, options);
   }
+}
 
+export class AlchemicalParser extends BaseParser {
   get knowsLotusRoot () {
     // Perfected Lotus Matrix can't be installed in an array.
-    if (!this.character.installedCharms) {
-      return false;
-    }
-    for (const x of this.character.installedCharms) {
-      if (x.name === 'Perfected Lotus Matrix' && x.submodules) {
-        for (const y of x.submodules) {
-          if (y.name === 'Lotus Filament Conduction') {
-            return true;
-          }
+    if (this.character.installed?.charms) {
+      for (const x of this.character.installed?.charms) {
+        if (x.submodules?.includes('Lotus Filament Conduction')) {
+          return true;
         }
       }
     }
     return false;
   }
 
-  get essenceCostMultiplier () {
-    return 9;
+  get nativeSplat () {
+    return 'Alchemical';
   }
+}
 
+export class AlchemicalCoster extends BaseCoster {
   get alchemicalCharmCost () {
-    return 6;
-  }
-
-  get dedicatedSlotCost () {
-    return 4;
-  }
-
-  get generalSlotCost () {
     return 6;
   }
 
@@ -52,5 +44,17 @@ export default class AlchemicalAuditor extends BaseAuditor {
 
   get unfavoredSiderealMACharmCost () {
     throw new Error('unable to compute Sidereal MA cost for Alchemical');
+  }
+
+  get essenceCostMultiplier () {
+    return 9;
+  }
+
+  get dedicatedSlotCost () {
+    return 4;
+  }
+
+  get generalSlotCost () {
+    return 6;
   }
 }
