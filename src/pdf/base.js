@@ -840,9 +840,9 @@ export class Generator {
   }
 
   static formatDotSection (from, to, style) {
-    let text = '•'.repeat(to - from);
+    let text = '\u2022'.repeat(to - from);
     if (from <= 4 && to >= 5) {
-      text = ['•'.repeat(5 - from), '•'.repeat(to - 5)].join(' ');
+      text = ['\u2022'.repeat(5 - from), '\u2022'.repeat(to - 5)].join(' ');
     }
     return { text, style };
   }

@@ -428,5 +428,11 @@ function formatTrait (name, value, cost, forceDots, prodigy) {
 }
 
 function formatNumber (n) {
-  return n ? '•'.repeat(n) : '0';
+  if (!n) {
+    return '0';
+  }
+  if (n <= 5) {
+    return '\u2022'.repeat(n);
+  }
+  return `\u2022\u2022\u2022\u2022\u2022 ${'\u2022'.repeat(n - 5)}`;
 }
