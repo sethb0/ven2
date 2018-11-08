@@ -1,5 +1,5 @@
 import { BaseAuditor } from './base';
-import { DragonBloodedCoster, DragonBloodedParser } from './dragonblooded';
+import { DragonBloodedCoster, DragonBloodedParser } from './dragon-blooded';
 
 export default class DragonKingAuditor extends BaseAuditor {
   constructor (character, options) {

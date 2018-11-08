@@ -442,7 +442,7 @@ export class BaseAuditor extends CharmCategorizer {
   paths () {
     let total = 0;
     if (this.character.paths) {
-      for (const x of this.character.paths) {
+      for (const x of Object.values(this.character.paths)) {
         total += discountedXP(x, 7, 5);
       }
     }
