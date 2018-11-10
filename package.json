@@ -15,9 +15,10 @@
     "venator": "./bin/venator.js"
   },
   "files": [
-    "/bin",
+    "/bin/**/*.js",
     "/npm-shrinkwrap.json",
-    "/dist"
+    "/dist/**/*.js",
+    "/dist/**/*.yml"
   ],
   "main": "dist/index.js",
   "keywords": [
@@ -46,7 +47,7 @@
     "js-yaml": "^3.12.0",
     "mongodb": "^3.1.9",
     "object.fromentries": "^2.0.0",
-    "pdfmake": "^0.1.38",
+    "pdfmake": "^0.1.39",
     "pump": "^3.0.0",
     "xmldom": "^0.1.27",
     "xmltojson": "^1.3.5",
@@ -62,7 +63,6 @@
     "@babel/plugin-proposal-function-bind": "^7.0.0",
     "@babel/plugin-proposal-logical-assignment-operators": "^7.0.0",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0",
-    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
     "@babel/plugin-proposal-optional-chaining": "^7.0.0",
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.5",
@@ -75,7 +75,7 @@
     "babel-plugin-dynamic-import-node": "^2.2.0",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
-    "eslint": "^5.8.0",
+    "eslint": "^5.9.0",
     "eslint-plugin-babel": "^5.2.1",
     "mocha": "^5.2.0"
   }

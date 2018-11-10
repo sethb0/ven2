@@ -1,4 +1,4 @@
-import { MongoClient, Logger } from 'mongodb';
+import { MongoClient } from 'mongodb';
 
 export default async function load (argv) {
   const f = (await argv.file).data;
