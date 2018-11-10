@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "@sethb0/yaml-utils": "^0.6.0",
-    "ajv": "^6.5.4",
+    "ajv": "^6.5.5",
     "ajv-merge-patch": "^4.1.0",
     "concat-stream": "^1.6.2",
     "js-yaml": "^3.12.0",
@@ -56,15 +56,15 @@
     "@ven2/images": "0.0.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.5",
     "@babel/plugin-proposal-function-bind": "^7.0.0",
     "@babel/plugin-proposal-logical-assignment-operators": "^7.0.0",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0",
     "@babel/plugin-proposal-numeric-separator": "^7.0.0",
     "@babel/plugin-proposal-optional-chaining": "^7.0.0",
     "@babel/polyfill": "^7.0.0",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-env": "^7.1.5",
     "@babel/register": "^7.0.0",
     "@sethb0/eslint-config-mfllc": "^0.6.1",
     "@sethb0/mockstd": "^0.1.0",
