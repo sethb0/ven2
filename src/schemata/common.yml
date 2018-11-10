@@ -28,6 +28,9 @@ definitions:
           $ref: '#/definitions/idString'
         variant:
           $ref: '#/definitions/idString'
+        count:
+          type: integer
+          minimum: 2
       required: ['id']
     - $ref: '#/definitions/idString'
 ##### END DEFINITIONS SECTION #####

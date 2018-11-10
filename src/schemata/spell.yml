@@ -7,12 +7,10 @@ properties:
   id:
     $ref: 'common.json#/definitions/idString'
   type:
-    type: string
     const: spell
   name:
     $ref: 'common.json#/definitions/nonEmptyString'
   circle:
-    type: string
     enum:
     - Terrestrial
     - Celestial
@@ -20,7 +18,19 @@ properties:
     - Shadowlands
     - Labyrinth
     - Void
+  cost:
+    $ref: 'common.json#/definitions/nonEmptyString'
+  target:
+    $ref: 'common.json#/definitions/nonEmptyString'
+  requires arcane link:
+    $ref: 'common.json#/definitions/true'
+  source:
+    $ref: 'common.json#/definitions/nonEmptyString'
   errata:
     $ref: 'common.json#/definitions/true'
+  house-ruled:
+    $ref: 'common.json#/definitions/true'
+  description:
+    type: string
 required: ['id', 'type', 'circle']
 ##### END SCHEMA #####
