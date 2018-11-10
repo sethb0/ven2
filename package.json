@@ -44,6 +44,7 @@
     "ajv-merge-patch": "^4.1.0",
     "concat-stream": "^1.6.2",
     "js-yaml": "^3.12.0",
+    "mongodb": "^3.1.9",
     "object.fromentries": "^2.0.0",
     "pdfmake": "^0.1.38",
     "pump": "^3.0.0",
