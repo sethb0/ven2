@@ -22,7 +22,7 @@ export default async function load (argv) {
         (data.knacks ||= []).push(record);
         break;
       case 'proxy':
-        // ignore
+        (data.proxies ||= []).push(record);
         break;
       default:
         console.warn(
@@ -43,17 +43,46 @@ export default async function load (argv) {
     await Promise.all(
       Object.keys(data)
         .map(
-          (name) => db.collection(name)
-            .createIndex({ id: 1 }, { unique: true, background: true, dropDups: true })
+          (name) => {
+            const indexes = [];
+            if (name === 'proxies') {
+              indexes.push(
+                { key: { id: 1, 'variants.id': 1 }, unique: true, background: true },
+                { key: { 'for.exalt': 1, 'for.group': 1 }, background: true },
+              );
+            } else {
+              indexes.push(
+                { key: { id: 1 }, unique: true, background: true },
+                { key: { name: 1 }, background: true },
+              );
+              if (name === 'spells') {
+                indexes.push({ key: { circle: 1 }, background: true });
+              } else if (name !== 'knacks') {
+                indexes.push({ key: { group: 1 }, background: true });
+              }
+            }
+            return db.collection(name).createIndexes(indexes);
+          }
         )
     );
     const results = await Promise.all(
       Object.entries(data)
         .map(
           ([name, records]) => db.collection(name)
-            .bulkWrite(records.map(
-              (r) => ({ replaceOne: { filter: { id: r.id }, replacement: r, upsert: true } })
-            ), { ordered: false, forceServerObjectId: true })
+            .bulkWrite(
+              records.map(
+                (r) => ({
+                  replaceOne: {
+                    filter: name === 'proxies'
+                      ? { id: r.id, 'variants.id': r.variants[0].id }
+                      : { id: r.id },
+                    replacement: r,
+                    upsert: true,
+                  },
+                })
+              ),
+              { ordered: false, forceServerObjectId: true }
+            )
             .then((result) => ({
               name,
               count: records.length,

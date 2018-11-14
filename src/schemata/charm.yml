@@ -3,6 +3,10 @@ $id: https://venator.sharpcla.ws/schema/charm.json
 
 ##### BEGIN DEFINITIONS SECTION #####
 definitions:
+  errata:
+    $ref: 'common.json#/definitions/true'
+  houseRuled:
+    $ref: 'common.json#/definitions/true'
   prerequisites:
     type: object
     properties:
@@ -33,6 +37,8 @@ definitions:
         type: object
         additionalProperties:
           $ref: 'common.json#/definitions/positiveInteger'
+  source:
+    $ref: 'common.json#/definitions/nonEmptyString'
 ##### END DEFINITIONS SECTION #####
 
 ##### BEGIN SCHEMA #####
@@ -41,6 +47,10 @@ allOf:
   properties:
     action:
       $ref: 'common.json#/definitions/nonEmptyString'
+    always foreign:
+      $ref: 'common.json#/definitions/true'
+    any akuma:
+      $ref: 'common.json#/definitions/true'
     cost:
       $ref: 'common.json#/definitions/nonEmptyString'
     description:
@@ -55,7 +65,7 @@ allOf:
         $ref: 'common.json#/definitions/nonEmptyString'
       minProperties: 1
     errata:
-      $ref: 'common.json#/definitions/true'
+      $ref: '#/definitions/errata'
     exalt:
       $ref: 'common.json#/definitions/nonEmptyString'
     excellency:
@@ -63,7 +73,7 @@ allOf:
     group:
       $ref: 'common.json#/definitions/nonEmptyString'
     house-ruled:
-      $ref: 'common.json#/definitions/true'
+      $ref: '#/definitions/houseRuled'
     id:
       $ref: 'common.json#/definitions/idString'
     keywords:
@@ -88,8 +98,12 @@ allOf:
       minProperties: 1
     martial-ready:
       $ref: 'common.json#/definitions/true'
+    mutually exclusive:
+      $ref: 'common.json#/definitions/true'
     name:
       $ref: 'common.json#/definitions/nonEmptyString'
+    peripheral expansion:
+      $ref: 'common.json#/definitions/positiveInteger'
     prerequisites:
       allOf:
       - $ref: '#/definitions/prerequisites'
@@ -124,20 +138,22 @@ allOf:
             minItems: 1
         required: ['when']
     source:
-      $ref: 'common.json#/definitions/nonEmptyString'
+      $ref: '#/definitions/source'
     taint:
       type: object
       additionalProperties:
         $ref: 'common.json#/definitions/nonNegativeInteger'
       minProperties: 1
-    transcends cap:
+    transcends caps:
       $ref: 'common.json#/definitions/true'
     treat as:
+      type: string
       enum:
       - Terrestrial Martial Arts
       - Celestial Martial Arts
       - Sidereal Martial Arts
     type:
+      type: string
       enum:
       - charm
       - generic
@@ -148,13 +164,23 @@ allOf:
       items:
         type: object
         properties:
+          description:
+            type: string
+          errata:
+            $ref: '#/definitions/errata'
+          house-ruled:
+            $ref: '#/definitions/houseRuled'
           id:
             $ref: 'common.json#/definitions/idString'
           name:
             $ref: 'common.json#/definitions/nonEmptyString'
           prerequisites:
             $ref: '#/definitions/prerequisites'
+          source:
+            $ref: '#/definitions/source'
         required: ['id', 'name']
+        propertyNames:
+          enum: ['description', 'id', 'name', 'prerequisites', 'source']
       minItems: 1
     virtue:
       type: object
@@ -171,19 +197,82 @@ allOf:
         enum: ['Compassion', 'Conviction', 'Temperance', 'Virtue']
       minProperties: 1
   required: ['id', 'type']
+  propertyNames:
+    enum:
+    - action
+    - always foreign
+    - any akuma
+    - cost
+    - description
+    - duration
+    - edge cost
+    - edges
+    - errata
+    - exalt
+    - excellency
+    - for
+    - group
+    - house-ruled
+    - id
+    - keywords
+    - lotus root
+    - martial
+    - martial-ready
+    - mutually exclusive
+    - name
+    - peripheral expansion
+    - prerequisites
+    - raises Essence cap
+    - raises trait cap
+    - repurchases
+    - source
+    - taint
+    - transcends caps
+    - treat as
+    - type
+    - variants
+    - virtue
 - if:
     properties:
       type:
         const: proxy
   then:
-    properties:
-      variant:
-        $ref: 'common.json#/definitions/idString'
-    propertyNames:
-      enum: ['id', 'name', 'type', 'variant']
-  else:
-    not:
-      required: ['variant']
+    allOf:
+    - properties:
+        for:
+          type: object
+          properties:
+            exalt:
+              $ref: 'common.json#/definitions/nonEmptyString'
+            group:
+              $ref: 'common.json#/definitions/nonEmptyString'
+          propertyNames:
+            enum: ['exalt', 'group']
+          required: ['exalt']
+        variants:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                $ref: 'common.json#/definitions/idString'
+              name:
+                $ref: 'common.json#/definitions/nonEmptyString'
+            propertyNames:
+              enum: ['id', 'name']
+            required: ['id', 'name']
+          minItems: 1
+          maxItems: 1
+      propertyNames:
+        enum: ['id', 'name', 'type', 'for', 'variants']
+      required: ['id', 'type', 'for']
+    - if:
+        required: ['name']
+      then:
+        not:
+          required: ['variants']
+      else:
+        required: ['variants']
 - if:
     required: ['edge cost']
   then:
@@ -211,4 +300,8 @@ allOf:
   else:
     not:
       required: ['taint']
+- if:
+    required: ['mutually exclusive']
+  then:
+    required: ['variants']
 ##### END SCHEMA #####

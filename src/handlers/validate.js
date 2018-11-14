@@ -45,8 +45,6 @@ export default async function validate (argv) {
         for (const e of validator.errors) {
           console.log(e);
         }
-      } else {
-        console.log(validator.errorsText());
       }
     }
   }

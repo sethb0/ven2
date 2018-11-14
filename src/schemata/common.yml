@@ -10,7 +10,8 @@ definitions:
     type: string
     minLength: 1
   idString:
-    $ref: '#/definitions/nonEmptyString'
+    type: string
+    pattern: '^[^\s.]+(\.[^\s.]+)?$'
   nonNegativeInteger:
     type: integer
     minimum: 0
