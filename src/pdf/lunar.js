@@ -2,15 +2,15 @@ import { NoCasteAbilitiesGenerator } from './base';
 
 export default class LunarGenerator extends NoCasteAbilitiesGenerator {
   get additionalFormattedHeaderInfo () {
-    return [...this.formattedSpiritAnimal, ...this.formattedTell];
-  }
-
-  get formattedSpiritAnimal () {
-    return LunarGenerator.formatHeaderLine('Spirit Animal', this.character['spirit animal']);
+    return [...this.formattedTotem, ...this.formattedTell];
   }
 
   get formattedTell () {
     return LunarGenerator.formatHeaderLine('Tell', this.character.tell);
+  }
+
+  get formattedTotem () {
+    return LunarGenerator.formatHeaderLine('Totem', this.character.totem);
   }
 
   get formattedVirtueFlaw () {
