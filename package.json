@@ -1,6 +1,6 @@
 {
   "name": "@ven2/ven2",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "Command-line tools for Exalted 2.5e character management",
   "author": "Seth Blumberg <sethb@pobox.com>",
   "license": "MIT",
