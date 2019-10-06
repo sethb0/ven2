@@ -40,7 +40,7 @@
     "url": "https://github.com/sethb0/ven2/issues"
   },
   "dependencies": {
-    "@sethb0/yaml-utils": "^0.6.0",
+    "@sethb0/yaml-utils": "^0.6.2",
     "ajv": "^6.10.2",
     "ajv-merge-patch": "^4.1.0",
     "concat-stream": "^1.6.2",
