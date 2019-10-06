@@ -4,10 +4,12 @@
       "@babel/preset-env",
       {
         "targets": {
-          "node": 8
+          "node": 10
         },
         "loose": true,
-        "useBuiltIns": "usage"
+        "modules": "commonjs",
+        "useBuiltIns": "usage",
+        "corejs": { "version": "3.2", "proposals": true }
       }
     ]
   ],
