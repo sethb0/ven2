@@ -10,16 +10,8 @@ export function builder (yargs) {
       ...stdInputOption,
       server: {
         description: 'Database server URL',
-        'default': 'mongodb://localhost:27017',
+        'default': 'mongodb://localhost:27017/ven2',
         alias: 'url',
-        nargs: 1,
-        requiresArg: true,
-        type: 'string',
-      },
-      database: {
-        description: 'Database name',
-        'default': 'ven2',
-        alias: 'db',
         nargs: 1,
         requiresArg: true,
         type: 'string',

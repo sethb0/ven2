@@ -52,8 +52,8 @@ export class Generator {
           ...this.formattedGraces,
           ...this.formattedPaths,
           ...this.formattedColleges,
-          ...this.formattedBackgrounds,
           ...this.formattedIntimacies,
+          ...this.formattedBackgrounds,
           ...this.allFormattedCharms,
           ...this.formattedSpells,
           ...this.formattedProtocols,
@@ -653,15 +653,17 @@ export class Generator {
   formatCharmSplat (groups) {
     const out = [];
     for (const [group, list] of Object.entries(groups)) {
-      const para = [
-        { text: group, italics: this.character.discounts(group) },
-        '\u2014',
-      ];
-      for (const charm of list) {
-        para.push(...Generator.formatCharm(charm), ', ');
+      if (list?.length) {
+        const para = [
+          { text: group, italics: this.character.discounts(group) },
+          '\u2014',
+        ];
+        for (const charm of list) {
+          para.push(...Generator.formatCharm(charm), ', ');
+        }
+        para.pop();
+        out.push({ text: para, style: 'hang', marginBottom: 2 });
       }
-      para.pop();
-      out.push({ text: para, style: 'hang', marginBottom: 2 });
     }
     return out;
   }

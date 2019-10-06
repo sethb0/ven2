@@ -15,7 +15,7 @@ const CASTE_TRAITS = loadCasteTraits();
 const CASTE_YOZIS = loadCasteYozis();
 
 const COPY_CHARM_FIELDS = [
-  'any akuma', 'edge cost', 'edges', 'favored caste', 'gather', 'lotus root', 'merge',
+  'any akuma', 'edge cost', 'favored caste', 'gather', 'lotus root', 'merge',
   'treat as',
 ];
 
@@ -42,7 +42,7 @@ export default async function transform (argv) {
   const caste = concept.Caste && concept.Caste[0]._attr.type._value;
   let casteTraits = new Set();
   if (caste) {
-    out.caste = caste.replace('Moon', ' Moon');
+    out.caste = caste.replace(/Moon$/u, ' Moon');
     casteTraits = CASTE_TRAITS[out.caste];
     if (CASTE_YOZIS[out.caste]) {
       out.yozis = { patron: CASTE_YOZIS[out.caste] };

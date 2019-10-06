@@ -3,11 +3,13 @@
 
 const { loadSync } = require('@sethb0/yaml-utils');
 const fs = require('fs');
+const path = require('path');
 const yargs = require('yargs');
 
 const argv = yargs
   .usage('$0 <in> <out>')
   .demandCommand(2)
   .argv;
+const mapped = argv._.map((x) => path.resolve(__dirname, '..', x));
 
-fs.writeFileSync(argv._[1], JSON.stringify(loadSync(argv._[0])));
+fs.writeFileSync(mapped[1], JSON.stringify(loadSync(mapped[0])));

@@ -490,6 +490,8 @@ properties:
       enum: ['Celestial', 'Labyrinth', 'Shadowlands', 'Solar', 'Terrestrial', 'Void']
   splat:
     $ref: 'common.json#/definitions/nonEmptyString'
+  tell:
+    $ref: 'common.json#/definitions/nonEmptyString'
   thaumaturgy:
     type: object
     additionalProperties:
@@ -501,6 +503,8 @@ properties:
           $ref: '#/definitions/specialtyArray'
       propertyNames:
         enum: ['degrees', 'procedures']
+  totem:
+    $ref: 'common.json#/definitions/nonEmptyString'
   uninstalled:
     $ref: '#/properties/installed'
   urge:
@@ -572,7 +576,9 @@ propertyNames:
   - specialties
   - spells
   - splat
+  - tell
   - thaumaturgy
+  - totem
   - uninstalled
   - urge
   - variant

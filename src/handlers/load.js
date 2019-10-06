@@ -19,10 +19,17 @@ export default async function load (argv) {
         }
         break;
       case 'knack':
-        (data.knacks ||= []).push(record);
+        if (record.group) {
+          (data.knacks ||= []).push(record);
+        } else {
+          console.warn(`Missing knack group in ${record.id} (index ${recno})`);
+        }
         break;
       case 'proxy':
         (data.proxies ||= []).push(record);
+        break;
+      case 'note':
+        console.warn(`Record type "note" should not have ID at index ${recno}`);
         break;
       default:
         console.warn(
@@ -31,7 +38,7 @@ export default async function load (argv) {
           } in ${record.id} (index ${recno})`
         );
       }
-    } else {
+    } else if (record.type !== 'note') {
       console.warn(`Missing ID in record at index ${recno}`);
     }
     recno += 1;
@@ -39,7 +46,7 @@ export default async function load (argv) {
 
   const client = await MongoClient.connect(argv.url, { useNewUrlParser: true });
   try {
-    const db = client.db(argv.db);
+    const db = client.db();
     await Promise.all(
       Object.keys(data)
         .map(
@@ -57,8 +64,15 @@ export default async function load (argv) {
               );
               if (name === 'spells') {
                 indexes.push({ key: { circle: 1 }, background: true });
-              } else if (name !== 'knacks') {
-                indexes.push({ key: { group: 1 }, background: true });
+              } else {
+                indexes.push(
+                  { key: { group: 1 }, background: true },
+                );
+                if (name !== 'knacks') {
+                  indexes.push(
+                    { key: { type: 1 }, background: true },
+                  );
+                }
               }
             }
             return db.collection(name).createIndexes(indexes);
@@ -74,7 +88,12 @@ export default async function load (argv) {
                 (r) => ({
                   replaceOne: {
                     filter: name === 'proxies'
-                      ? { id: r.id, 'variants.id': r.variants[0].id }
+                      ? {
+                        id: r.id,
+                        'variants.id': r.variants
+                          ? r.variants[0].id
+                          : { $exists: 0 },
+                      }
                       : { id: r.id },
                     replacement: r,
                     upsert: true,

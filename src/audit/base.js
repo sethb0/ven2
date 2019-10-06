@@ -36,9 +36,11 @@ export class CharmCategorizer {
     };
     this._merges = {};
     for (const [splat, charmGroups] of Object.entries(this.character.charms || {})) {
-      for (const [group, charms] of Object.entries(charmGroups)) {
-        for (const charm of charms) {
-          if (splat === this.parser.nativeSplat && !charm['treat as']) {
+      for (const [group, charms] of Object.entries(charmGroups || {})) {
+        for (const charm of charms || []) {
+          if (charm['always foreign']) {
+            this._charms.Foreign.push(charm);
+          } else if (splat === this.parser.nativeSplat && !charm['treat as']) {
             if (this.parser.favors(group)) {
               this._charms.FavoredNative.push(charm);
             } else {
@@ -286,14 +288,14 @@ export class BaseAuditor extends CharmCategorizer {
     let total = 0;
     if (this.character.abilities) {
       for (const [k, v] of Object.entries(this.character.abilities)) {
-        const favored = v.favored || v.caste || v.prodigy;
-        const bonus = v.bonus || v.creation || 0;
-        const experienced = v.experienced || bonus;
+        const favored = v?.favored || v?.caste || v?.prodigy;
+        const bonus = v?.bonus || v?.creation || 0;
+        const experienced = v?.experienced || bonus;
         let n = 0;
         for (let i = bonus; i < experienced; i += 1) {
           n += this.coster.getAbilityDotCost(k, i, favored);
         }
-        if (v.prodigy) {
+        if (v?.prodigy) {
           n += this.coster.prodigyCost;
         }
         if (this.options.debug) {
@@ -309,7 +311,7 @@ export class BaseAuditor extends CharmCategorizer {
     let total = 0;
     if (this.character.attributes) {
       for (const [k, v] of Object.entries(this.character.attributes)) {
-        const n = geomXP(v, v.favored || v.caste ? 3 : 4);
+        const n = geomXP(v, v?.favored || v?.caste ? 3 : 4);
         if (this.options.debug) {
           console.log('debug attributes: %s %d', k, n);
         }
@@ -348,11 +350,13 @@ export class BaseAuditor extends CharmCategorizer {
     let total = 0;
     if (this.character.colleges) {
       for (const [k, v] of Object.entries(this.character.colleges)) {
-        const n = discountedXP(v, 3, 2);
-        if (this.options.debug) {
-          console.log('debug colleges: %s %d', k, n);
+        if (v) {
+          const n = discountedXP(v, 3, 2);
+          if (this.options.debug) {
+            console.log('debug colleges: %s %d', k, n);
+          }
+          total += n;
         }
-        total += n;
       }
     }
     return total;
@@ -385,7 +389,7 @@ export class BaseAuditor extends CharmCategorizer {
             console.log('debug graces: Heart %d', heart);
           }
           total += heart;
-        } else {
+        } else if (v) {
           const n = geomXP(v, v.major ? 3 : 6);
           if (this.options.debug) {
             console.log('debug graces: %s %d', k, n);
@@ -426,13 +430,15 @@ export class BaseAuditor extends CharmCategorizer {
     let total = 0;
     if (this.character.mutations) {
       for (const [k, v] of Object.entries(this.character.mutations)) {
-        const multiplier = MUTATION_POINTS[k] * 2;
-        for (const mutation of v) {
-          const n = flatXP(mutation, multiplier);
-          if (this.options.debug) {
-            console.log('debug mutations: %s %d', mutation.name, n);
+        if (v) {
+          const multiplier = MUTATION_POINTS[k] * 2;
+          for (const mutation of v) {
+            const n = flatXP(mutation, multiplier);
+            if (this.options.debug) {
+              console.log('debug mutations: %s %d', mutation.name, n);
+            }
+            total += n;
           }
-          total += n;
         }
       }
     }
@@ -489,9 +495,11 @@ export class BaseAuditor extends CharmCategorizer {
     let total = 0;
     if (this.character.specialties) {
       for (const [k, v] of Object.entries(this.character.specialties)) {
-        const cost = this.coster.getSpecialtyDotCost(k);
-        for (const x of v) {
-          total += flatXP(x, cost);
+        if (v) {
+          const cost = this.coster.getSpecialtyDotCost(k);
+          for (const x of v) {
+            total += flatXP(x, cost);
+          }
         }
       }
     }
@@ -690,8 +698,8 @@ export class BaseParser {
   get knowsLotusRoot () {
     if (this.character.charms) {
       for (const x of Object.values(this.character.charms)) {
-        for (const y of Object.values(x)) {
-          for (const z of Object.values(y)) {
+        for (const y of Object.values(x || {})) {
+          for (const z of Object.values(y || {})) {
             if (z['lotus root']) {
               return true;
             }

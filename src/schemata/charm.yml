@@ -124,6 +124,11 @@ allOf:
               items:
                 $ref: 'common.json#/definitions/nonEmptyString'
               minItems: 1
+          modifier:
+            allOf:
+            - type: integer
+            - not:
+                const: 0
           required:
             $ref: 'common.json#/definitions/true'
         required: ['limit']

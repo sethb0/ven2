@@ -9,7 +9,7 @@
     "prepare": "rm -rf dist && babel src --out-dir dist --copy-files",
     "start": "node --require @babel/register src",
     "test": "mocha",
-    "web": "rm -rf web/schema && mkdir -p web/schema && (for x in src/schemata/*.yml; do node utils/y2j.js \"$x\" web/schema/$(basename \"$x\" .yml).json; done) && firebase deploy --only hosting"
+    "web": "./utils/web-deploy.sh"
   },
   "bin": {
     "venator": "./bin/venator.js"
@@ -41,42 +41,42 @@
   },
   "dependencies": {
     "@sethb0/yaml-utils": "^0.6.0",
-    "ajv": "^6.5.5",
+    "ajv": "^6.10.2",
     "ajv-merge-patch": "^4.1.0",
     "concat-stream": "^1.6.2",
-    "js-yaml": "^3.12.0",
-    "mongodb": "^3.1.9",
-    "object.fromentries": "^2.0.0",
-    "pdfmake": "^0.1.39",
+    "js-yaml": "^3.13.1",
+    "mongodb": "^3.3.2",
+    "object.fromentries": "^2.0.1",
+    "pdfmake": "^0.1.60",
     "pump": "^3.0.0",
     "xmldom": "^0.1.27",
     "xmltojson": "^1.3.5",
-    "yargs": "^12.0.2"
+    "yargs": "^14.0.0"
   },
   "peerDependencies": {
     "@ven2/data": "*",
     "@ven2/images": "0.0.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.1.5",
-    "@babel/core": "^7.1.5",
-    "@babel/plugin-proposal-function-bind": "^7.0.0",
-    "@babel/plugin-proposal-logical-assignment-operators": "^7.0.0",
-    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0",
-    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
-    "@babel/polyfill": "^7.0.0",
-    "@babel/preset-env": "^7.1.5",
-    "@babel/register": "^7.0.0",
-    "@sethb0/eslint-config-mfllc": "^0.6.1",
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/plugin-proposal-function-bind": "^7.2.0",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.2.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/register": "^7.6.2",
+    "@sethb0/eslint-config-mfllc": "^0.7.1",
     "@sethb0/mockstd": "^0.1.0",
     "@ven2/data": "*",
     "@ven2/images": "0.0.1",
-    "babel-eslint": "^10.0.1",
-    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "babel-eslint": "^10.0.3",
+    "babel-plugin-dynamic-import-node": "^2.3.0",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
-    "eslint": "^5.9.0",
-    "eslint-plugin-babel": "^5.2.1",
-    "mocha": "^5.2.0"
+    "eslint": "^6.5.1",
+    "eslint-plugin-babel": "^5.3.0",
+    "mocha": "^6.2.1"
   }
 }
