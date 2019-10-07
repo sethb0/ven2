@@ -44,7 +44,10 @@ export default async function load (argv) {
     recno += 1;
   }
 
-  const client = await MongoClient.connect(argv.url, { useNewUrlParser: true });
+  const client = await MongoClient.connect(argv.url, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
   try {
     const db = client.db();
     await Promise.all(
