@@ -140,17 +140,17 @@ export class BaseAuditor extends CharmCategorizer {
     const out = ['GRACES:'];
     if (this.character.graces) {
       const graces = Object.entries(this.character.graces);
-      graces.sort((a, b) => {
-        if (a[0] === 'Heart' && b[0] !== 'Heart') {
+      graces.sort(([a], [b]) => {
+        if (a === 'Heart' && b !== 'Heart') {
           return -1;
         }
-        if (a[0] !== 'Heart' && b[0] === 'Heart') {
+        if (a !== 'Heart' && b === 'Heart') {
           return 1;
         }
-        if (a[0] < b[0]) {
+        if (a < b) {
           return -1;
         }
-        if (a[0] > b[0]) {
+        if (a > b) {
           return 1;
         }
         return 0;
@@ -161,6 +161,9 @@ export class BaseAuditor extends CharmCategorizer {
           cost = flatXP(v, 20);
         } else {
           cost = geomXP(v, v.major ? 3 : 6);
+          if (!v.creation && !v.bonus && v.experienced) {
+            cost += this.coster.baseGraceCost;
+          }
         }
         const formatted = formatTrait(k, v, cost, true);
         if (formatted) {
@@ -331,11 +334,11 @@ export class BaseAuditor extends CharmCategorizer {
     const { thaumaturgy } = this.character;
     if (thaumaturgy) {
       const entries = Object.entries(thaumaturgy);
-      entries.sort((a, b) => {
-        if (a[0] < b[0]) {
+      entries.sort(([a], [b]) => {
+        if (a < b) {
           return -1;
         }
-        if (a[0] > b[0]) {
+        if (a > b) {
           return 1;
         }
         return 0;

@@ -51,6 +51,10 @@ export class RakshaCoster extends BaseCoster {
     return 6;
   }
 
+  get baseGraceCost () {
+    return 0;
+  }
+
   get favoredTerrestrialMACharmCost () {
     return 10;
   }

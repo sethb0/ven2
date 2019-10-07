@@ -390,7 +390,7 @@ export class BaseAuditor extends CharmCategorizer {
           }
           total += heart;
         } else if (v) {
-          const n = geomXP(v, v.major ? 3 : 6);
+          const n = geomXP(v, v.major ? 3 : 6) + this.coster.baseGraceCost;
           if (this.options.debug) {
             console.log('debug graces: %s %d', k, n);
           }
@@ -623,6 +623,10 @@ export class BaseCoster {
 
   get unfavoredSiderealMACharmCost () {
     return 15;
+  }
+
+  get baseGraceCost () {
+    return 6;
   }
 
   get rakshaCharmCost () {
